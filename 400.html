@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>400 - Solicitud Incorrecta | Matias Prestes</title>
+  <meta name="description" content="Página de error 400 - La solicitud no pudo ser procesada correctamente">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/navfooter.css">
+  <link rel="stylesheet" href="css/400.css">
+</head>
+<body>
+  <main class="error-container">
+    <div class="error-content" data-aos="fade-up">
+      <div class="error-icon">
+        <i class="fas fa-exclamation-circle"></i>
+      </div>
+      
+      <h1 class="error-title">400 - Solicitud Incorrecta</h1>
+      
+      <p class="error-message">
+        Lo sentimos, pero parece que algo salió mal con la solicitud que intentaste realizar. 
+        La página no se pudo cargar correctamente.
+      </p>
+
+      <div class="error-details">
+        <h2>¿Qué pudo haber pasado?</h2>
+        <ul>
+          <li><i class="fas fa-check"></i> La URL podría estar mal escrita o contener caracteres inválidos</li>
+          <li><i class="fas fa-check"></i> Podrían faltar parámetros necesarios en la solicitud</li>
+          <li><i class="fas fa-check"></i> La solicitud HTTP podría no ser válida o estar mal formada</li>
+        </ul>
+      </div>
+
+      <div class="solutions">
+        <h2>¿Qué puedes hacer?</h2>
+        <div class="solutions-grid">
+          <div class="solution-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-sync-alt"></i>
+            <h3>Recargar la página</h3>
+            <p>Intenta recargar la página para ver si el error se resuelve</p>
+            <button onclick="window.location.reload()" class="action-btn">
+              Recargar <i class="fas fa-redo"></i>
+            </button>
+          </div>
+
+          <div class="solution-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-search"></i>
+            <h3>Buscar contenido</h3>
+            <p>Busca el contenido que necesitas en nuestro sitio</p>
+            <div class="search-container">
+              <input type="text" placeholder="Buscar en el sitio..." id="searchInput">
+              <button class="search-btn">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="solution-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-home"></i>
+            <h3>Ir al inicio</h3>
+            <p>Vuelve a la página principal y navega desde allí</p>
+            <a href="index.html" class="action-btn">
+              Página Principal <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="help-section">
+        <h2>¿Necesitas ayuda adicional?</h2>
+        <p>Si el problema persiste, no dudes en contactarnos:</p>
+        <div class="help-buttons">
+          <a href="contacto.html" class="help-btn">
+            <i class="fas fa-envelope"></i>
+            Contactar Soporte
+          </a>
+          <a href="faq.html" class="help-btn secondary">
+            <i class="fas fa-question-circle"></i>
+            Ver FAQ
+          </a>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <h3>Enlaces Rápidos</h3>
+        <div class="links-grid">
+          <a href="materias.html" class="quick-link">
+            <i class="fas fa-book"></i>
+            Cursos
+          </a>
+          <a href="materiales.html" class="quick-link">
+            <i class="fas fa-file-alt"></i>
+            Materiales
+          </a>
+          <a href="noticias.html" class="quick-link">
+            <i class="fas fa-newspaper"></i>
+            Noticias
+          </a>
+          <a href="contacto.html" class="quick-link">
+            <i class="fas fa-envelope"></i>
+            Contacto
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/nav.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Search functionality
+    document.querySelector('.search-btn').addEventListener('click', function() {
+      const searchTerm = document.getElementById('searchInput').value.trim();
+      if (searchTerm) {
+        // Here you would typically implement site search
+        // For now, redirect to home page
+        window.location.href = 'index.html';
+      }
+    });
+
+    // Handle Enter key in search input
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        document.querySelector('.search-btn').click();
+      }
+    });
+  </script>
+</body>
+</html>
