@@ -3,7 +3,7 @@
 <div align="center">
   <a href="https://www.utu.edu.uy/" target="_blank"><img src="https://img.shields.io/badge/UTU-Profesor-blue?style=for-the-badge&logo=education&logoColor=white" alt="UTU"></a>
   <a href="https://www.ces.edu.uy/" target="_blank"><img src="https://img.shields.io/badge/Secundaria-Profesor-green?style=for-the-badge&logo=school&logoColor=white" alt="Secundaria"></a>
-  <a href="https://www.youtube.com/@profematiasprestes" target="_blank"><img src="https://img.shields.io/badge/YouTube-Canal-red?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"></a>
+  <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" target="_blank"><img src="https://img.shields.io/badge/YouTube-Canal-red?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"></a>
 </div>
 
 <br>
@@ -109,14 +109,14 @@
 - [Portal UTU](https://www.utu.edu.uy/estudiantes) - Acceso a calificaciones y gestiones académicas
 - [Portal Secundaria](https://www.dges.edu.uy/estudiantes) - Información académica oficial
 - [Plan Ceibal](https://www.ceibal.edu.uy/) - Recursos educativos digitales
-- [Canal de YouTube](https://www.youtube.com/@profematiasprestes) - Tutoriales y contenido complementario
+- [Canal de YouTube](https://www.youtube.com/@profematiasprestes?sub_confirmation=1) - Tutoriales y contenido complementario
 
 ## 📱 Contacto
 
 <div style="background-color: #e9f7fe; padding: 15px; border-radius: 5px; margin-top: 20px;">
   <p><strong>Email:</strong> profematiasprestes@gmail.com</p>
-  <p><strong>Horario de atención:</strong> Lunes a Viernes de 9:00 a 18:00</p>
-  <p><strong>Ubicación:</strong> Sala de Profesores (Planta Baja) o Laboratorio de Informática</p>
+  <p><strong>Horario de atención:</strong> Lunes a Viernes en horarios de clase</p>
+  <p><strong>Ubicación:</strong> Sala de Profesores o Laboratorio de Informática</p>
 </div>
 
 <hr>
