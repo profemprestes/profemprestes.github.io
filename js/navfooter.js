@@ -1,59 +1,119 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const navContainer = document.querySelector('.nav-container');
     const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    const navMenuContainer = document.querySelector('.nav-menu-container');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Crear el overlay para el menú móvil
+    const navOverlay = document.createElement('div');
+    navOverlay.className = 'nav-overlay';
+    document.body.appendChild(navOverlay);
 
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            // Toggle the 'show' class on the menu
-            navMenu.classList.toggle('show');
-            
-            // Update the aria-expanded attribute for accessibility
-            const isExpanded = navMenu.classList.contains('show');
-            navToggle.setAttribute('aria-expanded', isExpanded);
-            
-            // Optionally change the icon
-            const toggleIcon = navToggle.querySelector('i');
-            if (toggleIcon) {
-                if (isExpanded) {
-                    toggleIcon.classList.remove('fa-bars');
-                    toggleIcon.classList.add('fa-times');
-                } else {
-                    toggleIcon.classList.remove('fa-times');
-                    toggleIcon.classList.add('fa-bars');
-                }
+    // Función para abrir el menú
+    function openMenu() {
+        navMenuContainer.classList.add('show');
+        navOverlay.classList.add('show');
+        navToggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+        
+        const toggleIcon = navToggle.querySelector('i');
+        if (toggleIcon) {
+            toggleIcon.classList.remove('fa-bars');
+            toggleIcon.classList.add('fa-times');
+        }
+    }
+    
+    // Función para cerrar el menú
+    function closeMenu() {
+        navMenuContainer.classList.remove('show');
+        navOverlay.classList.remove('show');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        
+        const toggleIcon = navToggle.querySelector('i');
+        if (toggleIcon) {
+            toggleIcon.classList.remove('fa-times');
+            toggleIcon.classList.add('fa-bars');
+        }
+    }
+
+    if (navToggle && navMenuContainer) {
+        // Toggle menu on button click
+        navToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (navMenuContainer.classList.contains('show')) {
+                closeMenu();
+            } else {
+                openMenu();
             }
         });
+        
+        // Close menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                closeMenu();
+                
+                // Si el enlace apunta a un ancla en la misma página, hacer scroll suave
+                const href = this.getAttribute('href');
+                if (href.startsWith('#') && href.length > 1) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Close the menu when clicking on the overlay
+        navOverlay.addEventListener('click', closeMenu);
         
         // Close the menu when clicking outside
         document.addEventListener('click', function(event) {
             if (!navToggle.contains(event.target) && 
-                !navMenu.contains(event.target) && 
-                navMenu.classList.contains('show')) {
-                navMenu.classList.remove('show');
-                navToggle.setAttribute('aria-expanded', 'false');
-                
-                const toggleIcon = navToggle.querySelector('i');
-                if (toggleIcon) {
-                    toggleIcon.classList.remove('fa-times');
-                    toggleIcon.classList.add('fa-bars');
-                }
+                !navMenuContainer.contains(event.target) && 
+                navMenuContainer.classList.contains('show')) {
+                closeMenu();
             }
         });
         
         // Add keyboard accessibility
         document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape' && navMenu.classList.contains('show')) {
-                navMenu.classList.remove('show');
-                navToggle.setAttribute('aria-expanded', 'false');
-                
-                const toggleIcon = navToggle.querySelector('i');
-                if (toggleIcon) {
-                    toggleIcon.classList.remove('fa-times');
-                    toggleIcon.classList.add('fa-bars');
-                }
+            if (event.key === 'Escape' && navMenuContainer.classList.contains('show')) {
+                closeMenu();
             }
         });
     }
+
+    // Highlight active menu item based on current page
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage) {
+            link.classList.add('active');
+        }
+    });
+    
+    // Efecto de scroll en la barra de navegación
+    function handleScroll() {
+        if (window.scrollY > 50) {
+            navContainer.classList.add('scrolled');
+        } else {
+            navContainer.classList.remove('scrolled');
+        }
+    }
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // Inicializar el estado de la barra de navegación al cargar
+    handleScroll();
 
     // Footer animations
     // Animate footer elements when they come into view
