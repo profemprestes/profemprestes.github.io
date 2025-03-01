@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora las materias disponibles con Matías Prestes - Educación Digital">
+    <title>Materias - Matías Prestes</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/navfooter.css">
+    <link rel="stylesheet" href="css/materias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container" role="navigation">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-logo">
+                <img src="logofinal3.webp" alt="MP Logo" width="40" height="40">
+                <div class="brand-text">
+                    <span class="brand-name">Matías Prestes</span>
+                    <span class="brand-tagline">Educación Digital</span>
+                </div>
+            </a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+            <li class="nav-item"><a href="materias.html" class="nav-link active"><i class="fas fa-book"></i> Cursos</a></li>
+            <li class="nav-item"><a href="materiales.html" class="nav-link"><i class="fas fa-file-alt"></i> Materiales</a></li>
+            <li class="nav-item"><a href="faq.html" class="nav-link"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            <li class="nav-item"><a href="noticias.html" class="nav-link"><i class="fas fa-newspaper"></i> Noticias</a></li>
+            <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="https://youtube.com" target="_blank" class="cta-button"><i class="fab fa-youtube"></i> Suscríbete</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-materias">
+            <div class="hero-background">
+                <div id="particles-js"></div>
+            </div>
+            <div class="hero-container">
+                <h1>Materias</h1>
+                <p class="hero-subtitle">Explora nuestra selección de cursos en tecnología para desarrollar las habilidades del futuro</p>
+                <div class="hero-decorations">
+                    <div class="floating-code html-code">&lt;h1&gt;Aprende&lt;/h1&gt;</div>
+                    <div class="floating-code css-code">.futuro { color: brillante; }</div>
+                    <div class="floating-code js-code">function aprender() { return éxito; }</div>
+                    <div class="floating-code sql-code">SELECT * FROM oportunidades;</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materias Section -->
+        <section class="materias-section">
+            <div class="materias-container">
+                <div class="materias-header">
+                    <div class="section-title" data-aos="fade-up">
+                        <h2>Nuestros cursos</h2>
+                        <p>Desarrolla habilidades que transformarán tu futuro profesional</p>
+                    </div>
+                    
+                    <div class="materias-filters" data-aos="fade-up" data-aos-delay="100">
+                        <div class="search-container">
+                            <input type="text" id="searchMaterias" placeholder="Buscar materias..." class="search-input">
+                            <i class="fas fa-search search-icon"></i>
+                        </div>
+                        
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">Todos</button>
+                            <button class="filter-btn" data-filter="web">Desarrollo Web</button>
+                            <button class="filter-btn" data-filter="data">Datos</button>
+                            <button class="filter-btn" data-filter="systems">Sistemas</button>
+                            <button class="filter-btn" data-filter="robotics">Robótica</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="materias-grid" id="materiasGrid">
+                    <!-- HTML Card -->
+                    <div class="materia-card" data-category="web" data-aos="fade-up">
+                        <div class="materia-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="materia-content">
+                            <h3>HTML5</h3>
+                            <div class="materia-details">
+                                <p>Domina el lenguaje fundamental para crear páginas web modernas.</p>
+                                <ul class="materia-features">
+                                    <li><i class="fas fa-check-circle"></i> Estructura semántica</li>
+                                    <li><i class="fas fa-check-circle"></i> Formularios avanzados</li>
+                                    <li><i class="fas fa-check-circle"></i> Multimedia</li>
+                                </ul>
+                                <div class="materia-meta">
+                                    <span class="difficulty"><i class="fas fa-signal"></i> Principiante</span>
+                                    <span class="duration"><i class="far fa-clock"></i> 4 semanas</span>
+                                </div>
+                            </div>
+                            <a href="html5detalle.html" class="materia-btn">Ver más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- CSS Card -->
+                    <div class="materia-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                        <div class="materia-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="materia-content">
+                            <h3>CSS3</h3>
+                            <div class="materia-details">
+                                <p>Aprende a diseñar y estilizar sitios web con técnicas modernas.</p>
+                                <ul class="materia-features">
+                                    <li><i class="fas fa-check-circle"></i> Flexbox y Grid</li>
+                                    <li><i class="fas fa-check-circle"></i> Animaciones</li>
+                                    <li><i class="fas fa-check-circle"></i> Responsive Design</li>
+                                </ul>
+                                <div class="materia-meta">
+                                    <span class="difficulty"><i class="fas fa-signal"></i> Intermedio</span>
+                                    <span class="duration"><i class="far fa-clock"></i> 5 semanas</span>
+                                </div>
+                            </div>
+                            <a href="#" class="materia-btn">Ver más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- JavaScript Card -->
+                    <div class="materia-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                        <div class="materia-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="materia-content">
+                            <h3>JavaScript</h3>
+                            <div class="materia-details">
+                                <p>Desarrolla sitios web interactivos con el lenguaje más versátil de la web.</p>
+                                <ul class="materia-features">
+                                    <li><i class="fas fa-check-circle"></i> DOM Manipulation</li>
+                                    <li><i class="fas fa-check-circle"></i> ES6+</li>
+                                    <li><i class="fas fa-check-circle"></i> AJAX y Fetch API</li>
+                                </ul>
+                                <div class="materia-meta">
+                                    <span class="difficulty"><i class="fas fa-signal"></i> Intermedio</span>
+                                    <span class="duration"><i class="far fa-clock"></i> 8 semanas</span>
+                                </div>
+                            </div>
+                            <a href="#" class="materia-btn">Ver más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- PHP Card -->
+                    <div class="materia-card" data-category="web" data-aos="fade-up">
+                        <div class="materia-icon">
+                            <i class="fab fa-php"></i>
+                        </div>
+                        <div class="materia-content">
+                            <h3>PHP</h3>
+                            <div class="materia-details">
+                                <p>Crea sitios web dinámicos y aplicaciones del lado del servidor.</p>
+                                <ul class="materia-features">
+                                    <li><i class="fas fa-check-circle"></i> Bases de datos</li>
+                                    <li><i class="fas fa-check-circle"></i> Formularios</li>
+                                    <li><i class="fas fa-check-circle"></i> Sesiones y cookies</li>
+                                </ul>
+                                <div class="materia-meta">
+                                    <span class="difficulty"><i class="fas fa-signal"></i> Intermedio</span>
+                                    <span class="duration"><i class="far fa-clock"></i> 6 semanas</span>
+                                </div>
+                            </div>
+                            <a href="#" class="materia-btn">Ver más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- SQL Card -->
+                    <div class="materia-card" data-category="data" data-aos="fade-up" data-aos-delay="100">
+                        <div class="materia-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="materia-content">
+                            <h3>SQL</h3>
+                            <div class="materia-details">
+                                <p>Gestiona y consulta bases de datos relacionales de manera eficiente.</p>
+                                <ul class="materia-features">
+                                    <li><i class="fas fa-check-circle"></i> Consultas avanzadas</li>
+                                    <li><i class="fas fa-check-circle"></i> Normalización</li>
+                                    <li><i class="fas fa-check-circle"></i> Optimización</li>
+                                </ul>
+                                <div class="materia-meta">
+                                    <span class="difficulty"><i class="fas fa-signal"></i> Intermedio</span>
+                                    <span class="duration"><i class="far fa-clock"></i> 5 semanas</span>
+                                </div>
+                            </div>
+                            <a href="#" class="materia-btn">Ver más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Python Card -->
+                    <div class="materia-card" data-category="data" data-aos="fade-up" data-aos-delay="200">
+                        <div class="materia-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="materia-content">
+                            <h3>Python</h3>
+                            <div class="materia-details">
+                                <p>Aprende el lenguaje más versátil para ciencia de datos y desarrollo web.</p>
+                                <ul class="materia-features">
+                                    <li><i class="fas fa-check-circle"></i> Fundamentos</li>
+                                    <li><i class="fas fa-check-circle"></i> Procesamiento de datos</li>
+                                    <li><i class="fas fa-check-circle"></i> Flask/Django</li>
+                                </ul>
+                                <div class="materia-meta">
+                                    <span class="difficulty"><i class="fas fa-signal"></i> Intermedio</span>
+                                    <span class="duration"><i class="far fa-clock"></i> 8 semanas</span>
+                                </div>
+                            </div>
+                            <a href="#" class="materia-btn">Ver más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Linux Card -->
+                    <div class="materia-card" data-category="systems" data-aos="fade-up">
+                        <div class="materia-icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <div class="materia-content">
+                            <h3>Linux</h3>
+                            <div class="materia-details">
+                                <p>Domina el sistema operativo más utilizado en servidores y desarrollo.</p>
+                                <ul class="materia-features">
+                                    <li><i class="fas fa-check-circle"></i> Comandos básicos</li>
+                                    <li><i class="fas fa-check-circle"></i> Shell scripting</li>
+                                    <li><i class="fas fa-check-circle"></i> Administración de servidores</li>
+                                </ul>
+                                <div class="materia-meta">
+                                    <span class="difficulty"><i class="fas fa-signal"></i> Intermedio</span>
+                                    <span class="duration"><i class="far fa-clock"></i> 6 semanas</span>
+                                </div>
+                            </div>
+                            <a href="#" class="materia-btn">Ver más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Redes Card -->
+                    <div class="materia-card" data-category="systems" data-aos="fade-up" data-aos-delay="100">
+                        <div class="materia-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="materia-content">
+                            <h3>Redes</h3>
+                            <div class="materia-details">
+                                <p>Comprende los fundamentos de las redes de computadoras y su configuración.</p>
+                                <ul class="materia-features">
+                                    <li><i class="fas fa-check-circle"></i> Protocolos</li>
+                                    <li><i class="fas fa-check-circle"></i> Configuración</li>
+                                    <li><i class="fas fa-check-circle"></i> Seguridad</li>
+                                </ul>
+                                <div class="materia-meta">
+                                    <span class="difficulty"><i class="fas fa-signal"></i> Avanzado</span>
+                                    <span class="duration"><i class="far fa-clock"></i> 7 semanas</span>
+                                </div>
+                            </div>
+                            <a href="#" class="materia-btn">Ver más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Robótica Card -->
+                    <div class="materia-card" data-category="robotics" data-aos="fade-up" data-aos-delay="200">
+                        <div class="materia-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="materia-content">
+                            <h3>Robótica</h3>
+                            <div class="materia-details">
+                                <p>Construye y programa robots con tecnologías modernas.</p>
+                                <ul class="materia-features">
+                                    <li><i class="fas fa-check-circle"></i> Arduino</li>
+                                    <li><i class="fas fa-check-circle"></i> Sensores</li>
+                                    <li><i class="fas fa-check-circle"></i> Programación</li>
+                                </ul>
+                                <div class="materia-meta">
+                                    <span class="difficulty"><i class="fas fa-signal"></i> Intermedio</span>
+                                    <span class="duration"><i class="far fa-clock"></i> 8 semanas</span>
+                                </div>
+                            </div>
+                            <a href="#" class="materia-btn">Ver más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- No Results Message -->
+                <div id="noResults" class="no-results-message" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>Sin resultados</h3>
+                    <p>No se encontraron materias que coincidan con tu búsqueda. Intenta con otro término.</p>
+                </div>
+                
+                <div class="materias-cta" data-aos="fade-up">
+                    <h3>¿No encuentras lo que buscas?</h3>
+                    <p>Contáctame para consultar sobre cursos personalizados según tus necesidades.</p>
+                    <a href="contacto.html" class="contact-btn">
+                        <span>Contáctame</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-decorations">
+            <div class="rotating-circle"></div>
+            <div class="rotating-circle"></div>
+            <div class="rotating-circle"></div>
+            <div class="bouncing-rocket">🚀</div>
+            <div class="pulsing-circle"></div>
+            <div class="pulsing-circle"></div>
+            <div class="spinning-laptop">💻</div>
+        </div>
+        
+        <div class="footer-grid">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="logofinal3.webp" alt="MP Logo">
+                    <div class="footer-logo-text">
+                        <span class="logo-title">Matías Prestes</span>
+                        <span class="logo-subtitle">Educación Digital</span>
+                    </div>
+                </div>
+                <p class="footer-description">Brindando recursos educativos de calidad para impulsar tu carrera en el mundo digital. Comprometidos con tu crecimiento profesional.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Accesos Directos</h3>
+                <ul class="footer-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="materias.html"><i class="fas fa-book"></i> Cursos</a></li>
+                    <li><a href="materiales.html"><i class="fas fa-file-alt"></i> Materiales</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="noticias.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Información Legal</h3>
+                <ul class="footer-menu">
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Política de Privacidad</a></li>
+                    <li><a href="#"><i class="fas fa-gavel"></i> Términos y Condiciones</a></li>
+                    <li><a href="#"><i class="fas fa-cookie"></i> Política de Cookies</a></li>
+                    <li><a href="#"><i class="fas fa-handshake"></i> Acuerdos de Licencia</a></li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i> Derechos de Autor</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column footer-newsletter">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p>Suscríbete para recibir actualizaciones, nuevos recursos y consejos exclusivos directamente en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="newsletter-button">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2024 Matías Prestes. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-legal">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/navfooter.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/materias.js"></script>
+</body>
+</html>

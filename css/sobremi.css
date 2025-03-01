@@ -1,0 +1,425 @@
+/* Sobre mí Section Styles */
+.sobremi-section {
+    position: relative;
+    padding: 5rem 2rem;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8fafc, #eef2f7);
+}
+
+.sobremi-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.decoration-shape {
+    position: absolute;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    filter: blur(60px);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.shape-1 {
+    background: linear-gradient(135deg, #3b82f6, #93c5fd);
+    width: 400px;
+    height: 400px;
+    top: -50px;
+    left: -100px;
+    animation: floating 15s infinite alternate;
+}
+
+.shape-2 {
+    background: linear-gradient(135deg, #4f46e5, #a5b4fc);
+    width: 350px;
+    height: 350px;
+    bottom: -100px;
+    right: -50px;
+    animation: floating 18s infinite alternate-reverse;
+}
+
+.shape-3 {
+    background: linear-gradient(135deg, #8b5cf6, #c4b5fd);
+    width: 250px;
+    height: 250px;
+    top: 40%;
+    right: 15%;
+    animation: floating 12s infinite alternate;
+}
+
+.sobremi-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.sobremi-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sobremi-header h2 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.sobremi-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    border-radius: 2px;
+}
+
+.sobremi-header p {
+    font-size: 1.2rem;
+    color: #6b7280;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.sobremi-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.profile-section {
+    position: relative;
+}
+
+.profile-container {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.profile-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.profile-container:hover .profile-image {
+    transform: scale(1.05);
+}
+
+.profile-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 2rem;
+    color: white;
+}
+
+.profile-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-overlay p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.experience-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
+    z-index: 1;
+}
+
+.experience-badge i {
+    font-size: 1.1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.social-btn i {
+    font-size: 1.2rem;
+}
+
+.social-btn.youtube {
+    background: #e74c3c;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.social-btn.youtube:hover {
+    background: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.4);
+}
+
+.social-btn.linkedin {
+    background: #0077b5;
+    box-shadow: 0 5px 15px rgba(0, 119, 181, 0.3);
+}
+
+.social-btn.linkedin:hover {
+    background: #00669e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 119, 181, 0.4);
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-bottom: 0.5rem;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.social-btn:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.bio-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bio-text {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.bio-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+}
+
+.bio-text p {
+    color: #4b5563;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.bio-text p:last-child {
+    margin-bottom: 0;
+}
+
+.bio-text strong {
+    color: #1f2937;
+}
+
+.skills-container {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.skills-container h3 {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.skills-container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    border-radius: 2px;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-item:last-child {
+    margin-bottom: 0;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.skill-name {
+    color: #4b5563;
+    font-weight: 600;
+}
+
+.skill-percentage {
+    color: #4facfe;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-value {
+    height: 100%;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    border-radius: 10px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 1.5s ease;
+}
+
+.skills-container.animate .progress-value {
+    transform: scaleX(1);
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-15px, 15px);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .sobremi-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .profile-section {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobremi-header h2 {
+        font-size: 2rem;
+    }
+    
+    .sobremi-section {
+        padding: 4rem 1.5rem;
+    }
+    
+    .profile-overlay {
+        padding: 1.5rem;
+    }
+    
+    .profile-overlay h3 {
+        font-size: 1.2rem;
+    }
+    
+    .experience-badge {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .bio-text, .skills-container {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .sobremi-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .sobremi-header p {
+        font-size: 1rem;
+    }
+    
+    .social-links {
+        flex-direction: column;
+    }
+    
+    .social-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

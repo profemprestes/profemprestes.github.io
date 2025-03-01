@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de contacto de Matías Prestes - Educación Digital">
+    <title>Contacto - Matías Prestes</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/navfooter.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container" role="navigation">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-logo">
+                <img src="logofinal3.webp" alt="MP Logo" width="40" height="40">
+                <div class="brand-text">
+                    <span class="brand-name">Matías Prestes</span>
+                    <span class="brand-tagline">Educación Digital</span>
+                </div>
+            </a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+            <li class="nav-item"><a href="materias.html" class="nav-link"><i class="fas fa-book"></i> Cursos</a></li>
+            <li class="nav-item"><a href="materiales.html" class="nav-link"><i class="fas fa-file-alt"></i> Materiales</a></li>
+            <li class="nav-item"><a href="faq.html" class="nav-link"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            <li class="nav-item"><a href="noticias.html" class="nav-link"><i class="fas fa-newspaper"></i> Noticias</a></li>
+            <li class="nav-item"><a href="contacto.html" class="nav-link active"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="https://youtube.com" target="_blank" class="cta-button"><i class="fab fa-youtube"></i> Suscríbete</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Contact Hero Section -->
+        <section class="hero-contacto">
+            <div class="hero-background">
+                <div id="particles-js"></div>
+            </div>
+            <div class="hero-container">
+                <h1>Contacto</h1>
+                <p class="hero-subtitle">¿Tienes preguntas o comentarios? Estoy aquí para ayudarte</p>
+                <div class="hero-decorations">
+                    <div class="floating-icon" data-speed="2">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="floating-icon" data-speed="3">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="floating-icon" data-speed="1.5">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Content Section -->
+        <section class="contact-content">
+            <div class="contact-container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <div class="form-header">
+                            <h2>Envíame un mensaje</h2>
+                            <p>Rellena el formulario y te responderé lo antes posible</p>
+                        </div>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nombre completo <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="name" name="name" required data-validation="name">
+                                    <div class="error-message" id="nameError"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Correo electrónico <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" name="email" required data-validation="email">
+                                    <div class="error-message" id="emailError"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Asunto <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-tag"></i>
+                                    <input type="text" id="subject" name="subject" required data-validation="subject">
+                                    <div class="error-message" id="subjectError"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mensaje <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-comment-alt"></i>
+                                    <textarea id="message" name="message" rows="5" required data-validation="message"></textarea>
+                                    <div class="error-message" id="messageError"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-submit">
+                                <button type="submit" class="submit-button">
+                                    <span>Enviar mensaje</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Info and Map -->
+                    <div class="contact-info-container">
+                        <div class="contact-info">
+                            <h2>Información de contacto</h2>
+                            <p>Puedes comunicarte conmigo por cualquiera de estos medios:</p>
+                            
+                            <ul class="contact-details">
+                                <li>
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h3>Teléfono</h3>
+                                        <p><a href="tel:+59812345678">+598 1234 5678</a></p>
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h3>Email</h3>
+                                        <p><a href="mailto:contacto@profematiasprestes.com.uy">contacto@profematiasprestes.com.uy</a></p>
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h3>Dirección</h3>
+                                        <p>Av. 18 de Julio 1234, Montevideo, Uruguay</p>
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                    <div class="contact-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h3>Horario de atención</h3>
+                                        <p>Lunes a Viernes: 9:00 - 18:00</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                            <div class="social-media">
+                                <h3>Sígueme en redes sociales</h3>
+                                <div class="social-icons">
+                                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                            
+                            <a href="https://wa.me/59812345678" class="whatsapp-button" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Contáctame por WhatsApp</span>
+                            </a>
+                        </div>
+                        
+                        <div class="contact-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.8286731559546!2d-56.18151498466415!3d-34.90674808037856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f802a6eb50381%3A0x9a48f727d6c8894!2sAv.%2018%20de%20Julio%2C%20Montevideo%2C%20Uruguay!5e0!3m2!1ses!2sus!4v1651687775173!5m2!1ses!2sus" 
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Matías Prestes"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Mini Section -->
+        <section class="faq-mini-section">
+            <div class="faq-container">
+                <h2>Preguntas frecuentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>¿Cuánto tiempo tardas en responder?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Normalmente respondo en un plazo de 24-48 horas hábiles. Intento ser lo más rápido posible para ayudarte.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>¿Ofreces consultas personalizadas?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>¡Sí! Puedo adaptar las clases y materiales según tus necesidades específicas. Contáctame para más detalles.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>¿Dónde encuentro más recursos?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Visita la sección de <a href="materiales.html">Materiales</a> donde encontrarás recursos descargables y enlaces a mis canales con contenido educativo.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-cta">
+                    <a href="faq.html" class="faq-button">Ver todas las preguntas frecuentes</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-decorations">
+            <div class="rotating-circle"></div>
+            <div class="rotating-circle"></div>
+            <div class="rotating-circle"></div>
+            <div class="bouncing-rocket">🚀</div>
+            <div class="pulsing-circle"></div>
+            <div class="pulsing-circle"></div>
+            <div class="spinning-laptop">💻</div>
+        </div>
+        
+        <div class="footer-grid">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="logofinal3.webp" alt="MP Logo">
+                    <div class="footer-logo-text">
+                        <span class="logo-title">Matías Prestes</span>
+                        <span class="logo-subtitle">Educación Digital</span>
+                    </div>
+                </div>
+                <p class="footer-description">Brindando recursos educativos de calidad para impulsar tu carrera en el mundo digital. Comprometidos con tu crecimiento profesional.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Accesos Directos</h3>
+                <ul class="footer-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="materias.html"><i class="fas fa-book"></i> Cursos</a></li>
+                    <li><a href="materiales.html"><i class="fas fa-file-alt"></i> Materiales</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="noticias.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Información Legal</h3>
+                <ul class="footer-menu">
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Política de Privacidad</a></li>
+                    <li><a href="#"><i class="fas fa-gavel"></i> Términos y Condiciones</a></li>
+                    <li><a href="#"><i class="fas fa-cookie"></i> Política de Cookies</a></li>
+                    <li><a href="#"><i class="fas fa-handshake"></i> Acuerdos de Licencia</a></li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i> Derechos de Autor</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column footer-newsletter">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p>Suscríbete para recibir actualizaciones, nuevos recursos y consejos exclusivos directamente en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="newsletter-button">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2024 Matías Prestes. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-legal">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="successMessage" class="success-message">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>¡Mensaje enviado!</h3>
+            <p>Gracias por contactarme. Te responderé a la brevedad.</p>
+            <button id="closeSuccess" class="close-success">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="js/navfooter.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/contacto.js"></script>
+</body>
+</html>

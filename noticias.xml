@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Matías Prestes - Noticias Educativas</title>
+  <link>https://profematiasprestes.com.uy/noticias.html</link>
+  <description>Últimas noticias y actualizaciones sobre educación digital, cursos y tecnología</description>
+  <language>es</language>
+  <lastBuildDate>Mon, 15 May 2024 14:30:00 +0000</lastBuildDate>
+  
+  <item>
+    <title>Nuevo curso de SQL avanzado disponible</title>
+    <link>https://profematiasprestes.com.uy/noticias/sql-avanzado</link>
+    <description>Aprende consultas complejas, optimización de bases de datos y administración de sistemas SQL con nuestro nuevo curso avanzado. Diseñado para profesionales que quieren llevar sus habilidades al siguiente nivel.</description>
+    <pubDate>Mon, 15 May 2024 10:00:00 +0000</pubDate>
+    <guid>https://profematiasprestes.com.uy/noticias/sql-avanzado</guid>
+    <category>Cursos</category>
+  </item>
+  
+  <item>
+    <title>Conferencia sobre inteligencia artificial en educación</title>
+    <link>https://profematiasprestes.com.uy/noticias/ia-educacion</link>
+    <description>Participa en nuestra próxima conferencia donde exploraremos cómo la inteligencia artificial está transformando la educación. Contaremos con expertos internacionales y demostraciones prácticas de tecnologías emergentes.</description>
+    <pubDate>Wed, 10 May 2024 14:30:00 +0000</pubDate>
+    <guid>https://profematiasprestes.com.uy/noticias/ia-educacion</guid>
+    <category>Eventos</category>
+  </item>
+  
+  <item>
+    <title>Actualización de la plataforma con nuevos materiales</title>
+    <link>https://profematiasprestes.com.uy/noticias/nuevos-materiales</link>
+    <description>Hemos añadido nuevos recursos descargables, guías de estudio y ejercicios prácticos para todos nuestros cursos. Estos materiales han sido diseñados para reforzar el aprendizaje y dar soporte continuo a los estudiantes.</description>
+    <pubDate>Fri, 05 May 2024 09:15:00 +0000</pubDate>
+    <guid>https://profematiasprestes.com.uy/noticias/nuevos-materiales</guid>
+    <category>Recursos</category>
+  </item>
+  
+  <item>
+    <title>Python: La herramienta esencial para Data Science</title>
+    <link>https://profematiasprestes.com.uy/noticias/python-data-science</link>
+    <description>Descubre por qué Python se ha convertido en el lenguaje favorito para ciencia de datos y machine learning. Analizamos las bibliotecas más importantes y cómo puedes comenzar tu carrera en este campo prometedor.</description>
+    <pubDate>Fri, 28 Apr 2024 11:20:00 +0000</pubDate>
+    <guid>https://profematiasprestes.com.uy/noticias/python-data-science</guid>
+    <category>Tecnología</category>
+  </item>
+  
+  <item>
+    <title>JavaScript Frontend: Domina el desarrollo web moderno</title>
+    <link>https://profematiasprestes.com.uy/noticias/javascript-frontend</link>
+    <description>Lanzamos un nuevo curso sobre JavaScript para frontend que abarca desde los fundamentos hasta frameworks modernos como React y Vue. Aprende a crear interfaces interactivas y aplicaciones web dinámicas.</description>
+    <pubDate>Thu, 20 Apr 2024 15:45:00 +0000</pubDate>
+    <guid>https://profematiasprestes.com.uy/noticias/javascript-frontend</guid>
+    <category>Cursos</category>
+  </item>
+</channel>
+</rss>

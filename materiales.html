@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recursos y materiales educativos para tecnología, programación y robótica - Matías Prestes">
+    <title>Materiales - Matías Prestes</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/navfooter.css">
+    <link rel="stylesheet" href="css/materiales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container" role="navigation">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-logo">
+                <img src="logofinal3.webp" alt="MP Logo" width="40" height="40">
+                <div class="brand-text">
+                    <span class="brand-name">Matías Prestes</span>
+                    <span class="brand-tagline">Educación Digital</span>
+                </div>
+            </a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+            <li class="nav-item"><a href="materias.html" class="nav-link"><i class="fas fa-book"></i> Cursos</a></li>
+            <li class="nav-item"><a href="materiales.html" class="nav-link active"><i class="fas fa-file-alt"></i> Materiales</a></li>
+            <li class="nav-item"><a href="faq.html" class="nav-link"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            <li class="nav-item"><a href="noticias.html" class="nav-link"><i class="fas fa-newspaper"></i> Noticias</a></li>
+            <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="https://youtube.com" target="_blank" class="cta-button"><i class="fab fa-youtube"></i> Suscríbete</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-materiales">
+            <div class="hero-background">
+                <div id="particles-js"></div>
+            </div>
+            <div class="hero-container">
+                <h1>Recursos y Materiales Educativos</h1>
+                <p class="hero-subtitle">Encuentra apuntes, guías y ejercicios organizados por categorías.</p>
+                <div class="hero-decorations">
+                    <div class="tech-icon"><i class="fas fa-code"></i></div>
+                    <div class="tech-icon"><i class="fas fa-database"></i></div>
+                    <div class="tech-icon"><i class="fas fa-server"></i></div>
+                    <div class="tech-icon"><i class="fas fa-cogs"></i></div>
+                    <div class="tech-icon"><i class="fas fa-robot"></i></div>
+                    <div class="tech-icon"><i class="fas fa-file-code"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Theme Toggle -->
+        <div class="theme-toggle-container">
+            <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+                <span class="theme-toggle-track"></span>
+            </button>
+            <span class="theme-toggle-text">Modo Oscuro</span>
+        </div>
+
+        <!-- Categories Section -->
+        <section class="categorias-section" data-aos="fade-up">
+            <div class="categorias-container">
+                <h2>Categorías de Materiales</h2>
+                <div class="categorias-grid">
+                    <div class="categoria-card" data-filter="programacion">
+                        <div class="categoria-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="categoria-content">
+                            <h3>Programación Avanzada</h3>
+                            <p>HTML, CSS, JavaScript, PHP y más recursos para desarrolladores web.</p>
+                            <button class="categoria-btn">
+                                <span>Ver recursos</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="categoria-card" data-filter="basedatos">
+                        <div class="categoria-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="categoria-content">
+                            <h3>Base de Datos</h3>
+                            <p>Diagramas ER, SQL, procedimientos almacenados y normalización.</p>
+                            <button class="categoria-btn">
+                                <span>Ver recursos</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="categoria-card" data-filter="sistemas">
+                        <div class="categoria-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="categoria-content">
+                            <h3>Sistemas Operativos</h3>
+                            <p>Linux, scripts, administración de servidores y redes.</p>
+                            <button class="categoria-btn">
+                                <span>Ver recursos</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="categoria-card" data-filter="general">
+                        <div class="categoria-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="categoria-content">
+                            <h3>Materiales Generales</h3>
+                            <p>Informática, robótica, tutoriales y recursos variados.</p>
+                            <button class="categoria-btn">
+                                <span>Ver recursos</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materials Featured Section -->
+        <section class="destacado-section" data-aos="fade-up">
+            <div class="destacado-container">
+                <h2>Materiales Destacados</h2>
+                
+                <div class="swiper-container destacado-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="material-card destacado">
+                                <div class="material-type">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>PDF</span>
+                                </div>
+                                <div class="material-content">
+                                    <h3>Guía Completa de SQL</h3>
+                                    <div class="material-meta">
+                                        <span class="material-date"><i class="far fa-calendar-alt"></i> Actualizado: Mayo 2024</span>
+                                        <span class="material-downloads"><i class="fas fa-download"></i> 1,245 descargas</span>
+                                    </div>
+                                    <p>Todo lo que necesitas saber sobre consultas SQL, desde lo básico hasta procedimientos avanzados.</p>
+                                    <div class="material-tags">
+                                        <span class="tag">SQL</span>
+                                        <span class="tag">Base de Datos</span>
+                                        <span class="tag">Consultas</span>
+                                    </div>
+                                    <a href="#" class="material-download-btn">
+                                        <i class="fas fa-download"></i>
+                                        <span>Descargar</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="material-card destacado">
+                                <div class="material-type">
+                                    <i class="fas fa-file-code"></i>
+                                    <span>Curso</span>
+                                </div>
+                                <div class="material-content">
+                                    <h3>JavaScript para Principiantes</h3>
+                                    <div class="material-meta">
+                                        <span class="material-date"><i class="far fa-calendar-alt"></i> Actualizado: Abril 2024</span>
+                                        <span class="material-downloads"><i class="fas fa-download"></i> 978 descargas</span>
+                                    </div>
+                                    <p>Curso completo para aprender JavaScript desde cero con ejercicios prácticos y ejemplos.</p>
+                                    <div class="material-tags">
+                                        <span class="tag">JavaScript</span>
+                                        <span class="tag">Frontend</span>
+                                        <span class="tag">Curso</span>
+                                    </div>
+                                    <a href="#" class="material-download-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Ver Online</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="material-card destacado">
+                                <div class="material-type">
+                                    <i class="fas fa-file-image"></i>
+                                    <span>Infografía</span>
+                                </div>
+                                <div class="material-content">
+                                    <h3>Cheatsheet de Comandos Linux</h3>
+                                    <div class="material-meta">
+                                        <span class="material-date"><i class="far fa-calendar-alt"></i> Actualizado: Marzo 2024</span>
+                                        <span class="material-downloads"><i class="fas fa-download"></i> 845 descargas</span>
+                                    </div>
+                                    <p>Referencia rápida con los comandos más útiles de Linux para administradores de sistemas.</p>
+                                    <div class="material-tags">
+                                        <span class="tag">Linux</span>
+                                        <span class="tag">Comandos</span>
+                                        <span class="tag">Referencia</span>
+                                    </div>
+                                    <a href="#" class="material-download-btn">
+                                        <i class="fas fa-download"></i>
+                                        <span>Descargar</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materials Search Section -->
+        <section class="materiales-section" data-aos="fade-up">
+            <div class="materiales-container">
+                <h2>Todos los Materiales</h2>
+                
+                <div class="materiales-filter">
+                    <div class="search-container">
+                        <input type="text" id="materialesSearch" class="materiales-search" placeholder="Buscar materiales...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">Todos</button>
+                        <button class="filter-tab" data-filter="programacion">Programación</button>
+                        <button class="filter-tab" data-filter="basedatos">Base de Datos</button>
+                        <button class="filter-tab" data-filter="sistemas">Sistemas</button>
+                        <button class="filter-tab" data-filter="general">General</button>
+                    </div>
+                </div>
+                
+                <div class="materiales-grid" id="materialesGrid">
+                    <!-- Material Card 1 -->
+                    <div class="material-card" data-category="programacion" data-aos="fade-up">
+                        <div class="material-type">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>PDF</span>
+                        </div>
+                        <div class="material-content">
+                            <h3>Guía de Introducción a HTML5</h3>
+                            <div class="material-meta">
+                                <span class="material-date"><i class="far fa-calendar-alt"></i> Mayo 2024</span>
+                                <span class="material-size"><i class="fas fa-weight"></i> 2.3 MB</span>
+                            </div>
+                            <p>Completa guía para comenzar con HTML5, etiquetas semánticas y estructura web.</p>
+                            <div class="material-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">Web</span>
+                            </div>
+                            <a href="#" class="material-download-btn">
+                                <i class="fas fa-download"></i>
+                                <span>Descargar</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Material Card 2 -->
+                    <div class="material-card" data-category="programacion" data-aos="fade-up" data-aos-delay="100">
+                        <div class="material-type">
+                            <i class="fas fa-file-archive"></i>
+                            <span>ZIP</span>
+                        </div>
+                        <div class="material-content">
+                            <h3>Ejercicios de JavaScript</h3>
+                            <div class="material-meta">
+                                <span class="material-date"><i class="far fa-calendar-alt"></i> Abril 2024</span>
+                                <span class="material-size"><i class="fas fa-weight"></i> 4.7 MB</span>
+                            </div>
+                            <p>Colección de 50 ejercicios prácticos para dominar JavaScript con soluciones.</p>
+                            <div class="material-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Ejercicios</span>
+                            </div>
+                            <a href="#" class="material-download-btn">
+                                <i class="fas fa-download"></i>
+                                <span>Descargar</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Material Card 3 -->
+                    <div class="material-card" data-category="basedatos" data-aos="fade-up" data-aos-delay="200">
+                        <div class="material-type">
+                            <i class="fas fa-file-image"></i>
+                            <span>PNG</span>
+                        </div>
+                        <div class="material-content">
+                            <h3>Diagrama ER para Gestión de Veterinarias</h3>
+                            <div class="material-meta">
+                                <span class="material-date"><i class="far fa-calendar-alt"></i> Marzo 2024</span>
+                                <span class="material-size"><i class="fas fa-weight"></i> 1.8 MB</span>
+                            </div>
+                            <p>Modelo Entidad-Relación completo para sistema de gestión veterinaria.</p>
+                            <div class="material-tags">
+                                <span class="tag">Base de Datos</span>
+                                <span class="tag">Diagrama ER</span>
+                            </div>
+                            <a href="#" class="material-download-btn">
+                                <i class="fas fa-download"></i>
+                                <span>Descargar</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Material Card 4 -->
+                    <div class="material-card" data-category="sistemas" data-aos="fade-up">
+                        <div class="material-type">
+                            <i class="fas fa-video"></i>
+                            <span>Video</span>
+                        </div>
+                        <div class="material-content">
+                            <h3>Curso de Linux Básico</h3>
+                            <div class="material-meta">
+                                <span class="material-date"><i class="far fa-calendar-alt"></i> Febrero 2024</span>
+                                <span class="material-size"><i class="fas fa-clock"></i> 3h 20m</span>
+                            </div>
+                            <p>Introducción a Linux, comandos básicos y administración del sistema.</p>
+                            <div class="material-tags">
+                                <span class="tag">Linux</span>
+                                <span class="tag">Curso</span>
+                            </div>
+                            <a href="#" class="material-download-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Ver Online</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Material Card 5 -->
+                    <div class="material-card" data-category="programacion" data-aos="fade-up" data-aos-delay="100">
+                        <div class="material-type">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>PDF</span>
+                        </div>
+                        <div class="material-content">
+                            <h3>Manual de CSS Flexbox y Grid</h3>
+                            <div class="material-meta">
+                                <span class="material-date"><i class="far fa-calendar-alt"></i> Enero 2024</span>
+                                <span class="material-size"><i class="fas fa-weight"></i> 3.5 MB</span>
+                            </div>
+                            <p>Guía completa sobre los sistemas de layout CSS modernos con ejemplos.</p>
+                            <div class="material-tags">
+                                <span class="tag">CSS</span>
+                                <span class="tag">Flexbox</span>
+                                <span class="tag">Grid</span>
+                            </div>
+                            <a href="#" class="material-download-btn">
+                                <i class="fas fa-download"></i>
+                                <span>Descargar</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Material Card 6 -->
+                    <div class="material-card" data-category="general" data-aos="fade-up" data-aos-delay="200">
+                        <div class="material-type">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>PDF</span>
+                        </div>
+                        <div class="material-content">
+                            <h3>Introducción a la Robótica Educativa</h3>
+                            <div class="material-meta">
+                                <span class="material-date"><i class="far fa-calendar-alt"></i> Diciembre 2023</span>
+                                <span class="material-size"><i class="fas fa-weight"></i> 5.2 MB</span>
+                            </div>
+                            <p>Guía para docentes sobre cómo implementar robótica en el aula.</p>
+                            <div class="material-tags">
+                                <span class="tag">Robótica</span>
+                                <span class="tag">Educación</span>
+                            </div>
+                            <a href="#" class="material-download-btn">
+                                <i class="fas fa-download"></i>
+                                <span>Descargar</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Material Card 7 -->
+                    <div class="material-card" data-category="basedatos" data-aos="fade-up">
+                        <div class="material-type">
+                            <i class="fas fa-file-code"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="material-content">
+                            <h3>Colección de Procedimientos Almacenados</h3>
+                            <div class="material-meta">
+                                <span class="material-date"><i class="far fa-calendar-alt"></i> Noviembre 2023</span>
+                                <span class="material-size"><i class="fas fa-weight"></i> 980 KB</span>
+                            </div>
+                            <p>Scripts SQL con ejemplos prácticos de procedimientos almacenados.</p>
+                            <div class="material-tags">
+                                <span class="tag">SQL</span>
+                                <span class="tag">Procedimientos</span>
+                            </div>
+                            <a href="#" class="material-download-btn">
+                                <i class="fas fa-download"></i>
+                                <span>Descargar</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Material Card 8 -->
+                    <div class="material-card" data-category="sistemas" data-aos="fade-up" data-aos-delay="100">
+                        <div class="material-type">
+                            <i class="fas fa-file-alt"></i>
+                            <span>TXT</span>
+                        </div>
+                        <div class="material-content">
+                            <h3>Scripts Bash para Administración</h3>
+                            <div class="material-meta">
+                                <span class="material-date"><i class="far fa-calendar-alt"></i> Octubre 2023</span>
+                                <span class="material-size"><i class="fas fa-weight"></i> 450 KB</span>
+                            </div>
+                            <p>Colección de scripts Bash para automatizar tareas de administración en Linux.</p>
+                            <div class="material-tags">
+                                <span class="tag">Bash</span>
+                                <span class="tag">Linux</span>
+                                <span class="tag">Scripts</span>
+                            </div>
+                            <a href="#" class="material-download-btn">
+                                <i class="fas fa-download"></i>
+                                <span>Descargar</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- No Results Message -->
+                <div id="noResults" class="no-results" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>No se encontraron materiales</h3>
+                    <p>Intenta con otros términos de búsqueda o navega por las categorías.</p>
+                </div>
+                
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button id="loadMoreBtn" class="load-more-btn">
+                        <span>Cargar más</span>
+                        <i class="fas fa-sync"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Suggest Material Section -->
+        <section class="sugerir-section" data-aos="fade-up">
+            <div class="sugerir-container">
+                <div class="sugerir-content">
+                    <div class="sugerir-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="sugerir-text">
+                        <h2>¿Falta algún material?</h2>
+                        <p>Si necesitas algún recurso específico que no encuentras en nuestra biblioteca, envíanos tu sugerencia y lo consideraremos para futuras publicaciones.</p>
+                    </div>
+                    <button id="sugerirBtn" class="sugerir-btn">
+                        <span>Enviar sugerencia</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Suggestion Modal -->
+        <div id="sugerirModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Sugerir Material</h2>
+                <form id="sugerirForm" class="sugerir-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipoMaterial">Tipo de material</label>
+                        <select id="tipoMaterial" required>
+                            <option value="">Selecciona un tipo</option>
+                            <option value="pdf">PDF/Documento</option>
+                            <option value="video">Video</option>
+                            <option value="codigo">Código/Scripts</option>
+                            <option value="ejercicios">Ejercicios</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <textarea id="descripcion" rows="5" placeholder="Describe el material que te gustaría encontrar" required></textarea>
+                    </div>
+                    <button type="submit" class="sugerir-submit">Enviar Sugerencia</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-decorations">
+            <div class="rotating-circle"></div>
+            <div class="rotating-circle"></div>
+            <div class="rotating-circle"></div>
+            <div class="bouncing-rocket">🚀</div>
+            <div class="pulsing-circle"></div>
+            <div class="pulsing-circle"></div>
+            <div class="spinning-laptop">💻</div>
+        </div>
+        
+        <div class="footer-grid">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="logofinal3.webp" alt="MP Logo">
+                    <div class="footer-logo-text">
+                        <span class="logo-title">Matías Prestes</span>
+                        <span class="logo-subtitle">Educación Digital</span>
+                    </div>
+                </div>
+                <p class="footer-description">Brindando recursos educativos de calidad para impulsar tu carrera en el mundo digital. Comprometidos con tu crecimiento profesional.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Accesos Directos</h3>
+                <ul class="footer-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="materias.html"><i class="fas fa-book"></i> Cursos</a></li>
+                    <li><a href="materiales.html"><i class="fas fa-file-alt"></i> Materiales</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="noticias.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Información Legal</h3>
+                <ul class="footer-menu">
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Política de Privacidad</a></li>
+                    <li><a href="#"><i class="fas fa-gavel"></i> Términos y Condiciones</a></li>
+                    <li><a href="#"><i class="fas fa-cookie"></i> Política de Cookies</a></li>
+                    <li><a href="#"><i class="fas fa-handshake"></i> Acuerdos de Licencia</a></li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i> Derechos de Autor</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column footer-newsletter">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p>Suscríbete para recibir actualizaciones, nuevos recursos y consejos exclusivos directamente en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="newsletter-button">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2024 Matías Prestes. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-legal">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/navfooter.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/materiales.js"></script>
+</body>
+</html>

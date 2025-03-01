@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preguntas frecuentes sobre los cursos y materiales de Matías Prestes - Educación Digital">
+    <title>FAQ - Matías Prestes</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/navfooter.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container" role="navigation">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-logo">
+                <img src="logofinal3.webp" alt="MP Logo" width="40" height="40">
+                <div class="brand-text">
+                    <span class="brand-name">Matías Prestes</span>
+                    <span class="brand-tagline">Educación Digital</span>
+                </div>
+            </a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+            <li class="nav-item"><a href="materias.html" class="nav-link"><i class="fas fa-book"></i> Cursos</a></li>
+            <li class="nav-item"><a href="materiales.html" class="nav-link"><i class="fas fa-file-alt"></i> Materiales</a></li>
+            <li class="nav-item"><a href="faq.html" class="nav-link active"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            <li class="nav-item"><a href="noticias.html" class="nav-link"><i class="fas fa-newspaper"></i> Noticias</a></li>
+            <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="https://youtube.com" target="_blank" class="cta-button"><i class="fab fa-youtube"></i> Suscríbete</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-faq">
+            <div class="hero-background">
+                <div id="particles-js"></div>
+            </div>
+            <div class="hero-container">
+                <h1>Preguntas Frecuentes (FAQ)</h1>
+                <p class="hero-subtitle">Encuentra respuestas a las dudas más comunes sobre nuestros cursos, materiales y cómo sacar el máximo provecho de la plataforma</p>
+                <div class="hero-decorations">
+                    <div class="floating-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="floating-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="floating-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Content Section -->
+        <section class="faq-section">
+            <div class="faq-container">
+                <!-- FAQ Search -->
+                <div class="faq-search-container" data-aos="fade-up">
+                    <div class="search-wrapper">
+                        <input type="text" id="faqSearch" class="faq-search" placeholder="Buscar preguntas..." aria-label="Buscar preguntas">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div class="faq-categories">
+                        <button class="category-btn active" data-category="all">Todas</button>
+                        <button class="category-btn" data-category="cursos">Cursos</button>
+                        <button class="category-btn" data-category="materiales">Materiales</button>
+                        <button class="category-btn" data-category="acceso">Acceso</button>
+                        <button class="category-btn" data-category="soporte">Soporte</button>
+                    </div>
+                </div>
+
+                <div id="noResults" class="no-results" style="display: none;" data-aos="fade-up">
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>No se encontraron resultados</h3>
+                        <p>Intenta con otros términos o navega por las categorías</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Items -->
+                <div class="faq-list" data-aos="fade-up">
+                    <!-- Cursos -->
+                    <div class="faq-category-heading" id="cursos">
+                        <h2><i class="fas fa-book"></i> Cursos</h2>
+                    </div>
+
+                    <div class="faq-item" data-category="cursos">
+                        <div class="faq-question">
+                            <h3>¿Cómo acceder a los cursos?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Los cursos están disponibles directamente en la sección <a href="materias.html">Cursos</a>. Puedes acceder a ellos sin necesidad de registro previo. Cada curso incluye materiales descargables, videos y ejercicios prácticos.</p>
+                            <p>Si estás interesado en cursos personalizados, puedes <a href="contacto.html">contactarme</a> para obtener información detallada.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="cursos">
+                        <div class="faq-question">
+                            <h3>¿Cuál es la metodología de enseñanza?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Mi metodología se basa en el aprendizaje práctico y orientado a proyectos. Cada curso incluye:</p>
+                            <ul>
+                                <li>Material teórico explicado de forma clara y concisa</li>
+                                <li>Ejemplos prácticos aplicados a situaciones reales</li>
+                                <li>Ejercicios que refuerzan los conceptos aprendidos</li>
+                                <li>Proyectos que integran todo el conocimiento adquirido</li>
+                            </ul>
+                            <p>El objetivo es que no solo aprendas los conceptos, sino que sepas aplicarlos en situaciones profesionales reales.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="cursos">
+                        <div class="faq-question">
+                            <h3>¿Los cursos están actualizados?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, todos los cursos se revisan y actualizan regularmente para asegurar que el contenido refleje las últimas tendencias y tecnologías. La fecha de última actualización aparece en la descripción de cada curso.</p>
+                            <p>En tecnología es fundamental mantenerse al día, por lo que me comprometo a actualizar constantemente el material educativo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Materiales -->
+                    <div class="faq-category-heading" id="materiales">
+                        <h2><i class="fas fa-file-alt"></i> Materiales</h2>
+                    </div>
+
+                    <div class="faq-item" data-category="materiales">
+                        <div class="faq-question">
+                            <h3>¿Dónde puedo descargar materiales?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Todos los materiales están disponibles en la sección <a href="materiales.html">Materiales</a>. Allí encontrarás:</p>
+                            <ul>
+                                <li>Guías de estudio en formato PDF</li>
+                                <li>Ejercicios prácticos</li>
+                                <li>Plantillas y recursos para proyectos</li>
+                                <li>Cheatsheets de referencia rápida</li>
+                            </ul>
+                            <p>Los materiales son gratuitos para uso educativo personal.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="materiales">
+                        <div class="faq-question">
+                            <h3>¿Puedo utilizar los materiales en mis clases?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, puedes utilizar los materiales con fines educativos siempre que:</p>
+                            <ul>
+                                <li>No se utilicen con fines comerciales</li>
+                                <li>Se cite la fuente original</li>
+                                <li>No se modifique el contenido sustancialmente</li>
+                            </ul>
+                            <p>Para usos más allá del ámbito educativo personal, por favor <a href="contacto.html">contáctame</a> para obtener autorización.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="materiales">
+                        <div class="faq-question">
+                            <h3>¿Hay videos complementarios?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, tengo un canal de YouTube con videos complementarios para cada tema. Puedes encontrar enlaces directos en la sección de materiales o suscribirte directamente al canal desde el botón en la parte superior del sitio.</p>
+                            <p>Regularmente publico nuevos videos explicativos, tutoriales y resolución de ejercicios prácticos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Acceso -->
+                    <div class="faq-category-heading" id="acceso">
+                        <h2><i class="fas fa-lock-open"></i> Acceso</h2>
+                    </div>
+
+                    <div class="faq-item" data-category="acceso">
+                        <div class="faq-question">
+                            <h3>¿Es necesario registrarse?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, la mayoría del contenido está disponible sin necesidad de registro. Puedes acceder libremente a los cursos básicos, materiales y recursos.</p>
+                            <p>Sin embargo, para acceder a contenido premium, cursos avanzados o recibir certificaciones, puede ser necesario registrarse o contactarme directamente.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="acceso">
+                        <div class="faq-question">
+                            <h3>¿Hay un área de miembros?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Actualmente estoy desarrollando un área de miembros exclusiva donde encontrarás:</p>
+                            <ul>
+                                <li>Cursos avanzados y especializados</li>
+                                <li>Materiales exclusivos</li>
+                                <li>Foros de discusión</li>
+                                <li>Asesoramiento personalizado</li>
+                            </ul>
+                            <p>Puedes suscribirte al newsletter para recibir información cuando esta área esté disponible.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="acceso">
+                        <div class="faq-question">
+                            <h3>¿Ofrecen certificaciones oficiales?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, ofrezco certificaciones para los cursos completos que acreditan los conocimientos adquiridos. Estas certificaciones son reconocidas en el ámbito educativo y profesional.</p>
+                            <p>Para obtener una certificación, es necesario completar todos los módulos del curso y aprobar la evaluación final. Las certificaciones tienen un costo adicional que varía según el curso.</p>
+                        </div>
+                    </div>
+
+                    <!-- Soporte -->
+                    <div class="faq-category-heading" id="soporte">
+                        <h2><i class="fas fa-headset"></i> Soporte</h2>
+                    </div>
+
+                    <div class="faq-item" data-category="soporte">
+                        <div class="faq-question">
+                            <h3>¿Cómo contactar al profesor?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Puedes contactarme a través de diferentes canales:</p>
+                            <ul>
+                                <li>El <a href="contacto.html">formulario de contacto</a> en el sitio web</li>
+                                <li>Por correo electrónico a contacto@profematiasprestes.com.uy</li>
+                                <li>A través de WhatsApp al número disponible en la sección de contacto</li>
+                                <li>Por mis redes sociales oficiales</li>
+                            </ul>
+                            <p>Intento responder todas las consultas en un plazo máximo de 48 horas.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="soporte">
+                        <div class="faq-question">
+                            <h3>¿Ofrecen tutorías personalizadas?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, ofrezco tutorías personalizadas para estudiantes que necesiten un apoyo más directo en su aprendizaje. Las tutorías pueden ser:</p>
+                            <ul>
+                                <li>Individuales o en grupo reducido</li>
+                                <li>Enfocadas en temas específicos</li>
+                                <li>Orientadas a proyectos particulares</li>
+                            </ul>
+                            <p>Las sesiones se realizan por videoconferencia. Para más información sobre disponibilidad y tarifas, por favor <a href="contacto.html">contáctame</a>.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="soporte">
+                        <div class="faq-question">
+                            <h3>¿Hay foros de discusión para estudiantes?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Actualmente estoy implementando una comunidad de estudiantes donde podrás:</p>
+                            <ul>
+                                <li>Compartir dudas y soluciones</li>
+                                <li>Colaborar en proyectos</li>
+                                <li>Conectar con otros estudiantes</li>
+                                <li>Recibir feedback sobre tus avances</li>
+                            </ul>
+                            <p>Mientras tanto, puedes unirte a los grupos de discusión en mis redes sociales donde ya existe una comunidad activa.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact CTA -->
+                <div class="faq-cta" data-aos="fade-up">
+                    <h3>¿No encontraste la respuesta que buscabas?</h3>
+                    <p>Estoy aquí para ayudarte. No dudes en contactarme directamente con cualquier pregunta.</p>
+                    <a href="contacto.html" class="contact-btn">
+                        <span>Contactar ahora</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-decorations">
+            <div class="rotating-circle"></div>
+            <div class="rotating-circle"></div>
+            <div class="rotating-circle"></div>
+            <div class="bouncing-rocket">🚀</div>
+            <div class="pulsing-circle"></div>
+            <div class="pulsing-circle"></div>
+            <div class="spinning-laptop">💻</div>
+        </div>
+        
+        <div class="footer-grid">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="logofinal3.webp" alt="MP Logo">
+                    <div class="footer-logo-text">
+                        <span class="logo-title">Matías Prestes</span>
+                        <span class="logo-subtitle">Educación Digital</span>
+                    </div>
+                </div>
+                <p class="footer-description">Brindando recursos educativos de calidad para impulsar tu carrera en el mundo digital. Comprometidos con tu crecimiento profesional.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Accesos Directos</h3>
+                <ul class="footer-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="materias.html"><i class="fas fa-book"></i> Cursos</a></li>
+                    <li><a href="materiales.html"><i class="fas fa-file-alt"></i> Materiales</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="noticias.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Información Legal</h3>
+                <ul class="footer-menu">
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Política de Privacidad</a></li>
+                    <li><a href="#"><i class="fas fa-gavel"></i> Términos y Condiciones</a></li>
+                    <li><a href="#"><i class="fas fa-cookie"></i> Política de Cookies</a></li>
+                    <li><a href="#"><i class="fas fa-handshake"></i> Acuerdos de Licencia</a></li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i> Derechos de Autor</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column footer-newsletter">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p>Suscríbete para recibir actualizaciones, nuevos recursos y consejos exclusivos directamente en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="newsletter-button">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2024 Matías Prestes. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-legal">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/navfooter.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>

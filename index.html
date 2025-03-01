@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recursos y materiales educativos para tu crecimiento profesional">
+    <title>Matías Prestes - Educación Digital</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/navfooter.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/sobremi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="canonical" href="https://profemprestes.github.io/Desde0/">
+    <link rel="icon" href="img/logos/logofinal3.webp">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container" role="navigation">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-logo">
+                <img src="img/logos/logofinal3.webp" alt="MP Logo" width="40" height="40">
+                <div class="brand-text">
+                    <span class="brand-name">Matías Prestes</span>
+                    <span class="brand-tagline">Educación Digital</span>
+                </div>
+            </a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+            <li class="nav-item"><a href="materias.html" class="nav-link"><i class="fas fa-book"></i> Cursos</a></li>
+            <li class="nav-item"><a href="materiales.html" class="nav-link"><i class="fas fa-file-alt"></i> Materiales</a></li>
+            <li class="nav-item"><a href="faq.html" class="nav-link"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            <li class="nav-item"><a href="noticias.html" class="nav-link"><i class="fas fa-newspaper"></i> Noticias</a></li>
+            <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" target="_blank" class="cta-button"><i class="fab fa-youtube"></i> Suscríbete</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-background">
+                <div id="particles-js"></div>
+            </div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Domina la Tecnología del Futuro</h1>
+                    <p class="hero-subtitle">Aprende HTML, CSS, SQL, Robótica y más tecnologías que transformarán tu futuro. Recursos educativos diseñados para impulsar tu carrera digital.</p>
+                    <a href="#features" class="hero-cta" id="hero-cta-btn">
+                        <span>Explorar Recursos</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="img/logos/logofinal3.webp" alt="Matías Prestes" class="profile-image">
+                        <div class="tech-badge badge-html">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-badge badge-css">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-badge badge-sql">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="tech-badge badge-robotics">
+                            <i class="fas fa-robot"></i>
+                            <span>Robótica</span>
+                        </div>
+                        <div class="tech-badge badge-education">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Educación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-codes">
+                <pre class="code-snippet html-code">&lt;div class="container"&gt;
+  &lt;h1&gt;Aprende HTML&lt;/h1&gt;
+  &lt;p&gt;Estructura web&lt;/p&gt;
+&lt;/div&gt;</pre>
+                <pre class="code-snippet css-code">.container {
+  display: flex;
+  color: #4facfe;
+  animation: float 3s;
+}</pre>
+                <pre class="code-snippet sql-code">SELECT * 
+FROM students
+WHERE passion = 'technology'
+ORDER BY future DESC;</pre>
+            </div>
+            <div class="hero-scroll">
+                <a href="#features" class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow">
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Animated Banner Section -->
+        <section class="animated-banner">
+            <div class="banner-background">
+                <div class="animated-shape shape-1"></div>
+                <div class="animated-shape shape-2"></div>
+                <div class="animated-shape shape-3"></div>
+            </div>
+
+            <div class="banner-content">
+                <div class="banner-wrapper">
+                    <div class="banner-header aos-init visible aos-animate" data-aos="fade-up">
+                        <span class="banner-badge">🎓 ¡Cuenta regresiva!</span>
+                        <h2 class="countdown-title">¡Aguanten, que falta poco para la libertad! 🎉</h2>
+                        <p class="banner-subtitle">Tiempo restante para escapar... digo, para los exámenes 😅</p>
+                    </div>
+
+                    <div class="countdown-grid compact aos-init visible aos-animate" data-aos="fade-up">
+                        <div class="countdown-box" role="timer" aria-label="Días restantes">
+                            <div class="countdown-inner">
+                                <div id="days" class="countdown-value">277</div>
+                                <div class="countdown-label">Días de tortura</div>
+                            </div>
+                        </div>
+
+                        <div class="countdown-box" role="timer" aria-label="Horas restantes">
+                            <div class="countdown-inner">
+                                <div id="hours" class="countdown-value">00</div>
+                                <div class="countdown-label">Horas de sufrimiento</div>
+                            </div>
+                        </div>
+
+                        <div class="countdown-box" role="timer" aria-label="Minutos restantes">
+                            <div class="countdown-inner">
+                                <div id="minutes" class="countdown-value">27</div>
+                                <div class="countdown-label">Minutos de agonía</div>
+                            </div>
+                        </div>
+
+                        <div class="countdown-box" role="timer" aria-label="Segundos restantes">
+                            <div class="countdown-inner">
+                                <div id="seconds" class="countdown-value">52</div>
+                                <div class="countdown-label">Segundos eternos</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="banner-actions compact aos-init visible aos-animate" data-aos="fade-up" data-aos-delay="500">
+                        <a href="materiales.html" class="banner-btn primary">
+                            <span>Mientras tanto, estudia un poco</span>
+                            <span class="emoji">😭</span>
+                        </a>
+                        <a href="#" class="banner-btn secondary">
+                            <span>Sobrevivamos juntos</span>
+                            <span class="emoji">🤝</span>
+                        </a>
+                    </div>
+
+                    <p class="banner-footer-text aos-init aos-animate visible" data-aos="fade-up" data-aos-delay="600">
+                        * Los resultados pueden variar. No nos hacemos responsables por crisis existenciales durante el estudio 🤪
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Mí Section -->
+        <section class="sobremi-section" id="sobremi">
+            <div class="sobremi-background">
+                <div class="decoration-shape shape-1"></div>
+                <div class="decoration-shape shape-2"></div>
+                <div class="decoration-shape shape-3"></div>
+            </div>
+            
+            <div class="sobremi-container">
+                <div class="sobremi-header" data-aos="fade-up">
+                    <h2>Sobre Mí</h2>
+                    <p>Transformando la educación tecnológica con pasión y experiencia</p>
+                </div>
+                
+                <div class="sobremi-content">
+                    <div class="profile-section" data-aos="fade-right">
+                        <div class="profile-container">
+                            <img src="img/img/FotoPerfilMatias.webp" alt="Matías Prestes" class="profile-image">
+                            <div class="profile-overlay">
+                                <h3>Matías Prestes</h3>
+                                <p>Profesor de Informática y Tecnología</p>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-badge">
+                            <i class="fas fa-award"></i>
+                            <span>+10 años de experiencia</span>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" target="_blank" class="social-btn youtube">
+                                <i class="fab fa-youtube"></i>
+                                <span>Canal YouTube</span>
+                                <span class="tooltip">Tutoriales y recursos educativos</span>
+                            </a>
+                            <a href="https://uy.linkedin.com/in/mprestestecnologia" target="_blank" class="social-btn linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                                <span class="tooltip">Conéctate profesionalmente</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bio-section" data-aos="fade-left">
+                        <div class="bio-text">
+                            <p>Apasionado por la educación y la tecnología, me he dedicado más de una década a la enseñanza en <strong>UTU y Secundaria</strong>, formando estudiantes en el fascinante mundo de la informática.</p>
+                            
+                            <p>Mi enfoque educativo se centra en desarrollar habilidades prácticas y pensamiento crítico. Especializado en <strong>programación, bases de datos y robótica</strong>, busco siempre conectar los conceptos teóricos con aplicaciones del mundo real.</p>
+                            
+                            <p>A lo largo de mi trayectoria, he desarrollado metodologías innovadoras para hacer que temas técnicos sean accesibles para todos los niveles de aprendizaje. Creo firmemente que la <strong>tecnología debe ser inclusiva</strong> y que todos pueden aprender a dominarla con el enfoque adecuado.</p>
+                            
+                            <p>Mi objetivo es inspirar a la próxima generación de profesionales de la tecnología, proporcionándoles las herramientas y conocimientos necesarios para destacar en un mundo digital en constante evolución.</p>
+                        </div>
+                        
+                        <div class="skills-container">
+                            <h3>Mis Habilidades</h3>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Bases de datos y SQL</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-value" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Programación</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-value" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Robótica y educación tecnológica</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-value" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Capacitación y docencia</span>
+                                    <span class="skill-percentage">98%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-value" style="width: 98%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Section -->
+        <section class="features-section" id="features">
+            <h2>Recursos Destacados</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Cursos Online</h3>
+                    <p>Aprende a tu ritmo con nuestros cursos estructurados para todos los niveles.</p>
+                    <a href="#" class="feature-link">Ver Cursos <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Materiales Descargables</h3>
+                    <p>Guías, plantillas y recursos prácticos para complementar tu aprendizaje.</p>
+                    <a href="#" class="feature-link">Descargar <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Comunidad</h3>
+                    <p>Conecta con otros estudiantes y profesionales para compartir conocimientos.</p>
+                    <a href="#" class="feature-link">Unirse <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portales Oficiales Section -->
+        <section class="portales-section" id="portales">
+            <div class="portales-container">
+                <div class="portales-header" data-aos="fade-up">
+                    <h2>Portales Oficiales</h2>
+                    <p>Accede a las plataformas educativas oficiales para gestionar tu vida académica</p>
+                </div>
+
+                <div class="portales-grid">
+                    <!-- UTU Portal Card -->
+                    <div class="portal-card" data-aos="fade-up">
+                        <div class="portal-header">
+                            <div class="portal-logo">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <span class="portal-badge">Portal Oficial</span>
+                        </div>
+                        
+                        <h3 class="portal-title">Portal UTU</h3>
+                        <p class="portal-description">Gestiona toda tu información académica, accede a horarios y recursos en la plataforma oficial de UTU.</p>
+                        
+                        <div class="portal-features">
+                            <div class="feature-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>Calendario académico</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-book-open"></i>
+                                <span>Materiales de estudio</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Horarios de clase</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Consulta de calificaciones</span>
+                            </div>
+                        </div>
+                        
+                        <div class="portal-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">90k+</span>
+                                <span class="stat-label">Estudiantes</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">200+</span>
+                                <span class="stat-label">Cursos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">120+</span>
+                                <span class="stat-label">Centros</span>
+                            </div>
+                        </div>
+                        
+                        <a href="https://www.utu.edu.uy/estudiantes" target="_blank" class="portal-btn">
+                            <span>Acceder al portal</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Secundaria Portal Card -->
+                    <div class="portal-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portal-header">
+                            <div class="portal-logo">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <span class="portal-badge">Portal Oficial</span>
+                        </div>
+                        
+                        <h3 class="portal-title">Portal Secundaria</h3>
+                        <p class="portal-description">Administra tus estudios, consulta calificaciones y accede a la información académica oficial de Secundaria.</p>
+                        
+                        <div class="portal-features">
+                            <div class="feature-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>Historial académico</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-clipboard-check"></i>
+                                <span>Calificaciones en línea</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bullhorn"></i>
+                                <span>Comunicados oficiales</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-id-card"></i>
+                                <span>Carné estudiantil</span>
+                            </div>
+                        </div>
+                        
+                        <div class="portal-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">250k+</span>
+                                <span class="stat-label">Estudiantes</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">300+</span>
+                                <span class="stat-label">Liceos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">150+</span>
+                                <span class="stat-label">Materias</span>
+                            </div>
+                        </div>
+                        
+                        <a href="https://www.dges.edu.uy/estudiantes" target="_blank" class="portal-btn">
+                            <span>Acceder al portal</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Ceibal Portal Card -->
+                    <div class="portal-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="portal-header">
+                            <div class="portal-logo">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <span class="portal-badge">Soporte Técnico</span>
+                        </div>
+                        
+                        <h3 class="portal-title">Soporte Ceibal</h3>
+                        <p class="portal-description">Recursos digitales, plataformas educativas y soporte técnico para equipos y servicios del Plan Ceibal.</p>
+                        
+                        <div class="portal-features">
+                            <div class="feature-item">
+                                <i class="fas fa-tools"></i>
+                                <span>Soporte técnico</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span>Plataformas educativas</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-book"></i>
+                                <span>Biblioteca digital</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-video"></i>
+                                <span>Tutoriales en video</span>
+                            </div>
+                        </div>
+                        
+                        <div class="portal-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">700k+</span>
+                                <span class="stat-label">Dispositivos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">15+</span>
+                                <span class="stat-label">Plataformas</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">24/7</span>
+                                <span class="stat-label">Soporte</span>
+                            </div>
+                        </div>
+                        
+                        <a href="https://ceibal.edu.uy/ayuda/soporte-de-plataformas" target="_blank" class="portal-btn">
+                            <span>Acceder al soporte</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-decorations">
+            <div class="rotating-circle"></div>
+            <div class="rotating-circle"></div>
+            <div class="rotating-circle"></div>
+            <div class="bouncing-rocket">🚀</div>
+            <div class="pulsing-circle"></div>
+            <div class="pulsing-circle"></div>
+            <div class="spinning-laptop">💻</div>
+        </div>
+        
+        <div class="footer-grid">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="img/logos/logofinal3.webp" alt="MP Logo">
+                    <div class="footer-logo-text">
+                        <span class="logo-title">Matías Prestes</span>
+                        <span class="logo-subtitle">Educación Digital</span>
+                    </div>
+                </div>
+                <p class="footer-description">Brindando recursos educativos de calidad para impulsar tu carrera en el mundo digital. Comprometidos con tu crecimiento profesional.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://uy.linkedin.com/in/mprestestecnologia" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Accesos Directos</h3>
+                <ul class="footer-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="materias.html"><i class="fas fa-book"></i> Cursos</a></li>
+                    <li><a href="materiales.html"><i class="fas fa-file-alt"></i> Materiales</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="noticias.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Información Legal</h3>
+                <ul class="footer-menu">
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Política de Privacidad</a></li>
+                    <li><a href="#"><i class="fas fa-gavel"></i> Términos y Condiciones</a></li>
+                    <li><a href="#"><i class="fas fa-cookie"></i> Política de Cookies</a></li>
+                    <li><a href="#"><i class="fas fa-handshake"></i> Acuerdos de Licencia</a></li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i> Derechos de Autor</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column footer-newsletter">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p>Suscríbete para recibir actualizaciones, nuevos recursos y consejos exclusivos directamente en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="newsletter-button">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2024 Matías Prestes. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-legal">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/navfooter.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/banner.js"></script>
+    <script src="js/sobremi.js"></script>
+</body>
+</html>

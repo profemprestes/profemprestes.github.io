@@ -1,0 +1,415 @@
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0a1128 0%, #1c2e4a 100%);
+    z-index: -2;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 550px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards 0.3s;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #e0e0e0;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(79, 172, 254, 0.3);
+    transform: translateY(0);
+}
+
+.hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(79, 172, 254, 0.4);
+    background: linear-gradient(135deg, #4facfe, #00c8fe);
+}
+
+.hero-cta:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(79, 172, 254, 0.4);
+}
+
+.hero-cta i {
+    transition: transform 0.3s ease;
+}
+
+.hero-cta:hover i {
+    transform: translateX(5px);
+}
+
+.hero-image {
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards 0.6s;
+}
+
+.image-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image:hover .profile-image {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.tech-badge {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 2;
+    opacity: 0;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-html {
+    top: -20px;
+    right: -20px;
+    background: linear-gradient(135deg, rgba(228, 77, 38, 0.9), rgba(241, 101, 41, 0.8));
+    animation: fadeIn 0.5s ease forwards 1.2s, float 5s ease-in-out infinite;
+}
+
+.badge-css {
+    bottom: 40px;
+    left: -30px;
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.9), rgba(41, 173, 255, 0.8));
+    animation: fadeIn 0.5s ease forwards 1.5s, float 5s ease-in-out infinite 0.5s;
+}
+
+.badge-sql {
+    bottom: -20px;
+    right: 30px;
+    background: linear-gradient(135deg, rgba(0, 120, 215, 0.9), rgba(0, 156, 240, 0.8));
+    animation: fadeIn 0.5s ease forwards 1.8s, float 5s ease-in-out infinite 1s;
+}
+
+.badge-robotics {
+    top: 30px;
+    left: -40px;
+    background: linear-gradient(135deg, rgba(103, 58, 183, 0.9), rgba(142, 68, 255, 0.8));
+    animation: fadeIn 0.5s ease forwards 2.1s, float 5s ease-in-out infinite 1.5s;
+}
+
+.badge-education {
+    top: 60px;
+    right: -30px;
+    background: linear-gradient(135deg, rgba(0, 150, 136, 0.9), rgba(0, 188, 170, 0.8));
+    animation: fadeIn 0.5s ease forwards 2.4s, float 5s ease-in-out infinite 2s;
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 2s;
+}
+
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.scroll-indicator:hover {
+    color: #4facfe;
+}
+
+.mouse {
+    width: 26px;
+    height: 40px;
+    border: 2px solid currentColor;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background-color: currentColor;
+    border-radius: 2px;
+    animation: scrollWheel 2s ease infinite;
+    position: absolute;
+    top: 6px;
+}
+
+.arrow {
+    margin-top: 10px;
+}
+
+.arrow span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    animation: scrollArrow 2s infinite;
+    margin: 0 auto;
+}
+
+.floating-codes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.code-snippet {
+    position: absolute;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.15);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.html-code {
+    top: 20%;
+    left: 10%;
+    animation: fadeCodeIn 0.5s ease forwards 2.7s, floatCode 20s linear infinite;
+}
+
+.css-code {
+    bottom: 15%;
+    right: 10%;
+    animation: fadeCodeIn 0.5s ease forwards 3s, floatCode 20s linear infinite reverse;
+}
+
+.sql-code {
+    top: 15%;
+    right: 15%;
+    animation: fadeCodeIn 0.5s ease forwards 3.3s, floatCode 20s linear infinite 5s;
+}
+
+@keyframes scrollWheel {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+}
+
+@keyframes scrollArrow {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeCodeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatCode {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px) translateX(5px);
+    }
+    50% {
+        transform: translateY(0) translateX(10px);
+    }
+    75% {
+        transform: translateY(10px) translateX(5px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .hero-content {
+        margin-bottom: 3rem;
+    }
+    
+    .hero-title {
+        font-size: 2.75rem;
+    }
+    
+    .image-container {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .badge-css {
+        left: 0;
+    }
+    
+    .badge-robotics {
+        left: -20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 6rem 0 4rem;
+    }
+    
+    .hero-title {
+        font-size: 2.25rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .image-container {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .tech-badge {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .hero-scroll {
+        display: none;
+    }
+    
+    .code-snippet {
+        display: none;
+    }
+}

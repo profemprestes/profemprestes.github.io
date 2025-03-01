@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Últimas noticias y novedades sobre cursos, eventos y tecnología educativa de Matías Prestes">
+    <title>Noticias - Matías Prestes</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/navfooter.css">
+    <link rel="stylesheet" href="css/noticias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container" role="navigation">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-logo">
+                <img src="logofinal3.webp" alt="MP Logo" width="40" height="40">
+                <div class="brand-text">
+                    <span class="brand-name">Matías Prestes</span>
+                    <span class="brand-tagline">Educación Digital</span>
+                </div>
+            </a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+            <li class="nav-item"><a href="materias.html" class="nav-link"><i class="fas fa-book"></i> Cursos</a></li>
+            <li class="nav-item"><a href="materiales.html" class="nav-link"><i class="fas fa-file-alt"></i> Materiales</a></li>
+            <li class="nav-item"><a href="faq.html" class="nav-link"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            <li class="nav-item"><a href="noticias.html" class="nav-link active"><i class="fas fa-newspaper"></i> Noticias</a></li>
+            <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="https://youtube.com" target="_blank" class="cta-button"><i class="fab fa-youtube"></i> Suscríbete</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-noticias">
+            <div class="hero-background">
+                <div id="particles-js"></div>
+            </div>
+            <div class="hero-container">
+                <h1>Últimas Noticias y Novedades</h1>
+                <p class="hero-subtitle">Mantente al día con las actualizaciones sobre cursos, eventos y tecnología educativa</p>
+                <div class="hero-decorations">
+                    <div class="floating-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="floating-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="floating-icon">
+                        <i class="fas fa-rss"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Noticias Content Section -->
+        <section class="noticias-section">
+            <div class="noticias-container">
+                <!-- Noticias Search and Filter -->
+                <div class="noticias-filter-container" data-aos="fade-up">
+                    <div class="search-wrapper">
+                        <input type="text" id="noticiasSearch" class="noticias-search" placeholder="Buscar noticias..." aria-label="Buscar noticias">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div class="noticias-tags">
+                        <button class="tag-btn active" data-tag="all">Todas</button>
+                        <button class="tag-btn" data-tag="cursos">Cursos</button>
+                        <button class="tag-btn" data-tag="eventos">Eventos</button>
+                        <button class="tag-btn" data-tag="tecnologia">Tecnología</button>
+                        <button class="tag-btn" data-tag="recursos">Recursos</button>
+                    </div>
+                </div>
+
+                <div id="noResults" class="no-results" style="display: none;" data-aos="fade-up">
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>No se encontraron resultados</h3>
+                        <p>Intenta con otros términos o navegue por las categorías</p>
+                    </div>
+                </div>
+                
+                <!-- Noticias Grid -->
+                <div class="noticias-grid" id="noticiasGrid">
+                    <!-- Noticia 1 -->
+                    <article class="noticia-card" data-aos="fade-up" data-tags="cursos">
+                        <div class="noticia-image">
+                            <img src="https://via.placeholder.com/600x350?text=SQL+Avanzado" alt="Curso de SQL Avanzado">
+                            <span class="noticia-tag">Cursos</span>
+                        </div>
+                        <div class="noticia-content">
+                            <div class="noticia-fecha">
+                                <i class="far fa-calendar-alt"></i>
+                                15 de Mayo, 2024
+                            </div>
+                            <h2 class="noticia-titulo">Nuevo curso de SQL avanzado disponible</h2>
+                            <p class="noticia-resumen">Aprende consultas complejas, optimización de bases de datos y administración de sistemas SQL con nuestro nuevo curso avanzado. Diseñado para profesionales que quieren llevar sus habilidades al siguiente nivel.</p>
+                            <div class="noticia-footer">
+                                <a href="#" class="noticia-btn">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="noticia-stats">
+                                    <span><i class="far fa-eye"></i> 243</span>
+                                    <span><i class="far fa-comment"></i> 18</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Noticia 2 -->
+                    <article class="noticia-card" data-aos="fade-up" data-aos-delay="100" data-tags="eventos">
+                        <div class="noticia-image">
+                            <img src="https://via.placeholder.com/600x350?text=IA+en+Educacion" alt="Conferencia sobre IA en Educación">
+                            <span class="noticia-tag">Eventos</span>
+                        </div>
+                        <div class="noticia-content">
+                            <div class="noticia-fecha">
+                                <i class="far fa-calendar-alt"></i>
+                                10 de Mayo, 2024
+                            </div>
+                            <h2 class="noticia-titulo">Conferencia sobre inteligencia artificial en educación</h2>
+                            <p class="noticia-resumen">Participa en nuestra próxima conferencia donde exploraremos cómo la inteligencia artificial está transformando la educación. Contaremos con expertos internacionales y demostraciones prácticas de tecnologías emergentes.</p>
+                            <div class="noticia-footer">
+                                <a href="#" class="noticia-btn">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="noticia-stats">
+                                    <span><i class="far fa-eye"></i> 187</span>
+                                    <span><i class="far fa-comment"></i> 24</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Noticia 3 -->
+                    <article class="noticia-card" data-aos="fade-up" data-aos-delay="200" data-tags="recursos">
+                        <div class="noticia-image">
+                            <img src="https://via.placeholder.com/600x350?text=Nuevos+Materiales" alt="Actualización de materiales">
+                            <span class="noticia-tag">Recursos</span>
+                        </div>
+                        <div class="noticia-content">
+                            <div class="noticia-fecha">
+                                <i class="far fa-calendar-alt"></i>
+                                5 de Mayo, 2024
+                            </div>
+                            <h2 class="noticia-titulo">Actualización de la plataforma con nuevos materiales</h2>
+                            <p class="noticia-resumen">Hemos añadido nuevos recursos descargables, guías de estudio y ejercicios prácticos para todos nuestros cursos. Estos materiales han sido diseñados para reforzar el aprendizaje y dar soporte continuo a los estudiantes.</p>
+                            <div class="noticia-footer">
+                                <a href="#" class="noticia-btn">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="noticia-stats">
+                                    <span><i class="far fa-eye"></i> 156</span>
+                                    <span><i class="far fa-comment"></i> 9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Noticia 4 -->
+                    <article class="noticia-card" data-aos="fade-up" data-tags="tecnologia">
+                        <div class="noticia-image">
+                            <img src="https://via.placeholder.com/600x350?text=Python+Data+Science" alt="Python para Data Science">
+                            <span class="noticia-tag">Tecnología</span>
+                        </div>
+                        <div class="noticia-content">
+                            <div class="noticia-fecha">
+                                <i class="far fa-calendar-alt"></i>
+                                28 de Abril, 2024
+                            </div>
+                            <h2 class="noticia-titulo">Python: La herramienta esencial para Data Science</h2>
+                            <p class="noticia-resumen">Descubre por qué Python se ha convertido en el lenguaje favorito para ciencia de datos y machine learning. Analizamos las bibliotecas más importantes y cómo puedes comenzar tu carrera en este campo prometedor.</p>
+                            <div class="noticia-footer">
+                                <a href="#" class="noticia-btn">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="noticia-stats">
+                                    <span><i class="far fa-eye"></i> 312</span>
+                                    <span><i class="far fa-comment"></i> 31</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Noticia 5 -->
+                    <article class="noticia-card" data-aos="fade-up" data-aos-delay="100" data-tags="cursos">
+                        <div class="noticia-image">
+                            <img src="https://via.placeholder.com/600x350?text=JavaScript+Frontend" alt="JavaScript Frontend">
+                            <span class="noticia-tag">Cursos</span>
+                        </div>
+                        <div class="noticia-content">
+                            <div class="noticia-fecha">
+                                <i class="far fa-calendar-alt"></i>
+                                20 de Abril, 2024
+                            </div>
+                            <h2 class="noticia-titulo">JavaScript Frontend: Domina el desarrollo web moderno</h2>
+                            <p class="noticia-resumen">Lanzamos un nuevo curso sobre JavaScript para frontend que abarca desde los fundamentos hasta frameworks modernos como React y Vue. Aprende a crear interfaces interactivas y aplicaciones web dinámicas.</p>
+                            <div class="noticia-footer">
+                                <a href="#" class="noticia-btn">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="noticia-stats">
+                                    <span><i class="far fa-eye"></i> 278</span>
+                                    <span><i class="far fa-comment"></i> 22</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Noticia 6 -->
+                    <article class="noticia-card" data-aos="fade-up" data-aos-delay="200" data-tags="eventos">
+                        <div class="noticia-image">
+                            <img src="https://via.placeholder.com/600x350?text=Taller+Web+Design" alt="Taller de Diseño Web">
+                            <span class="noticia-tag">Eventos</span>
+                        </div>
+                        <div class="noticia-content">
+                            <div class="noticia-fecha">
+                                <i class="far fa-calendar-alt"></i>
+                                15 de Abril, 2024
+                            </div>
+                            <h2 class="noticia-titulo">Taller presencial de diseño web responsivo</h2>
+                            <p class="noticia-resumen">Únete a nuestro taller práctico donde aprenderás las mejores prácticas de diseño web adaptable. Trabajaremos con las últimas tecnologías de CSS y frameworks modernos para crear sitios que se vean perfectos en cualquier dispositivo.</p>
+                            <div class="noticia-footer">
+                                <a href="#" class="noticia-btn">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="noticia-stats">
+                                    <span><i class="far fa-eye"></i> 201</span>
+                                    <span><i class="far fa-comment"></i> 17</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Paginación -->
+                <div class="noticias-pagination" data-aos="fade-up">
+                    <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <span class="pagination-dots">...</span>
+                    <button class="pagination-btn">8</button>
+                    <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                
+                <!-- Subscription Section -->
+                <div class="suscripcion-container" data-aos="fade-up">
+                    <div class="suscripcion-content">
+                        <div class="suscripcion-text">
+                            <h2>Recibe las últimas novedades</h2>
+                            <p>Recibirás actualizaciones sobre nuevos cursos, materiales y noticias educativas.</p>
+                        </div>
+                        <form class="suscripcion-form">
+                            <div class="suscripcion-form-group">
+                                <input type="email" placeholder="Tu correo electrónico" required>
+                                <button type="submit">Suscribirse</button>
+                            </div>
+                            <div class="suscripcion-message"></div>
+                        </form>
+                    </div>
+                    <div class="rss-container">
+                        <div class="rss-content">
+                            <h3>Mantente informado con nuestro RSS</h3>
+                            <p>Agrega este feed a tu lector RSS favorito para estar siempre informado.</p>
+                            <a href="noticias.xml" class="rss-link">
+                                <span class="rss-icon"><i class="fas fa-rss"></i></span>
+                                <span>Suscríbete a nuestro RSS</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-decorations">
+            <div class="rotating-circle"></div>
+            <div class="rotating-circle"></div>
+            <div class="rotating-circle"></div>
+            <div class="bouncing-rocket">🚀</div>
+            <div class="pulsing-circle"></div>
+            <div class="pulsing-circle"></div>
+            <div class="spinning-laptop">💻</div>
+        </div>
+        
+        <div class="footer-grid">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="logofinal3.webp" alt="MP Logo">
+                    <div class="footer-logo-text">
+                        <span class="logo-title">Matías Prestes</span>
+                        <span class="logo-subtitle">Educación Digital</span>
+                    </div>
+                </div>
+                <p class="footer-description">Brindando recursos educativos de calidad para impulsar tu carrera en el mundo digital. Comprometidos con tu crecimiento profesional.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Accesos Directos</h3>
+                <ul class="footer-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="materias.html"><i class="fas fa-book"></i> Cursos</a></li>
+                    <li><a href="materiales.html"><i class="fas fa-file-alt"></i> Materiales</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="noticias.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Información Legal</h3>
+                <ul class="footer-menu">
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Política de Privacidad</a></li>
+                    <li><a href="#"><i class="fas fa-gavel"></i> Términos y Condiciones</a></li>
+                    <li><a href="#"><i class="fas fa-cookie"></i> Política de Cookies</a></li>
+                    <li><a href="#"><i class="fas fa-handshake"></i> Acuerdos de Licencia</a></li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i> Derechos de Autor</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column footer-newsletter">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p>Suscríbete para recibir actualizaciones, nuevos recursos y consejos exclusivos directamente en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="newsletter-button">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2024 Matías Prestes. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-legal">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/navfooter.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/noticias.js"></script>
+</body>
+</html>

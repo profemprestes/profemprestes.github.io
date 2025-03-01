@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curso detallado de HTML5 para principiantes y desarrolladores web - Matías Prestes">
+    <title>Curso de HTML5 - Matías Prestes</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/navfooter.css">
+    <link rel="stylesheet" href="css/html5detalle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container" role="navigation">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-logo">
+                <img src="logofinal3.webp" alt="MP Logo" width="40" height="40">
+                <div class="brand-text">
+                    <span class="brand-name">Matías Prestes</span>
+                    <span class="brand-tagline">Educación Digital</span>
+                </div>
+            </a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+            <li class="nav-item"><a href="materias.html" class="nav-link active"><i class="fas fa-book"></i> Cursos</a></li>
+            <li class="nav-item"><a href="materiales.html" class="nav-link"><i class="fas fa-file-alt"></i> Materiales</a></li>
+            <li class="nav-item"><a href="faq.html" class="nav-link"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            <li class="nav-item"><a href="noticias.html" class="nav-link"><i class="fas fa-newspaper"></i> Noticias</a></li>
+            <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="https://youtube.com" target="_blank" class="cta-button"><i class="fab fa-youtube"></i> Suscríbete</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Course Hero Banner -->
+        <section class="curso-hero">
+            <div class="curso-hero-bg"></div>
+            <div class="curso-hero-icon">
+                <i class="fab fa-html5"></i>
+            </div>
+            <div class="curso-container">
+                <div class="volver-btn" id="volverBtn">
+                    <i class="fas fa-arrow-left"></i> Volver a Materias
+                </div>
+                <h1>Curso de HTML5: Domina el lenguaje fundamental para la web</h1>
+                <h2>Aprende la estructura semántica, formularios avanzados y multimedia</h2>
+                
+                <div class="curso-metadata">
+                    <div class="metadata-item">
+                        <i class="far fa-clock"></i>
+                        <span>⏳ Duración: 4 semanas</span>
+                    </div>
+                    <div class="metadata-item">
+                        <i class="fas fa-signal"></i>
+                        <span>🟢 Nivel: Principiante</span>
+                    </div>
+                    <div class="metadata-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Certificación disponible</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="toc-section">
+            <div class="curso-container">
+                <div class="toc-container">
+                    <h3>Contenido del curso</h3>
+                    <ul class="toc-list">
+                        <li><a href="#introduccion" class="active"><i class="fas fa-book-open"></i> Introducción a HTML5</a></li>
+                        <li><a href="#estructura"><i class="fas fa-sitemap"></i> Estructura Semántica</a></li>
+                        <li><a href="#formularios"><i class="fas fa-clipboard-list"></i> Formularios Avanzados</a></li>
+                        <li><a href="#multimedia"><i class="fas fa-film"></i> Multimedia en HTML5</a></li>
+                        <li><a href="#recursos"><i class="fas fa-external-link-alt"></i> Recursos Adicionales</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Content -->
+        <section class="curso-content">
+            <div class="curso-container">
+                <!-- Introduction Section -->
+                <section id="introduccion" class="content-section" data-aos="fade-up">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h2>1️⃣ Introducción a HTML5 📖</h2>
+                    </div>
+                    
+                    <div class="section-content">
+                        <p>HTML5 es la quinta revisión importante del lenguaje básico de la World Wide Web. Publicado en octubre de 2014, HTML5 incorpora características nuevas y mejoras significativas respecto a su predecesor HTML4.</p>
+                        
+                        <div class="info-card">
+                            <h3><i class="fas fa-info-circle"></i> ¿Por qué HTML5?</h3>
+                            <ul>
+                                <li><strong>Semántica mejorada:</strong> Nuevas etiquetas que dan mayor significado a las secciones del documento.</li>
+                                <li><strong>Compatibilidad móvil:</strong> Diseñado teniendo en cuenta dispositivos móviles y tablets.</li>
+                                <li><strong>Gráficos y multimedia:</strong> Soporte nativo para contenido multimedia sin plugins.</li>
+                                <li><strong>Rendimiento mejorado:</strong> Mejoras en el almacenamiento y la conectividad.</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>Estructura básica de un documento HTML5</h3>
+                        <p>Todo documento HTML5 comienza con la declaración <code>&lt;!DOCTYPE html&gt;</code> que indica al navegador que estamos utilizando HTML5.</p>
+                        
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Estructura básica HTML5</span>
+                                <div class="code-actions">
+                                    <button class="btn-copy" data-target="codigo-basico"><i class="far fa-copy"></i> Copiar</button>
+                                    <button class="btn-edit" data-target="codigo-basico"><i class="far fa-edit"></i> Editar</button>
+                                </div>
+                            </div>
+                            <pre><code class="language-html" id="codigo-basico">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mi primera página HTML5&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Bienvenido a HTML5&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;p&gt;HTML5 es el estándar moderno para el desarrollo web.&lt;/p&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                        
+                        <div class="live-preview">
+                            <h4><i class="fas fa-desktop"></i> Vista previa</h4>
+                            <div class="preview-container">
+                                <h1 style="color:#333; font-size:1.5rem; margin-bottom:0.5rem;">Bienvenido a HTML5</h1>
+                                <p style="color:#666;">HTML5 es el estándar moderno para el desarrollo web.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Semantic Structure Section -->
+                <section id="estructura" class="content-section" data-aos="fade-up">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h2>2️⃣ Estructura Semántica 🏗️</h2>
+                    </div>
+                    
+                    <div class="section-content">
+                        <p>Una de las mayores innovaciones de HTML5 es la introducción de elementos semánticos que describen claramente su significado tanto para el navegador como para el desarrollador.</p>
+                        
+                        <div class="semantic-elements">
+                            <div class="semantic-item">
+                                <h3>&lt;header&gt;</h3>
+                                <p>Define la cabecera de un documento o sección. Típicamente contiene el logotipo, título y navegación principal.</p>
+                            </div>
+                            <div class="semantic-item">
+                                <h3>&lt;nav&gt;</h3>
+                                <p>Define una sección diseñada para contener enlaces de navegación principales.</p>
+                            </div>
+                            <div class="semantic-item">
+                                <h3>&lt;main&gt;</h3>
+                                <p>Especifica el contenido principal del documento. Solo debe existir uno por página.</p>
+                            </div>
+                            <div class="semantic-item">
+                                <h3>&lt;article&gt;</h3>
+                                <p>Define contenido independiente y autónomo que podría distribuirse por separado.</p>
+                            </div>
+                            <div class="semantic-item">
+                                <h3>&lt;section&gt;</h3>
+                                <p>Define una sección temática dentro del documento (capítulos, pestañas, etc).</p>
+                            </div>
+                            <div class="semantic-item">
+                                <h3>&lt;aside&gt;</h3>
+                                <p>Define contenido indirectamente relacionado con el contenido principal (barras laterales).</p>
+                            </div>
+                            <div class="semantic-item">
+                                <h3>&lt;footer&gt;</h3>
+                                <p>Define el pie de página de un documento o sección.</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Ejemplo de estructura semántica</h3>
+                        <p>Veamos un ejemplo completo que utiliza etiquetas semánticas para estructurar una página web:</p>
+                        
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Estructura semántica completa</span>
+                                <div class="code-actions">
+                                    <button class="btn-copy" data-target="codigo-semantico"><i class="far fa-copy"></i> Copiar</button>
+                                    <button class="btn-edit" data-target="codigo-semantico"><i class="far fa-edit"></i> Editar</button>
+                                </div>
+                            </div>
+                            <pre><code class="language-html" id="codigo-semantico">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Blog de Tecnología&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Blog de Tecnología&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Artículos&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;header&gt;
+                &lt;h2&gt;Inteligencia Artificial en 2024&lt;/h2&gt;
+                &lt;time datetime="2024-05-20"&gt;Publicado: 20 de Mayo, 2024&lt;/time&gt;
+            &lt;/header&gt;
+            
+            &lt;section&gt;
+                &lt;h3&gt;Introducción a la IA&lt;/h3&gt;
+                &lt;p&gt;La inteligencia artificial ha avanzado significativamente...&lt;/p&gt;
+            &lt;/section&gt;
+            
+            &lt;section&gt;
+                &lt;h3&gt;Aplicaciones actuales&lt;/h3&gt;
+                &lt;p&gt;Actualmente la IA se utiliza en diversos campos...&lt;/p&gt;
+            &lt;/section&gt;
+            
+            &lt;footer&gt;
+                &lt;p&gt;Autor: Juan Pérez&lt;/p&gt;
+            &lt;/footer&gt;
+        &lt;/article&gt;
+        
+        &lt;aside&gt;
+            &lt;h3&gt;Artículos relacionados&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Machine Learning en 2024&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;El futuro de la automatización&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;© 2024 Blog de Tecnología. Todos los derechos reservados.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                        
+                        <div class="semantic-diagram">
+                            <h4>Diagrama de estructura HTML5</h4>
+                            <div class="diagram-container">
+                                <div class="diagram-box header-box">
+                                    <div class="label">header</div>
+                                    <div class="inner-box">
+                                        <div>h1: Blog de Tecnología</div>
+                                        <div class="nav-box">
+                                            <div class="label">nav</div>
+                                            <div>Enlaces de navegación</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="diagram-box main-box">
+                                    <div class="label">main</div>
+                                    <div class="inner-container">
+                                        <div class="article-box">
+                                            <div class="label">article</div>
+                                            <div class="inner-article">
+                                                <div class="section-box">
+                                                    <div class="label">header</div>
+                                                    <div>h2: Título de artículo</div>
+                                                </div>
+                                                <div class="section-box">
+                                                    <div class="label">section</div>
+                                                    <div>Contenido de sección</div>
+                                                </div>
+                                                <div class="section-box">
+                                                    <div class="label">footer</div>
+                                                    <div>Información de autor</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="aside-box">
+                                            <div class="label">aside</div>
+                                            <div>Contenido relacionado</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="diagram-box footer-box">
+                                    <div class="label">footer</div>
+                                    <div>Información de copyright</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Advanced Forms Section -->
+                <section id="formularios" class="content-section" data-aos="fade-up">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h2>3️⃣ Formularios Avanzados 📝</h2>
+                    </div>
+                    
+                    <div class="section-content">
+                        <p>HTML5 introdujo numerosas mejoras en la gestión de formularios, incluyendo nuevos tipos de input, validación nativa y atributos funcionales.</p>
+                        
+                        <h3>Nuevos tipos de input</h3>
+                        <div class="input-types-grid">
+                            <div class="input-type">
+                                <h4>email</h4>
+                                <input type="email" placeholder="correo@ejemplo.com" class="demo-input">
+                                <code>&lt;input type="email"&gt;</code>
+                            </div>
+                            <div class="input-type">
+                                <h4>number</h4>
+                                <input type="number" min="0" max="100" value="50" class="demo-input">
+                                <code>&lt;input type="number"&gt;</code>
+                            </div>
+                            <div class="input-type">
+                                <h4>range</h4>
+                                <input type="range" min="0" max="100" value="50" class="demo-input">
+                                <code>&lt;input type="range"&gt;</code>
+                            </div>
+                            <div class="input-type">
+                                <h4>date</h4>
+                                <input type="date" class="demo-input">
+                                <code>&lt;input type="date"&gt;</code>
+                            </div>
+                            <div class="input-type">
+                                <h4>color</h4>
+                                <input type="color" value="#3498db" class="demo-input">
+                                <code>&lt;input type="color"&gt;</code>
+                            </div>
+                            <div class="input-type">
+                                <h4>search</h4>
+                                <input type="search" placeholder="Buscar..." class="demo-input">
+                                <code>&lt;input type="search"&gt;</code>
+                            </div>
+                            <div class="input-type">
+                                <h4>tel</h4>
+                                <input type="tel" placeholder="(123) 456-7890" class="demo-input">
+                                <code>&lt;input type="tel"&gt;</code>
+                            </div>
+                            <div class="input-type">
+                                <h4>url</h4>
+                                <input type="url" placeholder="https://ejemplo.com" class="demo-input">
+                                <code>&lt;input type="url"&gt;</code>
+                            </div>
+                        </div>
+                        
+                        <h3>Atributos de validación</h3>
+                        <p>HTML5 incorpora validación de formularios del lado del cliente sin necesidad de JavaScript:</p>
+                        <ul class="features-list">
+                            <li><code>required</code>: Hace que un campo sea obligatorio</li>
+                            <li><code>pattern</code>: Permite validar con expresiones regulares</li>
+                            <li><code>min</code> y <code>max</code>: Define valores mínimos y máximos</li>
+                            <li><code>minlength</code> y <code>maxlength</code>: Limita la longitud del texto</li>
+                        </ul>
+                        
+                        <h3>Ejemplo de formulario con validación nativa</h3>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Formulario HTML5 con validación</span>
+                                <div class="code-actions">
+                                    <button class="btn-copy" data-target="codigo-formulario"><i class="far fa-copy"></i> Copiar</button>
+                                    <button class="btn-edit" data-target="codigo-formulario"><i class="far fa-edit"></i> Editar</button>
+                                </div>
+                            </div>
+                            <pre><code class="language-html" id="codigo-formulario">&lt;form id="registroForm"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="nombre"&gt;Nombre completo:&lt;/label&gt;
+        &lt;input type="text" id="nombre" required minlength="3" maxlength="50"&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="form-group"&gt;
+        &lt;label for="email"&gt;Correo electrónico:&lt;/label&gt;
+        &lt;input type="email" id="email" required&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="form-group"&gt;
+        &lt;label for="telefono"&gt;Teléfono:&lt;/label&gt;
+        &lt;input type="tel" id="telefono" pattern="[0-9]{9}" placeholder="123456789"&gt;
+        &lt;span class="form-hint"&gt;Formato: 9 dígitos sin espacios&lt;/span&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="form-group"&gt;
+        &lt;label for="edad"&gt;Edad:&lt;/label&gt;
+        &lt;input type="number" id="edad" min="18" max="120"&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="form-group"&gt;
+        &lt;label for="fecha"&gt;Fecha de nacimiento:&lt;/label&gt;
+        &lt;input type="date" id="fecha" required&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="form-group"&gt;
+        &lt;label for="sitio"&gt;Sitio web:&lt;/label&gt;
+        &lt;input type="url" id="sitio" placeholder="https://ejemplo.com"&gt;
+    &lt;/div&gt;
+    
+    &lt;button type="submit"&gt;Enviar formulario&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+                        
+                        <div class="form-demo">
+                            <h4><i class="fas fa-user-edit"></i> Prueba el formulario</h4>
+                            <form id="demoForm" class="interactive-form">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre completo:</label>
+                                    <input type="text" id="nombre" required minlength="3" maxlength="50">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Correo electrónico:</label>
+                                    <input type="email" id="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono:</label>
+                                    <input type="tel" id="telefono" pattern="[0-9]{9}" placeholder="123456789">
+                                    <span class="form-hint">Formato: 9 dígitos sin espacios</span>
+                                </div>
+                                
+                                <button type="submit" class="form-submit">Validar formulario</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Multimedia Section -->
+                <section id="multimedia" class="content-section" data-aos="fade-up">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h2>4️⃣ Multimedia en HTML5 🎥🎵</h2>
+                    </div>
+                    
+                    <div class="section-content">
+                        <p>HTML5 revolucionó la web al introducir elementos nativos para multimedia, eliminando la necesidad de plugins como Flash para reproducir audio y video.</p>
+                        
+                        <div class="multimedia-grid">
+                            <div class="multimedia-card">
+                                <h3><i class="fas fa-video"></i> Elemento &lt;video&gt;</h3>
+                                <p>Permite insertar videos directamente en la página web con controles nativos del navegador.</p>
+                                
+                                <div class="code-container">
+                                    <div class="code-header">
+                                        <span>Ejemplo de video</span>
+                                        <div class="code-actions">
+                                            <button class="btn-copy" data-target="codigo-video"><i class="far fa-copy"></i> Copiar</button>
+                                        </div>
+                                    </div>
+                                    <pre><code class="language-html" id="codigo-video">&lt;video controls width="500"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;source src="video.webm" type="video/webm"&gt;
+    Tu navegador no soporta el elemento de video.
+&lt;/video&gt;</code></pre>
+                                </div>
+                                
+                                <h4>Atributos principales:</h4>
+                                <ul class="features-list">
+                                    <li><code>controls</code>: Muestra los controles de reproducción</li>
+                                    <li><code>autoplay</code>: Reproduce automáticamente al cargar</li>
+                                    <li><code>loop</code>: Repite el video al finalizar</li>
+                                    <li><code>muted</code>: Inicia el video sin sonido</li>
+                                    <li><code>poster</code>: Imagen de previsualización</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="multimedia-card">
+                                <h3><i class="fas fa-music"></i> Elemento &lt;audio&gt;</h3>
+                                <p>Permite reproducir archivos de audio directamente en la página web.</p>
+                                
+                                <div class="code-container">
+                                    <div class="code-header">
+                                        <span>Ejemplo de audio</span>
+                                        <div class="code-actions">
+                                            <button class="btn-copy" data-target="codigo-audio"><i class="far fa-copy"></i> Copiar</button>
+                                        </div>
+                                    </div>
+                                    <pre><code class="language-html" id="codigo-audio">&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    &lt;source src="audio.ogg" type="audio/ogg"&gt;
+    Tu navegador no soporta el elemento de audio.
+&lt;/audio&gt;</code></pre>
+                                </div>
+                                
+                                <h4>Atributos principales:</h4>
+                                <ul class="features-list">
+                                    <li><code>controls</code>: Muestra los controles de reproducción</li>
+                                    <li><code>autoplay</code>: Reproduce automáticamente al cargar</li>
+                                    <li><code>loop</code>: Repite el audio al finalizar</li>
+                                    <li><code>muted</code>: Inicia el audio sin sonido</li>
+                                    <li><code>preload</code>: Controla la precarga</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <h3>Ejemplo práctico de integración multimedia</h3>
+                        <div class="multimedia-demo">
+                            <h4>Reproductor de video HTML5</h4>
+                            <div class="video-container">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/5jFN7NVl0xk" title="Introducción a HTML5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            
+                            <div class="code-container">
+                                <div class="code-header">
+                                    <span>Integración de YouTube en HTML5</span>
+                                    <div class="code-actions">
+                                        <button class="btn-copy" data-target="codigo-youtube"><i class="far fa-copy"></i> Copiar</button>
+                                    </div>
+                                </div>
+                                <pre><code class="language-html" id="codigo-youtube">&lt;iframe width="560" height="315" 
+       src="https://www.youtube.com/embed/5jFN7NVl0xk" 
+       title="Introducción a HTML5" 
+       frameborder="0" 
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+       allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Additional Resources Section -->
+                <section id="recursos" class="content-section" data-aos="fade-up">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                        <h2>5️⃣ Recursos Adicionales 📚</h2>
+                    </div>
+                    
+                    <div class="section-content">
+                        <p>Complementa tu aprendizaje de HTML5 con estos recursos recomendados:</p>
+                        
+                        <div class="resources-grid">
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Documentación Oficial</h3>
+                                    <p>Consulta la especificación completa de HTML5 y recursos para desarrolladores:</p>
+                                    <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" class="resource-link">
+                                        <i class="fas fa-external-link-alt"></i> MDN Web Docs - HTML
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Tutoriales Interactivos</h3>
+                                    <p>Aprende HTML5 con ejercicios prácticos paso a paso:</p>
+                                    <a href="https://www.w3schools.com/html/" target="_blank" class="resource-link">
+                                        <i class="fas fa-external-link-alt"></i> W3Schools - HTML Tutorial
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Validador HTML</h3>
+                                    <p>Verifica que tu código HTML5 sea correcto y esté libre de errores:</p>
+                                    <a href="https://validator.w3.org/" target="_blank" class="resource-link">
+                                        <i class="fas fa-external-link-alt"></i> W3C Markup Validation Service
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Canal YouTube Recomendado</h3>
+                                    <p>Videos tutoriales sobre HTML5 y desarrollo web:</p>
+                                    <a href="https://www.youtube.com/c/TraversyMedia" target="_blank" class="resource-link">
+                                        <i class="fas fa-external-link-alt"></i> Traversy Media
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="next-steps">
+                            <h3><i class="fas fa-road"></i> Próximos pasos</h3>
+                            <p>Una vez dominados los fundamentos de HTML5, te recomendamos continuar con:</p>
+                            <ul class="next-courses">
+                                <li>
+                                    <a href="#" class="course-item">
+                                        <i class="fab fa-css3-alt"></i>
+                                        <span>CSS3: Diseño y estilizado de sitios web</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="course-item">
+                                        <i class="fab fa-js"></i>
+                                        <span>JavaScript: Interactividad y programación web</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="course-item">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <span>Responsive Design: Diseño adaptable a dispositivos</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section class="curso-cta" data-aos="fade-up">
+            <div class="curso-container">
+                <div class="cta-content">
+                    <h2>¿Listo para dominar HTML5?</h2>
+                    <p>Inscríbete ahora y comienza tu camino en el desarrollo web con este curso fundamental.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="cta-primary">Inscribirse al curso</a>
+                        <a href="materias.html" class="cta-secondary">Explorar más cursos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-decorations">
+            <div class="rotating-circle"></div>
+            <div class="rotating-circle"></div>
+            <div class="rotating-circle"></div>
+            <div class="bouncing-rocket">🚀</div>
+            <div class="pulsing-circle"></div>
+            <div class="pulsing-circle"></div>
+            <div class="spinning-laptop">💻</div>
+        </div>
+        
+        <div class="footer-grid">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="logofinal3.webp" alt="MP Logo">
+                    <div class="footer-logo-text">
+                        <span class="logo-title">Matías Prestes</span>
+                        <span class="logo-subtitle">Educación Digital</span>
+                    </div>
+                </div>
+                <p class="footer-description">Brindando recursos educativos de calidad para impulsar tu carrera en el mundo digital. Comprometidos con tu crecimiento profesional.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Accesos Directos</h3>
+                <ul class="footer-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="materias.html"><i class="fas fa-book"></i> Cursos</a></li>
+                    <li><a href="materiales.html"><i class="fas fa-file-alt"></i> Materiales</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="noticias.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Información Legal</h3>
+                <ul class="footer-menu">
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Política de Privacidad</a></li>
+                    <li><a href="#"><i class="fas fa-gavel"></i> Términos y Condiciones</a></li>
+                    <li><a href="#"><i class="fas fa-cookie"></i> Política de Cookies</a></li>
+                    <li><a href="#"><i class="fas fa-handshake"></i> Acuerdos de Licencia</a></li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i> Derechos de Autor</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column footer-newsletter">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p>Suscríbete para recibir actualizaciones, nuevos recursos y consejos exclusivos directamente en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="newsletter-button">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2024 Matías Prestes. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-legal">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="js/navfooter.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/html5detalle.js"></script>
+</body>
+</html>
