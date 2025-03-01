@@ -1,3 +1,8 @@
+/**
+ * Script para la página de contacto
+ * Incluye lazy loading para imágenes y mapas, y funcionalidad para los botones de overlay
+ */
+
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize Particles.js for hero background
     if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
@@ -99,6 +104,46 @@ document.addEventListener('DOMContentLoaded', function() {
     floatingIcons.forEach(icon => {
         const speed = parseFloat(icon.getAttribute('data-speed')) || 1;
         icon.style.animationDuration = `${6 * speed}s`;
+    });
+
+    // Inicializar AOS
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+    });
+    
+    // Lazy loading para imágenes y mapas
+    const lazyImages = document.querySelectorAll('.profile-image, .coverage-map');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        lazyImages.forEach(img => {
+            imageObserver.observe(img);
+        });
+    } else {
+        // Fallback para navegadores que no soportan IntersectionObserver
+        lazyImages.forEach(img => {
+            img.classList.add('loaded');
+        });
+    }
+    
+    // Interactividad para los botones de overlay
+    const overlayBtns = document.querySelectorAll('.overlay-btn');
+    overlayBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Detalles adicionales sobre esta zona estarán disponibles próximamente.');
+        });
     });
 
     // Form validation

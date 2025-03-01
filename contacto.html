@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/sobremi.css">
+    <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="css/contacto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -217,7 +218,7 @@
                 <div class="sobremi-content">
                     <div class="profile-section" data-aos="fade-right">
                         <div class="profile-container">
-                            <img src="img/img/FotoPerfilMatias.webp" alt="Matías Prestes" class="profile-image">
+                            <img src="img/img/FotoPerfilMatias.webp" alt="Matías Prestes" class="profile-image" loading="lazy">
                             <div class="profile-overlay">
                                 <h3>Matías Prestes</h3>
                                 <p>Profesor de Informática y Tecnología</p>
@@ -230,15 +231,25 @@
                         </div>
                         
                         <div class="social-links">
-                            <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" target="_blank" class="social-btn youtube">
+                            <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" target="_blank" rel="noopener" class="social-btn youtube">
                                 <i class="fab fa-youtube"></i>
-                                <span>Canal YouTube</span>
+                                <span>YouTube</span>
                                 <span class="tooltip">Tutoriales y recursos educativos</span>
                             </a>
-                            <a href="https://uy.linkedin.com/in/mprestestecnologia" target="_blank" class="social-btn linkedin">
+                            <a href="https://uy.linkedin.com/in/mprestestecnologia" target="_blank" rel="noopener" class="social-btn linkedin">
                                 <i class="fab fa-linkedin-in"></i>
                                 <span>LinkedIn</span>
                                 <span class="tooltip">Conéctate profesionalmente</span>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener" class="social-btn twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                                <span class="tooltip">Sígueme para actualizaciones</span>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener" class="social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                                <span class="tooltip">Únete a mi comunidad</span>
                             </a>
                         </div>
                     </div>
@@ -263,7 +274,7 @@
                                     <span class="skill-percentage">95%</span>
                                 </div>
                                 <div class="progress-bar">
-                                    <div class="progress-value" style="width: 95%"></div>
+                                    <div class="progress-value" style="width: 95%" data-aos="slide-right" data-aos-delay="100"></div>
                                 </div>
                             </div>
                             
@@ -273,7 +284,7 @@
                                     <span class="skill-percentage">90%</span>
                                 </div>
                                 <div class="progress-bar">
-                                    <div class="progress-value" style="width: 90%"></div>
+                                    <div class="progress-value" style="width: 90%" data-aos="slide-right" data-aos-delay="200"></div>
                                 </div>
                             </div>
                             
@@ -283,7 +294,7 @@
                                     <span class="skill-percentage">85%</span>
                                 </div>
                                 <div class="progress-bar">
-                                    <div class="progress-value" style="width: 85%"></div>
+                                    <div class="progress-value" style="width: 85%" data-aos="slide-right" data-aos-delay="300"></div>
                                 </div>
                             </div>
                             
@@ -293,7 +304,7 @@
                                     <span class="skill-percentage">98%</span>
                                 </div>
                                 <div class="progress-bar">
-                                    <div class="progress-value" style="width: 98%"></div>
+                                    <div class="progress-value" style="width: 98%" data-aos="slide-right" data-aos-delay="400"></div>
                                 </div>
                             </div>
                         </div>
@@ -475,6 +486,89 @@
             </div>
         </section>
 
+        <!-- Zonas de Cobertura Section -->
+        <section class="coverage-section" id="zonas-cobertura">
+            <div class="coverage-container">
+                <div class="coverage-header" data-aos="fade-up">
+                    <h2>Zonas de Cobertura</h2>
+                    <p>Áreas donde ofrezco mis servicios educativos</p>
+                </div>
+                
+                <div class="coverage-grid">
+                    <!-- Montevideo Map -->
+                    <div class="coverage-area" data-aos="fade-right">
+                        <div class="coverage-map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104726.91053391622!2d-56.24999651359368!3d-34.83355366408554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80ffc63bf7d3%3A0x6b321b2e355bec99!2sMontevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses!2suy!4v1651687775173!5m2!1ses!2suy" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Zona de cobertura en Montevideo"
+                                class="coverage-map"
+                            ></iframe>
+                            <div class="map-overlay montevideo">
+                                <div class="overlay-content">
+                                    <h3>Montevideo</h3>
+                                    <ul class="coverage-details">
+                                        <li><i class="fas fa-check-circle"></i> Disponibilidad: Lunes a Viernes</li>
+                                        <li><i class="fas fa-clock"></i> Horarios: 8:00 - 20:00</li>
+                                        <li><i class="fas fa-map-marker-alt"></i> Cobertura completa en toda la ciudad</li>
+                                        <li><i class="fas fa-building"></i> Clases en instituciones educativas y domicilio</li>
+                                    </ul>
+                                    <button class="overlay-btn">Ver detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Canelones Map -->
+                    <div class="coverage-area" data-aos="fade-left">
+                        <div class="coverage-map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209354.78812521388!2d-56.27912566875001!3d-34.62130229999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a1d2e1e890d991%3A0x3c6a2dc1a0c8abd2!2sCanelones%2C%20Departamento%20de%20Canelones!5e0!3m2!1ses!2suy!4v1651687775173!5m2!1ses!2suy" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Zona de cobertura en Canelones"
+                                class="coverage-map"
+                            ></iframe>
+                            <div class="map-overlay canelones">
+                                <div class="overlay-content">
+                                    <h3>Canelones</h3>
+                                    <ul class="coverage-details">
+                                        <li><i class="fas fa-check-circle"></i> Disponibilidad: Martes y Jueves</li>
+                                        <li><i class="fas fa-clock"></i> Horarios: 9:00 - 18:00</li>
+                                        <li><i class="fas fa-map-marker-alt"></i> Ciudad de Canelones y alrededores</li>
+                                        <li><i class="fas fa-school"></i> Clases en centros educativos seleccionados</li>
+                                    </ul>
+                                    <button class="overlay-btn">Ver detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coverage-info" data-aos="fade-up">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Información adicional</h3>
+                            <p>Para consultas sobre disponibilidad en otras zonas o para coordinar clases virtuales, no dudes en contactarme a través del formulario de contacto o por WhatsApp.</p>
+                            <a href="#contactForm" class="info-btn">Contactar ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -559,5 +653,8 @@
     <script src="js/hero.js"></script>
     <script src="js/banner.js"></script>
     <script src="js/sobremi.js"></script>
+    <script src="js/contacto.js"></script>
+    <script src="js/faq.js"></script>
 </body>
+
 </html>
