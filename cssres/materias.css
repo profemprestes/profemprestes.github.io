@@ -1,0 +1,347 @@
+/* Tech Icons Grid */
+.tech-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  opacity: 0.1;
+  position: absolute;
+  inset: 0;
+  place-items: center;
+}
+
+/* Animated Lines */
+.animated-line {
+  animation: lineDraw 30s linear infinite;
+}
+
+@keyframes lineDraw {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+  100% {
+    stroke-dasharray: 100 0;
+  }
+}
+
+/* Tech Icon Cards */
+.tech-icon-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.tech-icon-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Filter Buttons */
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background: white;
+  color: #3b82f6;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.filter-btn:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+.filter-btn.active {
+  background: #3b82f6;
+  color: white;
+  border-color: white;
+}
+
+/* Subject Cards */
+.subject-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.subject-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.subject-card:hover::before {
+  transform: translateX(100%);
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(59, 130, 246, 0.1) inset;
+}
+
+.subject-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.subject-card:hover .subject-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.subject-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.subject-description {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.subject-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #3b82f6;
+  font-weight: 500;
+  transition: gap 0.3s ease;
+}
+
+.subject-link:hover {
+  gap: 1rem;
+}
+
+.subject-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.subject-category.programming {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.subject-category.databases {
+  background: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+}
+
+.subject-category.robotics {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.subject-category.systems {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.subject-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.subject-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.subject-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.subject-btn:hover::before {
+  transform: translateX(100%);
+}
+
+.subject-btn.primary {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  color: white;
+}
+
+.subject-btn.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #3b82f6;
+}
+
+.subject-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+.subject-preview {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.subject-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* UTU Cards */
+.utu-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.utu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.utu-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.utu-content {
+  flex: 1;
+}
+
+.utu-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.utu-level {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #f3f4f6;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.utu-description {
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .tech-icons-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .filter-buttons {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .filter-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  
+  .utu-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .utu-icon {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .subject-actions {
+    flex-direction: column;
+  }
+  
+  .subject-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .subject-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

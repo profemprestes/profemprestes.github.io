@@ -1,0 +1,308 @@
+/* Container styles */
+.error-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background styles */
+.error-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.error-400 {
+  background: linear-gradient(135deg, #ffd700, #ff8c00);
+}
+
+.error-403 {
+  background: linear-gradient(135deg, #dc2626, #7f1d1d);
+}
+
+.error-404 {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.error-500 {
+  background: linear-gradient(135deg, #4b5563, #1f2937);
+}
+
+/* Particles animation */
+.error-particles {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 8%);
+  background-size: 3vmin 3vmin;
+  background-position: -1.5vmin -1.5vmin;
+  mask-image: linear-gradient(45deg, black, transparent);
+  animation: particlesFade 20s linear infinite;
+}
+
+@keyframes particlesFade {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+  100% { opacity: 0.3; }
+}
+
+/* Content styles */
+.error-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.8));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.error-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.error-message {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* Button styles */
+.error-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 9999px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.error-button:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+/* Countdown styles */
+.error-countdown {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* Typewriter effect */
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+
+/* Glitch effect for 500 error */
+.glitch {
+  position: relative;
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+  2%, 64% {
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%, 60% {
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62% {
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+.glitch:before,
+.glitch:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.glitch:before {
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+  2%, 64% {
+    transform: translate(2px,-2px);
+  }
+  4%, 60% {
+    transform: translate(-2px,2px);
+  }
+  62% {
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+.glitch:after {
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+  2%, 64% {
+    transform: translate(-2px,0);
+  }
+  4%, 60% {
+    transform: translate(-2px,0);
+  }
+  62% {
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+
+/* 404 Searching Character */
+.searching-character {
+  margin: 2rem 0;
+  position: relative;
+  height: 100px;
+}
+
+.character {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: searchFloat 3s ease-in-out infinite;
+}
+
+.shadow {
+  width: 80px;
+  height: 20px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(3px);
+  animation: shadowScale 3s ease-in-out infinite;
+}
+
+@keyframes searchFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-20px); }
+}
+
+@keyframes shadowScale {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(0.8); }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1a1a1a;
+  }
+  
+  .error-button {
+    background: rgba(255,255,255,0.05);
+  }
+  
+  .error-button:hover {
+    background: rgba(255,255,255,0.1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .error-code {
+    font-size: 6rem;
+  }
+  
+  .error-title {
+    font-size: 1.5rem;
+  }
+  
+  .error-message {
+    font-size: 1rem;
+  }
+  
+  .error-icon {
+    font-size: 3rem;
+  }
+  
+  .searching-character {
+    height: 80px;
+  }
+  
+  .character {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .shadow {
+    width: 60px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-code {
+    font-size: 4rem;
+  }
+  
+  .error-content {
+    padding: 1rem;
+  }
+  
+  .error-button {
+    padding: 0.75rem 1.5rem;
+  }
+}

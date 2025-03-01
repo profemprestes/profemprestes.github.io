@@ -1,0 +1,104 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --hero-overlay-color: rgba(0, 123, 255, 0.7);
+    --text-color-light: #f8f9fa;
+    --transition-speed: 0.3s;
+}
+
+.main-hero {
+    position: relative;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    overflow: hidden;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.floating-logo {
+    animation: float 3s ease-in-out infinite;
+}
+
+.logo-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.phrase-carousel {
+    position: relative;
+    min-height: 100px;
+}
+
+.phrase {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.phrase.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.highlight-text {
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.tech-skill {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tech-skill:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        padding: 1rem;
+    }
+    .phrase-carousel {
+        min-height: 80px;
+    }
+    .highlight-text {
+        font-size: 1.2rem;
+    }
+    .phrase-line {
+        font-size: 0.9rem;
+    }
+}
