@@ -25,39 +25,37 @@
   <link rel="stylesheet" href="css/privacy.css">
 </head>
 <body>
-  <!-- Reutilizar header/nav del sitio -->
-  <header>
-    <nav class="navbar">
-      <div class="nav-brand">
-        <a href="index.html" class="brand-link">
-          <img src="https://profematiasprestes.misitioweb.com.uy/img/logos/logofinal3.webp" alt="Logo Matias Prestes" class="brand-logo">
-          <div class="brand-text">
-            <h1>Matias Prestes</h1>
-            <p>Profesor Informática</p>
-          </div>
+   <!-- Navigation Bar -->
+   <nav class="nav-container" role="navigation">
+    <div class="nav-brand">
+        <a href="index.html" class="brand-logo" aria-label="Página de inicio de Matías Prestes">
+            <img src="img/logos/logofinal3.webp" alt="MP Logo" width="40" height="40">
+            <div class="brand-text">
+                <span class="brand-name">Matías Prestes</span>
+                <span class="brand-tagline">Profesor de Informática</span>
+            </div>
         </a>
-      </div>
-      
-      <button class="nav-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu-container">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+    <div class="nav-menu-container" id="nav-menu-container">
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a></li>
+            <li class="nav-item"><a href="materias.html" class="nav-link"><i class="fas fa-book" aria-hidden="true"></i> Cursos</a></li>
+            <li class="nav-item"><a href="materiales.html" class="nav-link"><i class="fas fa-file-alt" aria-hidden="true"></i> Materiales</a></li>
+            <li class="nav-item"><a href="faq.html" class="nav-link"><i class="fas fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
+            <li class="nav-item"><a href="noticias.html" class="nav-link"><i class="fas fa-newspaper" aria-hidden="true"></i> Noticias</a></li>
+            <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope" aria-hidden="true"></i> Contacto</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" target="_blank" rel="noopener" class="cta-button" aria-label="Suscríbete a mi canal de YouTube">
+                <i class="fab fa-youtube" aria-hidden="true"></i> Suscríbete
+            </a>
+        </div>
+    </div>
+</nav>
 
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
-        <li><a href="materias.html" class="nav-link"><i class="fas fa-book"></i> Cursos</a></li>
-        <li><a href="materiales.html" class="nav-link"><i class="fas fa-file-alt"></i> Materiales</a></li>
-        <li><a href="faq.html" class="nav-link"><i class="fas fa-question-circle"></i> FAQ</a></li>
-        <li><a href="noticias.html" class="nav-link"><i class="fas fa-newspaper"></i> Noticias</a></li>
-        <li><a href="contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
-        <li>
-          <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" class="nav-cta" target="_blank">
-            <i class="fab fa-youtube"></i>
-            <span>Ver Videos</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
 
   <main>
     <section class="privacy-hero">
