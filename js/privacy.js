@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Inicializar AOS (Animate On Scroll)
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    mirror: false
+  });
+
   // Table of Contents functionality
   const tocLinks = document.querySelectorAll('#privacyToc a');
   const sections = document.querySelectorAll('.privacy-section');
@@ -11,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetSection = document.querySelector(targetId);
       
       if (targetSection) {
-        targetSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+        window.scrollTo({
+          top: targetSection.offsetTop - 100,
+          behavior: 'smooth'
         });
       }
     });
@@ -27,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
       
-      if (pageYOffset >= sectionTop - 150) {
+      if (window.pageYOffset >= sectionTop - 150) {
         current = '#' + section.getAttribute('id');
       }
     });
@@ -47,19 +55,21 @@ document.addEventListener('DOMContentLoaded', () => {
     configure: document.getElementById('configureCookies')
   };
 
-  cookieButtons.accept.addEventListener('click', () => {
-    setCookiePreferences('all');
-    showCookieNotification('success', 'Has aceptado todas las cookies');
-  });
+  if (cookieButtons.accept && cookieButtons.reject && cookieButtons.configure) {
+    cookieButtons.accept.addEventListener('click', () => {
+      setCookiePreferences('all');
+      showCookieNotification('success', 'Has aceptado todas las cookies');
+    });
 
-  cookieButtons.reject.addEventListener('click', () => {
-    setCookiePreferences('essential');
-    showCookieNotification('info', 'Solo se usarán cookies esenciales');
-  });
+    cookieButtons.reject.addEventListener('click', () => {
+      setCookiePreferences('essential');
+      showCookieNotification('info', 'Solo se usarán cookies esenciales');
+    });
 
-  cookieButtons.configure.addEventListener('click', () => {
-    showCookieConfiguration();
-  });
+    cookieButtons.configure.addEventListener('click', () => {
+      showCookieConfiguration();
+    });
+  }
 
   function setCookiePreferences(type) {
     // Store cookie preferences
@@ -68,95 +78,120 @@ document.addEventListener('DOMContentLoaded', () => {
     // Implement actual cookie management here
     if (type === 'all') {
       // Enable all cookies
+      console.log('Todas las cookies habilitadas');
     } else {
       // Disable non-essential cookies
+      console.log('Solo cookies esenciales habilitadas');
     }
   }
 
   function showCookieNotification(icon, text) {
-    Swal.fire({
-      icon: icon,
-      title: 'Preferencias de Cookies',
-      text: text,
-      toast: true,
-      position: 'bottom-end',
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true
-    });
+    if (typeof Swal !== 'undefined') {
+      Swal.fire({
+        icon: icon,
+        title: 'Preferencias de Cookies',
+        text: text,
+        toast: true,
+        position: 'bottom-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true
+      });
+    } else {
+      // Fallback if SweetAlert is not available
+      alert(text);
+    }
   }
 
   function showCookieConfiguration() {
-    Swal.fire({
-      title: 'Configuración de Cookies',
-      html: `
-        <div class="cookie-config">
-          <div class="cookie-option">
-            <label>
-              <input type="checkbox" id="essentialCookies" checked disabled>
-              Cookies Esenciales
-            </label>
-            <p>Necesarias para el funcionamiento del sitio</p>
+    if (typeof Swal !== 'undefined') {
+      Swal.fire({
+        title: 'Configuración de Cookies',
+        html: `
+          <div class="cookie-config">
+            <div class="cookie-option">
+              <label>
+                <input type="checkbox" id="essentialCookies" checked disabled>
+                <span>Cookies Esenciales</span>
+              </label>
+              <p>Necesarias para el funcionamiento del sitio</p>
+            </div>
+            <div class="cookie-option">
+              <label>
+                <input type="checkbox" id="preferenceCookies">
+                <span>Cookies de Preferencias</span>
+              </label>
+              <p>Guardan tus preferencias de navegación</p>
+            </div>
+            <div class="cookie-option">
+              <label>
+                <input type="checkbox" id="analyticsCookies">
+                <span>Cookies Analíticas</span>
+              </label>
+              <p>Nos ayudan a mejorar el sitio</p>
+            </div>
+            <div class="cookie-option">
+              <label>
+                <input type="checkbox" id="marketingCookies">
+                <span>Cookies de Marketing</span>
+              </label>
+              <p>Utilizadas para mostrarte anuncios relevantes</p>
+            </div>
           </div>
-          <div class="cookie-option">
-            <label>
-              <input type="checkbox" id="preferenceCookies">
-              Cookies de Preferencias
-            </label>
-            <p>Guardan tus preferencias de navegación</p>
-          </div>
-          <div class="cookie-option">
-            <label>
-              <input type="checkbox" id="analyticsCookies">
-              Cookies Analíticas
-            </label>
-            <p>Nos ayudan a mejorar el sitio</p>
-          </div>
-        </div>
-      `,
-      showCancelButton: true,
-      confirmButtonText: 'Guardar Preferencias',
-      cancelButtonText: 'Cancelar',
-      customClass: {
-        popup: 'cookie-config-popup'
-      }
-    }).then((result) => {
-      if (result.isConfirmed) {
-        const preferences = {
-          essential: true, // Always enabled
-          preference: document.getElementById('preferenceCookies').checked,
-          analytics: document.getElementById('analyticsCookies').checked
-        };
-        
-        // Store preferences
-        localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
-        
-        showCookieNotification('success', 'Preferencias guardadas correctamente');
-      }
-    });
+        `,
+        showCancelButton: true,
+        confirmButtonText: 'Guardar Preferencias',
+        cancelButtonText: 'Cancelar',
+        customClass: {
+          popup: 'cookie-config-popup'
+        }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const preferences = {
+            essential: true, // Always enabled
+            preference: document.getElementById('preferenceCookies').checked,
+            analytics: document.getElementById('analyticsCookies').checked,
+            marketing: document.getElementById('marketingCookies').checked
+          };
+          
+          // Store preferences
+          localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+          
+          showCookieNotification('success', 'Preferencias guardadas correctamente');
+        }
+      });
+    } else {
+      // Fallback if SweetAlert is not available
+      alert('La configuración de cookies no está disponible en este momento.');
+    }
   }
 
-  // Check if first visit
+  // Check if first visit or if cookie preferences are not set
   if (!localStorage.getItem('cookiePreferences')) {
-    Swal.fire({
-      title: '🍪 Uso de Cookies',
-      text: 'Este sitio utiliza cookies para mejorar tu experiencia. ¿Aceptas todas las cookies?',
-      icon: 'info',
-      showCancelButton: true,
-      confirmButtonText: 'Aceptar Todas',
-      cancelButtonText: 'Configurar',
-      showDenyButton: true,
-      denyButtonText: 'Solo Esenciales'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        setCookiePreferences('all');
-        showCookieNotification('success', 'Has aceptado todas las cookies');
-      } else if (result.isDenied) {
-        setCookiePreferences('essential');
-        showCookieNotification('info', 'Solo se usarán cookies esenciales');
-      } else {
-        showCookieConfiguration();
+    // Wait a moment before showing the cookie notice
+    setTimeout(() => {
+      if (typeof Swal !== 'undefined') {
+        Swal.fire({
+          title: '🍪 Uso de Cookies',
+          text: 'Este sitio utiliza cookies para mejorar tu experiencia. ¿Aceptas todas las cookies?',
+          icon: 'info',
+          showCancelButton: true,
+          confirmButtonText: 'Aceptar Todas',
+          cancelButtonText: 'Configurar',
+          showDenyButton: true,
+          denyButtonText: 'Solo Esenciales'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            setCookiePreferences('all');
+            showCookieNotification('success', 'Has aceptado todas las cookies');
+          } else if (result.isDenied) {
+            setCookiePreferences('essential');
+            showCookieNotification('info', 'Solo se usarán cookies esenciales');
+          } else {
+            showCookieConfiguration();
+          }
+        });
       }
-    });
+    }, 1500);
   }
 });

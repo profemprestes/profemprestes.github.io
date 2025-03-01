@@ -1,306 +1,435 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Política de Privacidad - Matias Prestes</title>
-  <meta name="description" content="Política de privacidad y protección de datos personales para estudiantes y usuarios del sitio web educativo de Matias Prestes">
-  <meta name="keywords" content="política privacidad, protección datos, GDPR, cookies, seguridad web">
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- AOS CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  
-  <!-- Sweet Alert -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-material-ui/material-ui.css">
-  
-  <!-- Estilos propios -->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/navfooter.css">
-  <link rel="stylesheet" href="css/privacy.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profe Matias - Política de Privacidad</title>
+
+    <!-- SEO Improved -->
+    <meta name="description" content="Política de Privacidad de Matías Prestes. Información sobre cómo recopilamos, utilizamos y protegemos tus datos personales en nuestro sitio web.">
+    <meta name="keywords" content="Política de Privacidad, protección de datos, cookies, seguridad, derechos de usuario, Matías Prestes">
+    <meta name="author" content="Matías Prestes">
+    <meta name="google-site-verification" content="1ItZbJp514jLxdkq9HT8vOSDtrL-tWnX29NtZxlS9mw" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/navfooter.css">
+    <link rel="stylesheet" href="css/privacy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="canonical" href="https://profemprestes.github.io/privacy.html">
+    <link rel="icon" href="img/logos/logofinal3.webp">
+
+     <!-- Favicon -->
+     <link rel="icon" type="image/png" href="img/logos/favicon/favicon-96x96.png" sizes="96x96" />
+     <link rel="icon" type="image/svg+xml" href="img/logos/favicon/favicon.svg" />
+     <link rel="shortcut icon" href="img/logos/favicon/favicon.ico" />
+     <link rel="apple-touch-icon" sizes="180x180" href="img/logos/favicon/apple-touch-icon.png" />
+     <meta name="apple-mobile-web-app-title" content="Profe Matias" />
+     <link rel="manifest" href="img/logos/favicon/site.webmanifest" />
+     
+     <!-- SweetAlert2 para notificaciones de cookies -->
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-   <!-- Navigation Bar -->
-   <nav class="nav-container" role="navigation">
-    <div class="nav-brand">
-        <a href="index.html" class="brand-logo" aria-label="Página de inicio de Matías Prestes">
-            <img src="img/logos/logofinal3.webp" alt="MP Logo" width="40" height="40">
-            <div class="brand-text">
-                <span class="brand-name">Matías Prestes</span>
-                <span class="brand-tagline">Profesor de Informática</span>
-            </div>
-        </a>
-    </div>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu-container">
-        <i class="fas fa-bars" aria-hidden="true"></i>
-    </button>
-    <div class="nav-menu-container" id="nav-menu-container">
-        <ul class="nav-menu" id="nav-menu">
-            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a></li>
-            <li class="nav-item"><a href="materias.html" class="nav-link"><i class="fas fa-book" aria-hidden="true"></i> Cursos</a></li>
-            <li class="nav-item"><a href="materiales.html" class="nav-link"><i class="fas fa-file-alt" aria-hidden="true"></i> Materiales</a></li>
-            <li class="nav-item"><a href="faq.html" class="nav-link"><i class="fas fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
-            <li class="nav-item"><a href="noticias.html" class="nav-link"><i class="fas fa-newspaper" aria-hidden="true"></i> Noticias</a></li>
-            <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope" aria-hidden="true"></i> Contacto</a></li>
-        </ul>
-        <div class="nav-cta">
-            <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" target="_blank" rel="noopener" class="cta-button" aria-label="Suscríbete a mi canal de YouTube">
-                <i class="fab fa-youtube" aria-hidden="true"></i> Suscríbete
+    <!-- Navigation Bar -->
+    <nav class="nav-container" role="navigation">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-logo" aria-label="Página de inicio de Matías Prestes">
+                <img src="img/logos/logofinal3.webp" alt="MP Logo" width="40" height="40">
+                <div class="brand-text">
+                    <span class="brand-name">Matías Prestes</span>
+                    <span class="brand-tagline">Profesor de Informática</span>
+                </div>
             </a>
         </div>
-    </div>
-</nav>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu-container">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="nav-menu-container" id="nav-menu-container">
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a></li>
+                <li class="nav-item"><a href="materias.html" class="nav-link"><i class="fas fa-book" aria-hidden="true"></i> Cursos</a></li>
+                <li class="nav-item"><a href="materiales.html" class="nav-link"><i class="fas fa-file-alt" aria-hidden="true"></i> Materiales</a></li>
+                <li class="nav-item"><a href="faq.html" class="nav-link"><i class="fas fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
+                <li class="nav-item"><a href="noticias.html" class="nav-link"><i class="fas fa-newspaper" aria-hidden="true"></i> Noticias</a></li>
+                <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope" aria-hidden="true"></i> Contacto</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" target="_blank" rel="noopener" class="cta-button" aria-label="Suscríbete a mi canal de YouTube">
+                    <i class="fab fa-youtube" aria-hidden="true"></i> Suscríbete
+                </a>
+            </div>
+        </div>
+    </nav>
 
-
-  <main>
-    <section class="privacy-hero">
-      <div class="privacy-decoration shape-1"></div>
-      <div class="privacy-decoration shape-2"></div>
-      
-      <div class="privacy-hero-content" data-aos="fade-up">
-        <i class="fas fa-shield-alt hero-icon"></i>
-        <h1 class="hero-title">Política de Privacidad</h1>
-        <p class="hero-description">
-          Tu privacidad es importante para nosotros. Esta política explica cómo recopilamos, 
-          usamos y protegemos tu información personal.
-        </p>
-      </div>
+    <!-- Hero Section -->
+    <section class="privacy-hero" aria-label="Encabezado de la política de privacidad">
+        <div class="privacy-decoration shape-1"></div>
+        <div class="privacy-decoration shape-2"></div>
+        <div class="privacy-hero-content" data-aos="fade-up">
+            <i class="fas fa-shield-alt hero-icon" aria-hidden="true"></i>
+            <h1 class="hero-title">Política de Privacidad</h1>
+            <p class="hero-description">Comprometidos con la transparencia y la protección de tus datos personales</p>
+        </div>
     </section>
 
-    <div class="privacy-container">
-      <!-- Table of Contents -->
-      <nav class="privacy-nav" data-aos="fade-right">
-        <div class="toc-header">
-          <i class="fas fa-list"></i>
-          <h2>Contenido</h2>
-        </div>
-        <ul id="privacyToc">
-          <li><a href="#introduccion">Introducción</a></li>
-          <li><a href="#recopilacion">Información Recopilada</a></li>
-          <li><a href="#uso">Uso de la Información</a></li>
-          <li><a href="#cookies">Cookies</a></li>
-          <li><a href="#proteccion">Protección de Datos</a></li>
-          <li><a href="#derechos">Derechos del Usuario</a></li>
-          <li><a href="#terceros">Enlaces a Terceros</a></li>
-          <li><a href="#modificaciones">Modificaciones</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-
-      <div class="privacy-content">
-        <!-- Introducción -->
-        <section id="introduccion" class="privacy-section" data-aos="fade-up">
-          <h2>
-            <i class="fas fa-info-circle"></i>
-            Introducción
-          </h2>
-          <p>
-            En Matias Prestes, nos comprometemos a proteger la privacidad de nuestros estudiantes y usuarios. 
-            Esta política de privacidad describe nuestras prácticas de recopilación y uso de información personal, 
-            en cumplimiento con el Reglamento General de Protección de Datos (GDPR) y la Ley de Protección de 
-            Datos Personales.
-          </p>
-        </section>
-
-        <!-- Información Recopilada -->
-        <section id="recopilacion" class="privacy-section" data-aos="fade-up">
-          <h2>
-            <i class="fas fa-database"></i>
-            Información Recopilada
-          </h2>
-          <div class="info-grid">
-            <div class="info-card">
-              <i class="fas fa-user"></i>
-              <h3>Datos Personales</h3>
-              <ul>
-                <li>Nombre completo</li>
-                <li>Correo electrónico</li>
-                <li>Teléfono de contacto</li>
-                <li>Institución educativa</li>
-              </ul>
+    <!-- Main Content -->
+    <main class="privacy-container">
+        <!-- Table of Contents -->
+        <aside class="privacy-nav">
+            <div class="toc-header">
+                <i class="fas fa-list" aria-hidden="true"></i>
+                <h2>Índice</h2>
             </div>
-            
-            <div class="info-card">
-              <i class="fas fa-globe"></i>
-              <h3>Datos Técnicos</h3>
-              <ul>
-                <li>Dirección IP</li>
-                <li>Tipo de navegador</li>
-                <li>Sistema operativo</li>
-                <li>Cookies y tecnologías similares</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+            <ul id="privacyToc">
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#informacion-recopilada">Información Recopilada</a></li>
+                <li><a href="#uso-informacion">Uso de la Información</a></li>
+                <li><a href="#cookies">Cookies y Tecnologías</a></li>
+                <li><a href="#proteccion-datos">Protección de Datos</a></li>
+                <li><a href="#derechos-usuario">Derechos del Usuario</a></li>
+                <li><a href="#enlaces-terceros">Enlaces a Terceros</a></li>
+                <li><a href="#modificaciones">Modificaciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </aside>
 
-        <!-- Uso de la Información -->
-        <section id="uso" class="privacy-section" data-aos="fade-up">
-          <h2>
-            <i class="fas fa-tasks"></i>
-            Uso de la Información
-          </h2>
-          <div class="use-cases">
-            <div class="use-case">
-              <i class="fas fa-graduation-cap"></i>
-              <h3>Servicios Educativos</h3>
-              <p>Para proporcionar y mejorar nuestros servicios educativos.</p>
-            </div>
-            
-            <div class="use-case">
-              <i class="fas fa-envelope"></i>
-              <h3>Comunicación</h3>
-              <p>Para enviar actualizaciones importantes y material educativo.</p>
-            </div>
-            
-            <div class="use-case">
-              <i class="fas fa-chart-line"></i>
-              <h3>Análisis</h3>
-              <p>Para mejorar la experiencia del usuario y el contenido del sitio.</p>
-            </div>
-          </div>
-        </section>
+        <!-- Privacy Content -->
+        <article class="privacy-content">
+            <!-- Introducción -->
+            <section id="introduccion" class="privacy-section" data-aos="fade-up">
+                <h2><i class="fas fa-info-circle" aria-hidden="true"></i> Introducción</h2>
+                <p>Bienvenido a la Política de Privacidad de <strong>Matías Prestes</strong>. Este documento tiene como objetivo informarte sobre cómo recopilamos, utilizamos, compartimos y protegemos tu información personal cuando visitas nuestro sitio web.</p>
+                <p>La protección de tus datos personales es una prioridad para nosotros. Nos comprometemos a respetar tu privacidad y a cumplir con todas las leyes y regulaciones aplicables, incluyendo el Reglamento General de Protección de Datos (GDPR) y la Ley de Protección de Datos Personales de Uruguay.</p>
+                <p>Te recomendamos leer detenidamente esta política para entender nuestras prácticas respecto a tus datos personales y cómo los trataremos. Al utilizar nuestro sitio web, aceptas las prácticas descritas en esta política.</p>
+            </section>
 
-        <!-- Cookies -->
-        <section id="cookies" class="privacy-section" data-aos="fade-up">
-          <h2>
-            <i class="fas fa-cookie-bite"></i>
-            Cookies y Tecnologías Similares
-          </h2>
-          <div class="cookies-info">
-            <div class="cookie-types">
-              <h3>Tipos de Cookies</h3>
-              <ul>
-                <li>
-                  <strong>Necesarias:</strong> 
-                  Para el funcionamiento básico del sitio
-                </li>
-                <li>
-                  <strong>Preferencias:</strong>
-                  Para recordar tus preferencias de navegación
-                </li>
-                <li>
-                  <strong>Estadísticas:</strong>
-                  Para analizar el uso del sitio
-                </li>
-              </ul>
-            </div>
-            
-            <div class="cookie-controls">
-              <h3>Control de Cookies</h3>
-              <p>
-                Puedes gestionar tus preferencias de cookies en cualquier momento:
-              </p>
-              <div class="cookie-buttons">
-                <button id="acceptCookies" class="cookie-btn accept">
-                  <i class="fas fa-check"></i>
-                  Aceptar Todas
-                </button>
-                <button id="rejectCookies" class="cookie-btn reject">
-                  <i class="fas fa-times"></i>
-                  Rechazar No Esenciales
-                </button>
-                <button id="configureCookies" class="cookie-btn configure">
-                  <i class="fas fa-cog"></i>
-                  Configurar
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+            <!-- Información Recopilada -->
+            <section id="informacion-recopilada" class="privacy-section" data-aos="fade-up">
+                <h2><i class="fas fa-database" aria-hidden="true"></i> Información Recopilada</h2>
+                <p>Recopilamos diferentes tipos de información para proporcionar y mejorar nuestros servicios. A continuación, detallamos qué información recopilamos y cómo lo hacemos:</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-user" aria-hidden="true"></i>
+                        <h3>Datos Personales</h3>
+                        <ul>
+                            <li>Nombre y apellido</li>
+                            <li>Correo electrónico</li>
+                            <li>Institución educativa</li>
+                            <li>Curso o nivel educativo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-desktop" aria-hidden="true"></i>
+                        <h3>Datos Técnicos</h3>
+                        <ul>
+                            <li>Dirección IP</li>
+                            <li>Tipo de navegador</li>
+                            <li>Sistema operativo</li>
+                            <li>Páginas visitadas</li>
+                            <li>Tiempo de permanencia</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-cookie" aria-hidden="true"></i>
+                        <h3>Cookies</h3>
+                        <ul>
+                            <li>Cookies esenciales</li>
+                            <li>Cookies de preferencias</li>
+                            <li>Cookies analíticas</li>
+                            <li>Cookies de terceros</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Métodos de Recopilación</h3>
+                <p>Recopilamos información a través de los siguientes métodos:</p>
+                <ul>
+                    <li><strong>Formularios:</strong> Cuando te suscribes a nuestro newsletter, nos contactas o participas en encuestas.</li>
+                    <li><strong>Uso del sitio:</strong> Automáticamente a través de cookies y tecnologías similares cuando navegas por nuestro sitio.</li>
+                    <li><strong>Herramientas analíticas:</strong> Utilizamos Google Analytics para recopilar datos sobre el uso del sitio.</li>
+                </ul>
+            </section>
 
-        <!-- Continuar con las demás secciones... -->
+            <!-- Uso de la Información -->
+            <section id="uso-informacion" class="privacy-section" data-aos="fade-up">
+                <h2><i class="fas fa-chart-line" aria-hidden="true"></i> Uso de la Información</h2>
+                <p>La información que recopilamos se utiliza para diversos fines, siempre orientados a mejorar tu experiencia y nuestros servicios:</p>
+                
+                <div class="use-cases">
+                    <div class="use-case">
+                        <i class="fas fa-tools" aria-hidden="true"></i>
+                        <h3>Mejora del Servicio</h3>
+                        <p>Analizamos patrones de uso para optimizar nuestro contenido y funcionalidades.</p>
+                    </div>
+                    
+                    <div class="use-case">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <h3>Comunicación</h3>
+                        <p>Enviamos notificaciones, actualizaciones y materiales educativos relevantes.</p>
+                    </div>
+                    
+                    <div class="use-case">
+                        <i class="fas fa-lock" aria-hidden="true"></i>
+                        <h3>Seguridad</h3>
+                        <p>Protegemos nuestro sitio y detectamos actividades fraudulentas.</p>
+                    </div>
+                    
+                    <div class="use-case">
+                        <i class="fas fa-user-graduate" aria-hidden="true"></i>
+                        <h3>Personalización</h3>
+                        <p>Adaptamos el contenido según tus intereses y necesidades educativas.</p>
+                    </div>
+                </div>
+                
+                <h3>Compartir Información</h3>
+                <p>Nos comprometemos a no vender, alquilar ni compartir tu información personal con terceros sin tu consentimiento, excepto en las siguientes situaciones:</p>
+                <ul>
+                    <li><strong>Proveedores de servicios:</strong> Compartimos datos con proveedores que nos ayudan a operar el sitio (hosting, análisis, procesamiento de pagos).</li>
+                    <li><strong>Requisitos legales:</strong> Cuando sea necesario para cumplir con la ley o proteger nuestros derechos.</li>
+                    <li><strong>Con tu consentimiento:</strong> Cuando nos autorices expresamente a compartir tu información.</li>
+                </ul>
+            </section>
 
-      </div>
-    </div>
-  </main>
+            <!-- Cookies -->
+            <section id="cookies" class="privacy-section" data-aos="fade-up">
+                <h2><i class="fas fa-cookie-bite" aria-hidden="true"></i> Cookies y Tecnologías Similares</h2>
+                <p>Utilizamos cookies y tecnologías similares para mejorar tu experiencia, analizar el tráfico y personalizar el contenido. Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas nuestro sitio web.</p>
+                
+                <div class="cookies-info">
+                    <div class="cookie-types">
+                        <h3>Tipos de Cookies que Utilizamos</h3>
+                        <ul>
+                            <li><strong>Cookies Esenciales:</strong> Necesarias para el funcionamiento básico del sitio. No pueden ser desactivadas.</li>
+                            <li><strong>Cookies de Preferencias:</strong> Permiten recordar tus preferencias y personalizar tu experiencia.</li>
+                            <li><strong>Cookies Analíticas:</strong> Nos ayudan a entender cómo interactúas con nuestro sitio para mejorarlo.</li>
+                            <li><strong>Cookies de Marketing:</strong> Utilizadas para mostrarte anuncios relevantes dentro y fuera de nuestro sitio.</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Control de Cookies</h3>
+                    <p>Puedes gestionar las cookies a través de la configuración de tu navegador. La mayoría de los navegadores te permiten:</p>
+                    <ul>
+                        <li>Ver las cookies almacenadas</li>
+                        <li>Aceptar o rechazar cookies</li>
+                        <li>Configurar tu navegador para que te avise antes de aceptar cookies</li>
+                        <li>Eliminar cookies</li>
+                    </ul>
+                    
+                    <p>Ten en cuenta que si desactivas ciertas cookies, algunas funciones de nuestro sitio pueden no estar disponibles o no funcionar correctamente.</p>
+                    
+                    <div class="cookie-buttons">
+                        <button id="acceptCookies" class="cookie-btn accept">Aceptar Todas</button>
+                        <button id="rejectCookies" class="cookie-btn reject">Solo Esenciales</button>
+                        <button id="configureCookies" class="cookie-btn configure">Configurar</button>
+                    </div>
+                </div>
+            </section>
 
-  <!-- Reutilizar footer del sitio -->
+            <!-- Protección de Datos -->
+            <section id="proteccion-datos" class="privacy-section" data-aos="fade-up">
+                <h2><i class="fas fa-shield-alt" aria-hidden="true"></i> Protección de Datos</h2>
+                <p>La seguridad de tus datos personales es una prioridad para nosotros. Implementamos medidas técnicas y organizativas adecuadas para proteger tu información contra acceso no autorizado, alteración, divulgación o destrucción.</p>
+                
+                <h3>Medidas de Seguridad</h3>
+                <ul>
+                    <li><strong>Cifrado SSL:</strong> Todas las comunicaciones entre tu dispositivo y nuestro sitio están cifradas mediante protocolos SSL.</li>
+                    <li><strong>Acceso restringido:</strong> Solo personal autorizado tiene acceso a la información personal.</li>
+                    <li><strong>Actualizaciones regulares:</strong> Mantenemos nuestros sistemas actualizados para protegernos contra vulnerabilidades.</li>
+                    <li><strong>Copias de seguridad:</strong> Realizamos copias de seguridad periódicas para prevenir pérdida de datos.</li>
+                    <li><strong>Monitoreo:</strong> Supervisamos nuestros sistemas para detectar posibles brechas de seguridad.</li>
+                </ul>
+                
+                <h3>Retención de Datos</h3>
+                <p>Conservamos tus datos personales solo durante el tiempo necesario para cumplir con los fines para los que fueron recopilados, a menos que la ley exija un período de retención más largo. Cuando ya no necesitamos tus datos, los eliminaremos o anonimizaremos de manera segura.</p>
+            </section>
+
+            <!-- Derechos del Usuario -->
+            <section id="derechos-usuario" class="privacy-section" data-aos="fade-up">
+                <h2><i class="fas fa-user-shield" aria-hidden="true"></i> Derechos del Usuario</h2>
+                <p>Como titular de los datos personales, tienes ciertos derechos respecto a tu información. Respetamos estos derechos y te facilitamos su ejercicio:</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-eye" aria-hidden="true"></i>
+                        <h3>Derecho de Acceso</h3>
+                        <p>Puedes solicitar una copia de los datos personales que tenemos sobre ti.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-edit" aria-hidden="true"></i>
+                        <h3>Derecho de Rectificación</h3>
+                        <p>Puedes solicitar la corrección de datos inexactos o incompletos.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <h3>Derecho de Supresión</h3>
+                        <p>Puedes solicitar la eliminación de tus datos personales.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-ban" aria-hidden="true"></i>
+                        <h3>Derecho de Oposición</h3>
+                        <p>Puedes oponerte al tratamiento de tus datos para ciertos fines.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-download" aria-hidden="true"></i>
+                        <h3>Derecho de Portabilidad</h3>
+                        <p>Puedes solicitar tus datos en un formato estructurado y transferible.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-pause-circle" aria-hidden="true"></i>
+                        <h3>Derecho de Limitación</h3>
+                        <p>Puedes solicitar la limitación del tratamiento de tus datos.</p>
+                    </div>
+                </div>
+                
+                <h3>Cómo Ejercer tus Derechos</h3>
+                <p>Para ejercer cualquiera de estos derechos, puedes contactarnos a través de:</p>
+                <ul>
+                    <li>Correo electrónico: <a href="mailto:privacidad@profematiasprestes.com">privacidad@profematiasprestes.com</a></li>
+                    <li>Formulario de contacto en nuestra sección de <a href="contacto.html">Contacto</a></li>
+                </ul>
+                <p>Responderemos a tu solicitud dentro de un plazo máximo de 30 días. En caso de que necesitemos más tiempo, te informaremos debidamente.</p>
+            </section>
+
+            <!-- Enlaces a Terceros -->
+            <section id="enlaces-terceros" class="privacy-section" data-aos="fade-up">
+                <h2><i class="fas fa-external-link-alt" aria-hidden="true"></i> Enlaces a Terceros</h2>
+                <p>Nuestro sitio web puede contener enlaces a sitios web de terceros, como plataformas educativas, recursos complementarios o redes sociales. Estos enlaces se proporcionan únicamente para tu conveniencia e información.</p>
+                <p>Es importante tener en cuenta que:</p>
+                <ul>
+                    <li>No tenemos control sobre el contenido o las prácticas de privacidad de estos sitios de terceros.</li>
+                    <li>No somos responsables de sus políticas de privacidad ni de cómo tratan tu información personal.</li>
+                    <li>Al hacer clic en estos enlaces, abandonas nuestro sitio web y quedas sujeto a las políticas de privacidad de esos terceros.</li>
+                </ul>
+                <p>Te recomendamos revisar las políticas de privacidad de cualquier sitio web que visites a través de enlaces en nuestro sitio antes de proporcionar cualquier información personal.</p>
+            </section>
+
+            <!-- Modificaciones -->
+            <section id="modificaciones" class="privacy-section" data-aos="fade-up">
+                <h2><i class="fas fa-history" aria-hidden="true"></i> Modificaciones y Actualizaciones</h2>
+                <p>Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento para adaptarla a:</p>
+                <ul>
+                    <li>Cambios en la legislación aplicable</li>
+                    <li>Decisiones de autoridades competentes</li>
+                    <li>Cambios en nuestras prácticas de recopilación y uso de datos</li>
+                    <li>Mejoras en nuestros servicios</li>
+                </ul>
+                
+                <h3>Notificación de Cambios</h3>
+                <p>Cuando realicemos cambios significativos en esta política, te notificaremos a través de:</p>
+                <ul>
+                    <li>Un aviso destacado en nuestro sitio web</li>
+                    <li>Un correo electrónico a la dirección que nos hayas proporcionado (para cambios importantes)</li>
+                    <li>Una notificación en la página de inicio antes de que los cambios entren en vigor</li>
+                </ul>
+                
+                <p>La fecha de la última actualización aparecerá siempre al final de esta política. Te recomendamos revisar periódicamente esta página para estar informado sobre cómo protegemos tu información.</p>
+            </section>
+
+            <!-- Contacto -->
+            <section id="contacto" class="privacy-section" data-aos="fade-up">
+                <h2><i class="fas fa-envelope" aria-hidden="true"></i> Contacto</h2>
+                <p>Si tienes preguntas, comentarios o inquietudes sobre esta Política de Privacidad o sobre cómo manejamos tus datos personales, no dudes en contactarnos:</p>
+                
+                <div class="contact-info">
+                    <p><strong>Responsable del tratamiento:</strong> Matías Prestes</p>
+                    <p><strong>Correo electrónico:</strong> <a href="mailto:privacidad@profematiasprestes.com">privacidad@profematiasprestes.com</a></p>
+                    <p><strong>Formulario de contacto:</strong> Disponible en nuestra sección de <a href="contacto.html">Contacto</a></p>
+                </div>
+                
+                <p>También puedes presentar una reclamación ante la autoridad de protección de datos competente si consideras que el tratamiento de tus datos personales infringe la normativa aplicable.</p>
+                
+                <div class="last-update">
+                    <p><strong>Última actualización:</strong> 15 de mayo de 2024</p>
+                </div>
+            </section>
+        </article>
+    </main>
+  <!-- Footer -->
   <footer class="footer">
-    <div class="footer-decoration rotating-circle"></div>
-    <div class="footer-decoration bouncing-rocket">🚀</div>
-    <div class="footer-decoration pulsing-circle"></div>
-    <div class="footer-decoration spinning-laptop">💻</div>
+    <div class="footer-decorations">
+        <div class="rotating-circle"></div>
+        <div class="rotating-circle"></div>
+        <div class="rotating-circle"></div>
+        <div class="bouncing-rocket">🚀</div>
+        <div class="pulsing-circle"></div>
+        <div class="pulsing-circle"></div>
+        <div class="spinning-laptop">💻</div>
+    </div>
     
     <div class="footer-grid">
-      <div class="footer-column" data-aos="fade-up">
-        <img src="https://profematiasprestes.misitioweb.com.uy/img/logos/logofinal3.webp" alt="Logo Matias Prestes" class="footer-logo">
-        <p class="footer-description">
-          Educación tecnológica de calidad para formar los profesionales del mañana. Especializado en programación, bases de datos y robótica.
-        </p>
-        <div class="social-links">
-          <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" class="social-link" target="_blank">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a href="https://uy.linkedin.com/in/mprestestecnologia" class="social-link" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/mprestes" class="social-link" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="mailto:profematiasprestes@profematiasprestes.misitioweb.com.uy" class="social-link">
-            <i class="fas fa-envelope"></i>
-          </a>
+        <div class="footer-column">
+            <div class="footer-logo">
+                <img src="img/logos/logofinal3.webp" alt="MP Logo">
+                <div class="footer-logo-text">
+                    <span class="logo-title">Matías Prestes</span>
+                    <span class="logo-subtitle">Educación Digital</span>
+                </div>
+            </div>
+            <p class="footer-description">Brindando recursos educativos de calidad para impulsar tu carrera en el mundo digital. Comprometidos con tu crecimiento profesional.</p>
+            <div class="footer-social">
+                <a href="https://uy.linkedin.com/in/mprestestecnologia" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
         </div>
-      </div>
-
-      <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
-        <h3 class="footer-title">Accesos Directos</h3>
-        <ul class="footer-links">
-          <li class="footer-link"><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
-          <li class="footer-link"><a href="materias.html"><i class="fas fa-book"></i> Cursos</a></li>
-          <li class="footer-link"><a href="materiales.html"><i class="fas fa-file-alt"></i> Materiales</a></li>
-          <li class="footer-link"><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
-          <li class="footer-link"><a href="noticias.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
-          <li class="footer-link"><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="footer-title">Legal</h3>
-        <ul class="footer-links">
-          <li class="footer-link">
-            <a href="privacy.html"><i class="fas fa-shield-alt"></i> Política de Privacidad</a>
-          </li>
-          <li class="footer-link">
-            <a href="terms.html"><i class="fas fa-file-contract"></i> Términos de Servicio</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
-        <h3 class="footer-title">Newsletter</h3>
-        <p class="footer-description">
-          Suscríbete para recibir actualizaciones y recursos exclusivos.
-        </p>
-        <form class="newsletter-form">
-          <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
-          <button type="submit" class="newsletter-button">
-            <i class="fas fa-paper-plane"></i> Suscribirse
-          </button>
-        </form>
-      </div>
+        
+        <div class="footer-column">
+            <h3 class="footer-heading">Accesos Directos</h3>
+            <ul class="footer-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="materias.html"><i class="fas fa-book"></i> Cursos</a></li>
+                <li><a href="materiales.html"><i class="fas fa-file-alt"></i> Materiales</a></li>
+                <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li><a href="noticias.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h3 class="footer-heading">Información Legal</h3>
+            <ul class="footer-menu">
+                <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Política de Privacidad</a></li>
+                <li><a href="terminos.html"><i class="fas fa-gavel"></i> Términos y Condiciones</a></li>
+                <li><a href="#"><i class="fas fa-cookie"></i> Política de Cookies</a></li>
+                <li><a href="#"><i class="fas fa-handshake"></i> Acuerdos de Licencia</a></li>
+                <li><a href="#"><i class="fas fa-user-shield"></i> Derechos de Autor</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column footer-newsletter">
+            <h3 class="footer-heading">Newsletter</h3>
+            <p>Suscríbete para recibir actualizaciones, nuevos recursos y consejos exclusivos directamente en tu correo.</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="newsletter-button">Suscribirse</button>
+            </form>
+        </div>
     </div>
-
-    <div class="copyright">
-      &copy; <span id="current-year">2024</span> Matías Prestes. Todos los derechos reservados.
+    
+    <div class="footer-bottom">
+        <div class="footer-copyright">
+            <p>&copy; 2024 Matías Prestes. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-legal">
+            <a href="privacy.html">Privacidad</a>
+            <a href="terminos.html">Términos</a>
+            <a href="#">Cookies</a>
+        </div>
     </div>
-  </footer>
+</footer>
 
-  <!-- Scripts -->
-  <script src="js/nav.js"></script>
-  <script src="js/privacy.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/navfooter.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/privacy.js"></script>
 </body>
 </html>
