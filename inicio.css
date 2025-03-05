@@ -1,0 +1,79 @@
+.fun-banner {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.banner-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.banner-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.banner-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.banner-btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.banner-btn.primary {
+    background: #ff9800;
+    color: #fff;
+}
+
+.banner-btn.primary:hover {
+    background: #e68900;
+}
+
+.banner-btn.secondary {
+    background: #03dac6;
+    color: #000;
+}
+
+.banner-btn.secondary:hover {
+    background: #02b8a4;
+}
+
+.floating-elements {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    font-size: 2rem;
+    animation: float 5s infinite alternate;
+}
+
+.emoji {
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+} 

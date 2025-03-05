@@ -15,54 +15,35 @@ document.addEventListener('DOMContentLoaded', function() {
     let countdownTimer;
     
     function updateCountdown() {
-        // Get current date and time
-        const now = new Date().getTime();
+        // Set the date we're counting down to (end of school year)
+        const endDate = new Date("November 29, 2025 23:59:59").getTime();
         
-        // Calculate the time remaining
-        const timeRemaining = targetDate - now;
-        
-        // Calculate days, hours, minutes, seconds
-        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-        
-        // Get DOM elements
-        const daysEl = document.getElementById('days');
-        const hoursEl = document.getElementById('hours');
-        const minutesEl = document.getElementById('minutes');
-        const secondsEl = document.getElementById('seconds');
-        
-        // Check if elements exist before updating
-        if (daysEl && hoursEl && minutesEl && secondsEl) {
-            // Update DOM with new values only if they've changed
-            updateElementWithAnimation(daysEl, days);
-            updateElementWithAnimation(hoursEl, hours < 10 ? '0' + hours : hours);
-            updateElementWithAnimation(minutesEl, minutes < 10 ? '0' + minutes : minutes);
-            updateElementWithAnimation(secondsEl, seconds < 10 ? '0' + seconds : seconds);
-        }
-        
-        // If countdown is over
-        if (timeRemaining < 0) {
-            clearInterval(countdownTimer);
+        // Update the countdown every second
+        setInterval(() => {
+            const now = new Date().getTime();
+            const distance = endDate - now;
             
-            // Update DOM with zeros
-            if (daysEl) daysEl.textContent = '0';
-            if (hoursEl) hoursEl.textContent = '00';
-            if (minutesEl) minutesEl.textContent = '00';
-            if (secondsEl) secondsEl.textContent = '00';
+            // Calculate days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
             
-            // Show celebration message
-            const countdownTitle = document.querySelector('.countdown-title');
-            if (countdownTitle) {
-                countdownTitle.textContent = '¡La libertad ha llegado! 🎉🎊';
+            // Update the HTML elements
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+            
+            // If the countdown is finished
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("days").textContent = "0";
+                document.getElementById("hours").textContent = "00";
+                document.getElementById("minutes").textContent = "00";
+                document.getElementById("seconds").textContent = "00";
             }
-            
-            const bannerSubtitle = document.querySelector('.banner-subtitle');
-            if (bannerSubtitle) {
-                bannerSubtitle.textContent = 'Disfruta de tu merecido descanso. ¡Lo lograste!';
-            }
-        }
+        }, 1000);
     }
     
     // Function to update element with flip animation if value changed
