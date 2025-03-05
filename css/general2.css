@@ -146,7 +146,8 @@ main {
     margin-bottom: 1.5rem;
     display: inline-block;
     background: linear-gradient(135deg, #0056ff, #8257e5);
-    -webkit-background-clip: text;
+    background-clip: text; /* Add this line for standard compatibility */
+    -webkit-background-clip: text; /* Existing vendor prefix */
     -webkit-text-fill-color: transparent;
 }
 
