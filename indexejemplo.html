@@ -14,7 +14,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/navfooter.css">
-    <link rel="stylesheet" href="css/hero2.css">
+    <link rel="stylesheet" href="css/hero3.css">
     <link rel="stylesheet" href="css/inicio.css">
     <link rel="stylesheet" href="css/banner2.css">
     <link rel="stylesheet" href="css/sobremi2.css">
@@ -177,15 +177,27 @@
         <section class="hero" id="hero">
             <div class="hero-background">
                 <div id="particles-js"></div>
+             
             </div>
             <div class="hero-container">
                 <div class="hero-content">
-                    <h1 class="hero-title">Domina la Tecnología del Futuro</h1>
+                    <div class="hero-badge">
+                        <span class="badge-icon">🚀</span>
+                        <span class="badge-text">¡Bienvenido a la aventura digital!</span>
+                    </div>
+                    <h1 class="hero-title">Domina la Tecnología <span class="highlight">del Futuro</span></h1>
                     <p class="hero-subtitle">Aprende HTML, CSS, SQL, Robótica y más tecnologías que transformarán tu futuro. Recursos educativos diseñados para impulsar tu carrera digital.</p>
-                    <a href="#features" class="hero-cta" id="hero-cta-btn">
-                        <span>Explorar Recursos</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <div class="hero-cta-group">
+                        <a href="#features" class="hero-cta primary" id="hero-cta-btn">
+                            <span>Explorar Recursos</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="contacto.html" class="hero-cta secondary">
+                            <span>Contactar</span>
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+        
                 </div>
                 <div class="hero-image">
                     <div class="image-container">
@@ -405,55 +417,31 @@ ORDER BY future DESC;</pre>
                 </div>
             </div>
         </section>
-
-        <!-- Banner Humorístico -->
-<section class="fun-banner" id="fun-banner">
-    <div class="banner-container">
-        <h2 class="banner-title">¡Error 404: Motivación no encontrada! 🚀</h2>
-        <p class="banner-subtitle">Si los parciales fueran código, ya los habría refactorizado 10 veces 😅</p>
-        <div class="banner-actions">
-            <a href="materiales.html" class="banner-btn primary">Recargar Motivación 🔄</a>
-            <a href="faq.html" class="banner-btn secondary">Depurar errores académicos 🛠</a>
-        </div>
-        <div class="floating-elements">
-            <span class="emoji">💻</span>
-            <span class="emoji">☕</span>
-            <span class="emoji">🎮</span>
-            <span class="emoji">📚</span>
-        </div>
-    </div>
-</section>
-
-        <!-- Featured Section -->
-        <section class="features-section" id="features">
-            <h2>Recursos Destacados</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Cursos Online</h3>
-                    <p>Aprende a tu ritmo con nuestros cursos estructurados para todos los niveles.</p>
-                    <a href="#" class="feature-link">Ver Cursos <i class="fas fa-arrow-right"></i></a>
+        <!-- Fun Banner Section -->
+        <section class="fun-banner" id="fun-banner">
+            <div class="banner-container">
+                <h2 class="banner-title">¡Debuggeando el Semestre! 🎯</h2>
+                <p class="banner-subtitle">Cuando el código no compila y los parciales tampoco... ¡pero seguimos con humor! 💪</p>
+                <div class="banner-actions">
+                    <a href="materiales.html" class="banner-btn primary">
+                        <span>Recargar Energías</span>
+                        <span>⚡</span>
+                    </a>
+                    <a href="faq.html" class="banner-btn secondary">
+                        <span>Manual de Supervivencia</span>
+                        <span>🛟</span>
+                    </a>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <h3>Materiales Descargables</h3>
-                    <p>Guías, plantillas y recursos prácticos para complementar tu aprendizaje.</p>
-                    <a href="#" class="feature-link">Descargar <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Comunidad</h3>
-                    <p>Conecta con otros estudiantes y profesionales para compartir conocimientos.</p>
-                    <a href="#" class="feature-link">Unirse <i class="fas fa-arrow-right"></i></a>
+                <div class="floating-elements">
+                    <span class="emoji">💻</span>
+                    <span class="emoji">☕</span>
+                    <span class="emoji">🎮</span>
+                    <span class="emoji">📚</span>
+                    <span class="emoji">🔧</span>
                 </div>
             </div>
         </section>
+
 
         <!-- Portales Oficiales Section -->
         <section class="portales-section" id="portales">
@@ -689,7 +677,7 @@ ORDER BY future DESC;</pre>
             <div class="footer-copyright">
                 <p>&copy; 2024 Matías Prestes. Todos los derechos reservados.</p>
             </div>
-            <div class="footer-legal">
+            <div class="footer-legal"></div>
                 <a href="privacy.html">Privacidad</a>
                 <a href="terminos.html">Términos</a>
                 <a href="#">Cookies</a>
