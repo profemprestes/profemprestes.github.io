@@ -1,5 +1,152 @@
 /* Combined JS for Matias Prestes Website */
 
+/**
+ * Initialize Particles.js with custom options
+ * @param {string} elementId - The ID of the element to render particles in
+ * @param {object} options - Custom options to override defaults
+ */
+function initParticles(elementId, options = {}) {
+    if (typeof particlesJS !== 'undefined' && document.getElementById(elementId)) {
+        const settings = {
+            number: options.number || 80,
+            color: options.color || "#ffffff",
+            lineColor: options.lineColor || "#4facfe",
+            lineOpacity: options.lineOpacity !== undefined ? options.lineOpacity : 0.4,
+            opacity: options.opacity !== undefined ? options.opacity : 0.5,
+            randomOpacity: options.randomOpacity !== undefined ? options.randomOpacity : false,
+            grabOpacity: options.grabOpacity !== undefined ? options.grabOpacity : 1,
+            moveSpeed: options.moveSpeed || 2
+        };
+
+        particlesJS(elementId, {
+            "particles": {
+                "number": {
+                    "value": settings.number,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": settings.color
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": settings.opacity,
+                    "random": settings.randomOpacity,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": settings.lineColor,
+                    "opacity": settings.lineOpacity,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": settings.moveSpeed,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": settings.grabOpacity
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    } else if (!document.getElementById(elementId) && typeof particlesJS !== 'undefined') {
+        // Element not found, silent or debug log
+    } else {
+        // console.warn('Particles.js not loaded');
+    }
+}
+
+/**
+ * Initialize AOS with custom options
+ * @param {object} options - Custom options to override defaults
+ */
+function initAOS(options = {}) {
+    if (typeof AOS !== 'undefined') {
+        const defaults = {
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false,
+            offset: 100
+        };
+        AOS.init({ ...defaults, ...options });
+    }
+}
+
 /* --- general.js --- */
 // Main page specific JavaScript
 
@@ -440,115 +587,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Initialize Particles.js
-    if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#4facfe",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-    } else {
-        console.warn('Particles.js not loaded or particles-js element not found');
-    }
+    initParticles('particles-js', {
+        number: 80,
+        color: "#ffffff",
+        opacity: 0.5,
+        randomOpacity: false,
+        lineColor: "#4facfe",
+        lineOpacity: 0.4,
+        grabOpacity: 1
+    });
 
     // Add interaction to the profile image
     const profileImage = document.querySelector('.profile-image');
@@ -626,13 +673,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 /* --- banner.js (Fixed) --- */
 document.addEventListener('DOMContentLoaded', function() {
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: false
-        });
-    }
+    initAOS({
+        once: false
+    });
 
     const targetDate = new Date('2025-11-29 00:00:00').getTime();
     let countdownTimer;
@@ -720,16 +763,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* --- sobremi.js --- */
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS (Animate on Scroll) if available
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false,
-            offset: 100
-        });
-    }
+    initAOS();
 
     // Animate progress bars when skills container comes into view
     const skillsContainer = document.querySelector('.skills-container');
@@ -875,111 +909,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 /* --- materias.js --- */
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Particles.js for hero background
-    if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 50,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
-                },
-                "opacity": {
-                    "value": 0.3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#4facfe",
-                    "opacity": 0.2,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 0.4
-                        }
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-    }
+    initParticles('particles-js', {
+        number: 50,
+        color: "#ffffff",
+        opacity: 0.3,
+        randomOpacity: true,
+        lineColor: "#4facfe",
+        lineOpacity: 0.2,
+        grabOpacity: 0.4
+    });
 
-    // Initialize AOS (Animate on Scroll)
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false,
-            offset: 100
-        });
-    }
+    initAOS();
 
     // Materias filtering functionality
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -1493,100 +1433,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 /* --- contacto.js --- */
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Particles.js for hero background
-    if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 50,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
-                },
-                "opacity": {
-                    "value": 0.3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#4facfe",
-                    "opacity": 0.2,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 0.4
-                        }
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-    }
+    initParticles('particles-js', {
+        number: 50,
+        color: "#ffffff",
+        opacity: 0.3,
+        randomOpacity: true,
+        lineColor: "#4facfe",
+        lineOpacity: 0.2,
+        grabOpacity: 0.4
+    });
 
     // Animation for floating icons
     const floatingIcons = document.querySelectorAll('.floating-icon');
@@ -1795,110 +1650,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 /* --- faq.js --- */
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Particles.js for hero background
-    if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 50,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
-                },
-                "opacity": {
-                    "value": 0.3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#aa80ff",
-                    "opacity": 0.2,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 0.4
-                        }
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-    }
+    initParticles('particles-js', {
+        number: 50,
+        color: "#ffffff",
+        opacity: 0.3,
+        randomOpacity: true,
+        lineColor: "#aa80ff",
+        lineOpacity: 0.2,
+        grabOpacity: 0.4
+    });
 
-    // Initialize AOS (Animate on Scroll)
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            offset: 100
-        });
-    }
+    initAOS();
 
     // FAQ Accordion Functionality
     const faqItems = document.querySelectorAll('.faq-item');
@@ -2150,110 +1912,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 /* --- noticias.js --- */
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Particles.js for hero background
-    if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 50,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
-                },
-                "opacity": {
-                    "value": 0.3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#76b2fe",
-                    "opacity": 0.2,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 0.4
-                        }
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-    }
+    initParticles('particles-js', {
+        number: 50,
+        color: "#ffffff",
+        opacity: 0.3,
+        randomOpacity: true,
+        lineColor: "#76b2fe",
+        lineOpacity: 0.2,
+        grabOpacity: 0.4
+    });
 
-    // Initialize AOS (Animate on Scroll)
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            offset: 100
-        });
-    }
+    initAOS();
 
     // Noticias filtering functionality
     const tagButtons = document.querySelectorAll('.tag-btn');
@@ -2553,111 +2222,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 /* --- materiales.js --- */
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Particles.js for hero background
-    if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
-                },
-                "opacity": {
-                    "value": 0.2,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.2,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 0.5
-                        }
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-    }
+    initParticles('particles-js', {
+        number: 80,
+        color: "#ffffff",
+        opacity: 0.2,
+        randomOpacity: true,
+        lineColor: "#ffffff",
+        lineOpacity: 0.2,
+        grabOpacity: 0.5
+    });
 
-    // Initialize AOS (Animate on Scroll)
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false,
-            offset: 100
-        });
-    }
+    initAOS({
+        mirror: false
+    });
 
     // Initialize Swiper slider for featured materials
     if (typeof Swiper !== 'undefined') {
@@ -2974,13 +2551,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 /* --- privacy.js --- */
 document.addEventListener('DOMContentLoaded', () => {
-  // Inicializar AOS (Animate On Scroll)
-  AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true,
-    mirror: false
-  });
+  initAOS();
 
   // Table of Contents functionality
   const tocLinks = document.querySelectorAll('#privacyToc a');
@@ -3172,13 +2743,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 /* --- terminos.js --- */
 document.addEventListener('DOMContentLoaded', () => {
-  // Inicializar AOS (Animate On Scroll)
-  AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true,
-    mirror: false
-  });
+  initAOS();
 
   // Table of Contents functionality
   const tocLinks = document.querySelectorAll('#termsToc a');
@@ -4143,54 +3708,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 /* --- materiales2.js --- */
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Particles.js with simplified configuration
-    if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 50, density: { enable: true, value_area: 800 } },
-                color: { value: "#ffffff" },
-                shape: { type: "circle" },
-                opacity: { value: 0.3, random: true },
-                size: { value: 3, random: true },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: "#4facfe",
-                    opacity: 0.2,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 2,
-                    direction: "none",
-                    random: false,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: { enable: true, mode: "grab" },
-                    onclick: { enable: true, mode: "push" },
-                    resize: true
-                }
-            },
-            retina_detect: true
-        });
-    }
+    initParticles('particles-js', {
+        number: 50,
+        color: "#ffffff",
+        opacity: 0.3,
+        randomOpacity: true,
+        lineColor: "#4facfe",
+        lineOpacity: 0.2
+    });
 
-    // Initialize AOS
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false,
-            offset: 100
-        });
-    }
+    initAOS();
 
     // Materias filtering functionality
     const filterButtons = document.querySelectorAll('.filter-btn');
