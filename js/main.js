@@ -619,32 +619,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const codeSnippets = document.querySelectorAll('.code-snippet');
     if (codeSnippets.length > 0) {
         // Random movement for code snippets
-        let positions = [];
+        // Using drifts array to store the accumulated translation
+        let drifts = [];
 
-        codeSnippets.forEach((snippet, index) => {
-            positions.push({
-                x: parseFloat(getComputedStyle(snippet).left) || 0,
-                y: parseFloat(getComputedStyle(snippet).top) || 0,
-                dirX: Math.random() > 0.5 ? 1 : -1,
-                dirY: Math.random() > 0.5 ? 1 : -1,
-                speed: 0.5 + Math.random()
+        codeSnippets.forEach(() => {
+            drifts.push({
+                x: 0,
+                y: 0
             });
         });
 
         // This is just for small additional movement, the main animation is in CSS
         const moveSnippets = () => {
             codeSnippets.forEach((snippet, index) => {
-                if (!snippet || positions.length <= index) return;
+                if (!snippet || drifts.length <= index) return;
 
-                const currentX = parseFloat(snippet.style.left) || positions[index].x;
-                const currentY = parseFloat(snippet.style.top) || positions[index].y;
+                // Subtle random movement using translate for better performance
+                // Replacing layout-triggering left/top properties with composite-only translate
+                // 0.25% of ~1000px is roughly 2.5px
+                const deltaX = (Math.random() * 3 - 1.5);
+                const deltaY = (Math.random() * 3 - 1.5);
 
-                // Subtle random movement
-                const newX = currentX + (Math.random() * 0.5 - 0.25);
-                const newY = currentY + (Math.random() * 0.5 - 0.25);
+                drifts[index].x += deltaX;
+                drifts[index].y += deltaY;
 
-                snippet.style.left = `${newX}%`;
-                snippet.style.top = `${newY}%`;
+                snippet.style.translate = `${drifts[index].x}px ${drifts[index].y}px`;
             });
 
             requestAnimationFrame(moveSnippets);
