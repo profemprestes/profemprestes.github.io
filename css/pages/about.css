@@ -1,5 +1,310 @@
-/* Placeholder for About Me section styles */
+/* About Me Section */
 .sobremi-section {
     padding: 5rem 2rem;
     background-color: var(--bg-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.sobremi-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.decoration-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+}
+
+.decoration-shape.shape-1 {
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(79, 172, 254, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.decoration-shape.shape-2 {
+    bottom: -50px;
+    left: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(124, 77, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.decoration-shape.shape-3 {
+    top: 40%;
+    left: 40%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.sobremi-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.sobremi-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.sobremi-header h2 {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.sobremi-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    border-radius: 2px;
+}
+
+.sobremi-header p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.sobremi-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Profile Side */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.profile-container:hover {
+    transform: translateY(-10px);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.profile-container:hover .profile-image {
+    transform: scale(1.1);
+}
+
+.profile-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.profile-container:hover .profile-overlay {
+    transform: translateY(0);
+}
+
+.profile-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.profile-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.experience-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.experience-badge i {
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 160px;
+}
+
+.social-btn i {
+    font-size: 1.2rem;
+}
+
+.social-btn.youtube {
+    background-color: #ff0000;
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+.social-btn.youtube:hover {
+    background-color: #cc0000;
+    transform: translateY(-3px);
+}
+
+.social-btn.linkedin {
+    background-color: #0077b5;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 119, 181, 0.3);
+}
+
+.social-btn.linkedin:hover {
+    background-color: #005582;
+    transform: translateY(-3px);
+}
+
+.tooltip {
+    display: none; /* Can be enhanced later with CSS tooltip logic */
+}
+
+/* Bio Side */
+.bio-section {
+    padding-top: 1rem;
+}
+
+.bio-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.bio-text strong {
+    color: var(--primary-color);
+}
+
+.skills-container {
+    margin-top: 3rem;
+}
+
+.skills-container h3 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 2rem;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-value {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    border-radius: 10px;
+    position: relative;
+    width: 0; /* Animated via JS or AOS, but let's set width inline in HTML usually, or verify */
+    transition: width 1.5s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .sobremi-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .profile-section {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobremi-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .sobremi-header h2 {
+        font-size: 2rem;
+    }
+
+    .profile-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
 }

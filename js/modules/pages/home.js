@@ -1,51 +1,54 @@
-
-// Section: /\* --- hero.js --- \*/
-/* --- hero.js --- */
 document.addEventListener('DOMContentLoaded', function() {
+    // --- Hero Section Logic ---
+
     // Smooth scroll for hero buttons
     const heroCta = document.getElementById('hero-cta-btn');
     const scrollIndicator = document.querySelector('.scroll-indicator');
 
-    if (heroCta) {
-        heroCta.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
+    const smoothScrollTo = (e) => {
+        e.preventDefault();
+        const targetId = e.currentTarget.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
 
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    }
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    };
 
-    if (scrollIndicator) {
-        scrollIndicator.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    }
+    if (heroCta) heroCta.addEventListener('click', smoothScrollTo);
+    if (scrollIndicator) scrollIndicator.addEventListener('click', smoothScrollTo);
 
     // Initialize Particles.js
-    initParticles('particles-js', {
-        number: 80,
-        color: "#ffffff",
-        opacity: 0.5,
-        randomOpacity: false,
-        lineColor: "#4facfe",
-        lineOpacity: 0.4,
-        grabOpacity: 1
-    });
+    if (typeof initParticles === 'function') {
+        initParticles('particles-js', {
+            number: 80,
+            color: "#ffffff",
+            opacity: 0.5,
+            randomOpacity: false,
+            lineColor: "#4facfe",
+            lineOpacity: 0.4,
+            grabOpacity: 1
+        });
+    } else if (window.particlesJS) {
+         // Fallback if initParticles wrapper is missing but particlesJS is loaded
+         particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "opacity": { "value": 0.5, "random": false },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#4facfe", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 6 }
+            },
+            "interactivity": {
+                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" } },
+                "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } } }
+            }
+        });
+    }
 
     // Add interaction to the profile image
     const profileImage = document.querySelector('.profile-image');
@@ -68,25 +71,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Code snippets animation
     const codeSnippets = document.querySelectorAll('.code-snippet');
     if (codeSnippets.length > 0) {
-        // Random movement for code snippets
-        // Using drifts array to store the accumulated translation
-        let drifts = [];
+        let drifts = Array(codeSnippets.length).fill().map(() => ({ x: 0, y: 0 }));
 
-        codeSnippets.forEach(() => {
-            drifts.push({
-                x: 0,
-                y: 0
-            });
-        });
-
-        // This is just for small additional movement, the main animation is in CSS
         const moveSnippets = () => {
             codeSnippets.forEach((snippet, index) => {
-                if (!snippet || drifts.length <= index) return;
+                if (!snippet) return;
 
-                // Subtle random movement using translate for better performance
-                // Replacing layout-triggering left/top properties with composite-only translate
-                // 0.25% of ~1000px is roughly 2.5px
                 const deltaX = (Math.random() * 3 - 1.5);
                 const deltaY = (Math.random() * 3 - 1.5);
 
@@ -95,16 +85,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 snippet.style.translate = `${drifts[index].x}px ${drifts[index].y}px`;
             });
-
             requestAnimationFrame(moveSnippets);
         };
-
         requestAnimationFrame(moveSnippets);
     }
 
     // Detect when hero section is in view and add extra animation
     const observeElements = document.querySelectorAll('.hero-content, .hero-image');
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -112,26 +99,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 observer.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.1
-    });
+    }, { threshold: 0.1 });
 
-    observeElements.forEach(element => {
-        observer.observe(element);
-    });
-});
+    observeElements.forEach(element => observer.observe(element));
 
-// Section: /\* --- banner.js \(Fixed\) --- \*/
-/* --- banner.js (Fixed) --- */
-document.addEventListener('DOMContentLoaded', function() {
-    initAOS({
-        once: false
-    });
+    // --- Banner / Countdown Logic ---
 
-    const targetDate = new Date('2025-11-29 00:00:00').getTime();
-    let countdownTimer;
+    // Initialize AOS
+    if (typeof initAOS === 'function') {
+        initAOS({ once: false });
+    } else if (typeof AOS !== 'undefined') {
+        AOS.init({ once: false });
+    }
 
-    function updateCountdown() {
+    const updateCountdown = () => {
+        // Example Date: November 29, 2025
         const endDate = new Date('November 29, 2025 23:59:59').getTime();
         const now = new Date().getTime();
         const distance = endDate - now;
@@ -146,25 +128,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const elMinutes = document.getElementById('minutes');
         const elSeconds = document.getElementById('seconds');
 
-        if (elDays) elDays.textContent = days;
+        if (elDays) elDays.textContent = days > 0 ? days : 0;
         if (elHours) elHours.textContent = hours.toString().padStart(2, '0');
         if (elMinutes) elMinutes.textContent = minutes.toString().padStart(2, '0');
         if (elSeconds) elSeconds.textContent = seconds.toString().padStart(2, '0');
-
-        if (distance < 0 && countdownTimer) {
-            clearInterval(countdownTimer);
-            if (elDays) elDays.textContent = '0';
-            if (elHours) elHours.textContent = '00';
-            if (elMinutes) elMinutes.textContent = '00';
-            if (elSeconds) elSeconds.textContent = '00';
-        }
-    }
+    };
 
     if (document.getElementById('days')) {
         updateCountdown();
-        countdownTimer = setInterval(updateCountdown, 1000);
+        setInterval(updateCountdown, 1000);
     }
 
+    // Banner Interactive Effects
     const countdownBoxes = document.querySelectorAll('.countdown-box');
     countdownBoxes.forEach(box => {
         box.addEventListener('mouseover', function() {
@@ -179,26 +154,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    const style = document.createElement('style');
-    style.textContent = `
-        .ripple-effect {
-            position: absolute;
-            top: var(--ripple-y, 50%);
-            left: var(--ripple-x, 50%);
-            width: 10px;
-            height: 10px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            animation: ripple 1s ease-out;
-        }
-        @keyframes ripple {
-            0% { width: 0; height: 0; opacity: 0.8; }
-            100% { width: 200px; height: 200px; opacity: 0; }
-        }
-    `;
-    document.head.appendChild(style);
+    // Add ripple styles dynamically
+    if (!document.getElementById('ripple-style')) {
+        const style = document.createElement('style');
+        style.id = 'ripple-style';
+        style.textContent = `
+            .ripple-effect {
+                position: absolute;
+                top: var(--ripple-y, 50%);
+                left: var(--ripple-x, 50%);
+                width: 10px;
+                height: 10px;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+                animation: ripple 1s ease-out;
+            }
+            @keyframes ripple {
+                0% { width: 0; height: 0; opacity: 0.8; }
+                100% { width: 200px; height: 200px; opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    }
 
     const bannerBtns = document.querySelectorAll('.banner-btn');
     bannerBtns.forEach(btn => {
