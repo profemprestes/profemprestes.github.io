@@ -11,6 +11,20 @@
     <meta name="author" content="Matías Prestes">
     <meta name="google-site-verification" content="1ItZbJp514jLxdkq9HT8vOSDtrL-tWnX29NtZxlS9mw" />
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://profemprestes.github.io/">
+    <meta property="og:title" content="Matías Prestes - Profesor de Tecnología">
+    <meta property="og:description" content="Sitio web de Matías Prestes, profesor de informática. Recursos educativos sobre programación, bases de datos y robótica.">
+    <meta property="og:image" content="https://profemprestes.github.io/img/logos/logofinal3.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://profemprestes.github.io/">
+    <meta property="twitter:title" content="Matías Prestes - Profesor de Tecnología">
+    <meta property="twitter:description" content="Sitio web de Matías Prestes, profesor de informática. Recursos educativos sobre programación, bases de datos y robótica.">
+    <meta property="twitter:image" content="https://profemprestes.github.io/img/logos/logofinal3.webp">
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
@@ -183,7 +197,7 @@
                     <h1 class="hero-title">Domina la Tecnología <span class="highlight">del Futuro</span></h1>
                     <p class="hero-subtitle">Aprende HTML, CSS, SQL, Robótica y más tecnologías que transformarán tu futuro. Recursos educativos diseñados para impulsar tu carrera digital.</p>
                     <div class="hero-cta-group">
-                        <a href="#features" class="hero-cta primary" id="hero-cta-btn">
+                        <a href="#portales" class="hero-cta primary" id="hero-cta-btn">
                             <span>Explorar Recursos</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -236,7 +250,7 @@ WHERE passion = 'technology'
 ORDER BY future DESC;</pre>
             </div>
             <div class="hero-scroll">
-                <a href="#features" class="scroll-indicator">
+                <a href="#portales" class="scroll-indicator">
                     <div class="mouse">
                         <div class="wheel"></div>
                     </div>
@@ -448,7 +462,7 @@ ORDER BY future DESC;</pre>
 
                 <div class="portales-grid">
                     <!-- UTU Portal Card -->
-                    <div class="portal-card" data-aos="fade-up">
+                    <article class="portal-card" data-aos="fade-up">
                         <div class="portal-header">
                             <div class="portal-logo">
                                 <i class="fas fa-university"></i>
@@ -497,10 +511,10 @@ ORDER BY future DESC;</pre>
                             <span>Acceder al portal</span>
                             <i class="fas fa-external-link-alt"></i>
                         </a>
-                    </div>
+                    </article>
                     
                     <!-- Secundaria Portal Card -->
-                    <div class="portal-card" data-aos="fade-up" data-aos-delay="100">
+                    <article class="portal-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="portal-header">
                             <div class="portal-logo">
                                 <i class="fas fa-school"></i>
@@ -549,10 +563,10 @@ ORDER BY future DESC;</pre>
                             <span>Acceder al portal</span>
                             <i class="fas fa-external-link-alt"></i>
                         </a>
-                    </div>
+                    </article>
                     
                     <!-- Ceibal Portal Card -->
-                    <div class="portal-card" data-aos="fade-up" data-aos-delay="200">
+                    <article class="portal-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="portal-header">
                             <div class="portal-logo">
                                 <i class="fas fa-laptop"></i>
@@ -601,7 +615,7 @@ ORDER BY future DESC;</pre>
                             <span>Acceder al soporte</span>
                             <i class="fas fa-external-link-alt"></i>
                         </a>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -681,6 +695,6 @@ ORDER BY future DESC;</pre>
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
