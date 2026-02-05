@@ -215,37 +215,81 @@
 <body
     class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
     <nav
-        class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-all duration-300 nav-container">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-2">
-                    <img src="img/logos/logofinal3.webp" alt="Logo Matías Prestes"
-                        class="w-10 h-10 rounded-lg object-contain">
-                    <div>
-                        <h1 class="font-bold text-lg leading-none">Matías Prestes</h1>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">Profesor de Informática</p>
-                    </div>
+                <div class="nav-brand flex items-center gap-2 z-[52]"> <!-- High Z-index for logo -->
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <img src="img/logos/logofinal3.webp" alt="Logo Matías Prestes"
+                            class="w-10 h-10 rounded-lg object-contain group-hover:scale-105 transition-transform duration-300">
+                        <div>
+                            <h1 class="font-bold text-lg leading-none group-hover:text-primary transition-colors">Matías
+                                Prestes</h1>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Profesor de Informática</p>
+                        </div>
+                    </a>
                 </div>
+
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
-                        href="#"><span class="material-symbols-outlined text-lg">home</span> Inicio</a>
-                    <a class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
-                        href="#"><span class="material-symbols-outlined text-lg">school</span> Cursos</a>
-                    <a class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
-                        href="#"><span class="material-symbols-outlined text-lg">description</span> Materiales</a>
-                    <a class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
-                        href="#"><span class="material-symbols-outlined text-lg">help_outline</span> FAQ</a>
-                    <a class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
-                        href="#"><span class="material-symbols-outlined text-lg">newspaper</span> Noticias</a>
-                    <a class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 transition-all shadow-lg shadow-orange-500/20"
-                        href="#">
+                    <a class="nav-link text-sm font-medium hover:text-primary transition-colors flex items-center gap-1 active"
+                        href="index.html"><span class="material-symbols-outlined text-lg">home</span> Inicio</a>
+                    <a class="nav-link text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
+                        href="materias.html"><span class="material-symbols-outlined text-lg">school</span> Cursos</a>
+                    <a class="nav-link text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
+                        href="materiales.html"><span class="material-symbols-outlined text-lg">description</span>
+                        Materiales</a>
+                    <a class="nav-link text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
+                        href="faq.html"><span class="material-symbols-outlined text-lg">help_outline</span> FAQ</a>
+                    <a class="nav-link text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
+                        href="noticias.html"><span class="material-symbols-outlined text-lg">newspaper</span>
+                        Noticias</a>
+                    <a class="bg-primary hover:bg-cyan-600 text-white px-5 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5"
+                        href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" target="_blank">
                         <span class="material-symbols-outlined text-lg">play_circle</span> Suscríbete
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="nav-toggle"
+                    class="md:hidden text-2xl text-slate-700 dark:text-slate-200 focus:outline-none z-[52] relative p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    aria-label="Abrir menú" aria-expanded="false">
+                    <i class="fas fa-bars pointer-events-none"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container (Hidden by default, styled in global.css/.mobile-view) -->
+        <div id="nav-menu-container" class="mobile-view md:hidden">
+            <div class="flex flex-col gap-6 w-full h-full">
+                <div class="flex flex-col gap-6 mt-4">
+                    <a class="nav-link text-lg font-medium text-slate-200 hover:text-primary transition-colors flex items-center gap-3 border-b border-white/5 pb-4"
+                        href="index.html"><span class="material-symbols-outlined text-xl">home</span> Inicio</a>
+                    <a class="nav-link text-lg font-medium text-slate-200 hover:text-primary transition-colors flex items-center gap-3 border-b border-white/5 pb-4"
+                        href="materias.html"><span class="material-symbols-outlined text-xl">school</span> Cursos</a>
+                    <a class="nav-link text-lg font-medium text-slate-200 hover:text-primary transition-colors flex items-center gap-3 border-b border-white/5 pb-4"
+                        href="materiales.html"><span class="material-symbols-outlined text-xl">description</span>
+                        Materiales</a>
+                    <a class="nav-link text-lg font-medium text-slate-200 hover:text-primary transition-colors flex items-center gap-3 border-b border-white/5 pb-4"
+                        href="faq.html"><span class="material-symbols-outlined text-xl">help_outline</span> FAQ</a>
+                    <a class="nav-link text-lg font-medium text-slate-200 hover:text-primary transition-colors flex items-center gap-3 border-b border-white/5 pb-4"
+                        href="noticias.html"><span class="material-symbols-outlined text-xl">newspaper</span>
+                        Noticias</a>
+                    <a class="nav-link text-lg font-medium text-slate-200 hover:text-primary transition-colors flex items-center gap-3 border-b border-white/5 pb-4"
+                        href="contacto.html"><span class="material-symbols-outlined text-xl">mail</span> Contacto</a>
+                </div>
+
+                <div class="mt-auto mb-8">
+                    <a class="w-full bg-gradient-to-r from-primary to-secondary text-white px-6 py-4 rounded-xl text-center font-bold flex justify-center items-center gap-2 transition-all shadow-lg shadow-primary/20"
+                        href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" target="_blank">
+                        <span class="material-symbols-outlined text-2xl">play_circle</span> Suscríbete
                     </a>
                 </div>
             </div>
         </div>
     </nav>
     <section class="relative overflow-hidden pt-20 pb-32 bg-[#0a0f1d] grid-bg">
+        <div id="particles-js" class="absolute inset-0 z-0 pointer-events-none opacity-40"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="relative z-10">
@@ -263,7 +307,7 @@
                         educativos diseñados para impulsar tu carrera digital.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <button
+                        <button id="hero-cta-btn"
                             class="bg-primary hover:bg-cyber-blue text-white px-8 py-4 rounded-xl font-bold transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(14,165,233,0.4)] hover:shadow-[0_0_30px_rgba(0,242,255,0.6)] group">
                             Explorar Recursos <span
                                 class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
@@ -285,31 +329,31 @@
                             class="absolute -inset-16 rounded-full border border-white/5 animate-[spin_25s_linear_infinite_reverse]">
                         </div>
                     </div>
-                    <div class="absolute top-10 right-20 animate-float" style="animation-delay: 0.2s;">
+                    <div class="absolute top-10 right-20 animate-float tech-badge" style="animation-delay: 0.2s;">
                         <span
                             class="bg-orange-500 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-1 shadow-lg shadow-orange-500/40">
                             <span class="material-symbols-outlined text-sm">code</span> HTML5
                         </span>
                     </div>
-                    <div class="absolute top-1/4 -left-10 animate-float" style="animation-delay: 0.5s;">
+                    <div class="absolute top-1/4 -left-10 animate-float tech-badge" style="animation-delay: 0.5s;">
                         <span
                             class="bg-purple-500 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-1 shadow-lg shadow-purple-500/40">
                             <span class="material-symbols-outlined text-sm">precision_manufacturing</span> Robótica
                         </span>
                     </div>
-                    <div class="absolute bottom-10 right-1/4 animate-float" style="animation-delay: 0.8s;">
+                    <div class="absolute bottom-10 right-1/4 animate-float tech-badge" style="animation-delay: 0.8s;">
                         <span
                             class="bg-indigo-500 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-1 shadow-lg shadow-indigo-500/40">
                             <span class="material-symbols-outlined text-sm">storage</span> SQL
                         </span>
                     </div>
-                    <div class="absolute top-1/2 -right-4 animate-float" style="animation-delay: 1.1s;">
+                    <div class="absolute top-1/2 -right-4 animate-float tech-badge" style="animation-delay: 1.1s;">
                         <span
                             class="bg-emerald-500 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-1 shadow-lg shadow-emerald-500/40">
                             <span class="material-symbols-outlined text-sm">school</span> Educación
                         </span>
                     </div>
-                    <div class="absolute bottom-1/4 -left-8 animate-float" style="animation-delay: 1.4s;">
+                    <div class="absolute bottom-1/4 -left-8 animate-float tech-badge" style="animation-delay: 1.4s;">
                         <span
                             class="bg-blue-500 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-1 shadow-lg shadow-blue-500/40">
                             <span class="material-symbols-outlined text-sm">style</span> CSS3
@@ -331,21 +375,21 @@
             <p class="text-indigo-200 mb-12 text-lg">Tiempo restante para escapar... digo, para los exámenes 😄</p>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div class="neon-border rounded-2xl p-6 backdrop-blur-md">
-                    <div class="text-5xl font-black text-white mb-1 animate-pulse-slow">0</div>
+                    <div id="days" class="text-5xl font-black text-white mb-1 animate-pulse-slow">0</div>
                     <div class="text-[10px] uppercase tracking-[0.2em] font-bold text-indigo-300">Días de tortura</div>
                 </div>
                 <div class="neon-border rounded-2xl p-6 backdrop-blur-md">
-                    <div class="text-5xl font-black text-white mb-1 animate-pulse-slow">00</div>
+                    <div id="hours" class="text-5xl font-black text-white mb-1 animate-pulse-slow">00</div>
                     <div class="text-[10px] uppercase tracking-[0.2em] font-bold text-indigo-300">Horas de sufrimiento
                     </div>
                 </div>
                 <div class="neon-border rounded-2xl p-6 backdrop-blur-md">
-                    <div class="text-5xl font-black text-white mb-1 animate-pulse-slow">00</div>
+                    <div id="minutes" class="text-5xl font-black text-white mb-1 animate-pulse-slow">00</div>
                     <div class="text-[10px] uppercase tracking-[0.2em] font-bold text-indigo-300">Minutos de agonía
                     </div>
                 </div>
                 <div class="neon-border rounded-2xl p-6 backdrop-blur-md">
-                    <div class="text-5xl font-black text-white mb-1 animate-pulse-slow">00</div>
+                    <div id="seconds" class="text-5xl font-black text-white mb-1 animate-pulse-slow">00</div>
                     <div class="text-[10px] uppercase tracking-[0.2em] font-bold text-indigo-300">Segundos eternos</div>
                 </div>
             </div>
@@ -376,8 +420,8 @@
                     <div
                         class="bg-slate-50 dark:bg-card-dark p-6 rounded-[2.5rem] shadow-2xl border border-slate-100 dark:border-slate-800">
                         <div class="relative rounded-3xl overflow-hidden mb-8 group aspect-[4/5]">
-                            <img alt="Matías Prestes Portrait"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            <img alt="Matías Prestes Portrait" loading="lazy"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 profile-image"
                                 src="img/img/FotoPerfilMatias.webp" />
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                             <div class="absolute bottom-6 left-6 right-6">
@@ -770,6 +814,10 @@
             </div>
         </div>
     </footer>
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+    <!-- FontAwesome fallback if needed or use CDN from contact -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
