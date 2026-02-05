@@ -1,5 +1,8 @@
+
+/* Section extracted: /\* Footer Styles \*/ */
+/* Footer Styles */
 .footer {
-    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     color: #f8f8f8;
     padding: 4rem 2rem 2rem;
     position: relative;
@@ -302,6 +305,14 @@
     color: white;
 }
 
+
+
+
+
+
+
+
+
 /* Responsive adjustments for the footer */
 @media (max-width: 768px) {
     .footer {
@@ -346,3 +357,4 @@
         display: none;
     }
 }
+/* Hero Section */

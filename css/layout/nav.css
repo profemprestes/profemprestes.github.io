@@ -1,3 +1,9 @@
+
+/* Section extracted: /\* Nav and Footer \*/ */
+/* Nav and Footer */
+/* navfooter.css */
+
+/* Navigation Bar Styles */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -5,23 +11,23 @@
     padding: 1rem 2rem;
     background-color: rgba(248, 248, 248, 0.98);
     color: var(--text-main);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Asegurar que el menú esté por encima de otros elementos */
     transition: all 0.3s ease;
 }
 
 .nav-container.scrolled {
     padding: 0.7rem 2rem;
     background-color: rgba(248, 248, 248, 0.95);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .nav-brand {
     display: flex;
     align-items: center;
-    z-index: 1001;
+    z-index: 1001; /* Asegurar que el logo esté por encima del menú móvil */
 }
 
 .brand-logo {
@@ -70,10 +76,10 @@
     color: var(--text-main);
     font-size: 1.5rem;
     cursor: pointer;
-    display: none;
+    display: none; /* Hidden on desktop */
     padding: 0.5rem;
     transition: all 0.3s ease;
-    z-index: 1001;
+    z-index: 1001; /* Asegurar que el botón esté por encima del menú móvil */
     border-radius: 4px;
 }
 
@@ -122,14 +128,12 @@
     transition: transform 0.3s ease;
 }
 
-.nav-link:hover i,
-.nav-link.active i {
+.nav-link:hover i, .nav-link.active i {
     transform: translateY(-2px);
     color: var(--primary-color);
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover, .nav-link.active {
     color: var(--primary-color);
 }
 
@@ -145,8 +149,7 @@
     border-radius: 2px;
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
+.nav-link:hover::after, .nav-link.active::after {
     width: 100%;
 }
 
@@ -267,29 +270,12 @@
     }
 
     /* Delay para cada elemento del menú */
-    .nav-menu-container.show .nav-item:nth-child(1) {
-        transition-delay: 0.1s;
-    }
-
-    .nav-menu-container.show .nav-item:nth-child(2) {
-        transition-delay: 0.15s;
-    }
-
-    .nav-menu-container.show .nav-item:nth-child(3) {
-        transition-delay: 0.2s;
-    }
-
-    .nav-menu-container.show .nav-item:nth-child(4) {
-        transition-delay: 0.25s;
-    }
-
-    .nav-menu-container.show .nav-item:nth-child(5) {
-        transition-delay: 0.3s;
-    }
-
-    .nav-menu-container.show .nav-item:nth-child(6) {
-        transition-delay: 0.35s;
-    }
+    .nav-menu-container.show .nav-item:nth-child(1) { transition-delay: 0.1s; }
+    .nav-menu-container.show .nav-item:nth-child(2) { transition-delay: 0.15s; }
+    .nav-menu-container.show .nav-item:nth-child(3) { transition-delay: 0.2s; }
+    .nav-menu-container.show .nav-item:nth-child(4) { transition-delay: 0.25s; }
+    .nav-menu-container.show .nav-item:nth-child(5) { transition-delay: 0.3s; }
+    .nav-menu-container.show .nav-item:nth-child(6) { transition-delay: 0.35s; }
 
     .nav-link {
         color: var(--text-main);
@@ -326,8 +312,7 @@
     }
 
     .brand-tagline {
-        display: none;
-        /* Hide tagline on mobile to save space */
+        display: none; /* Hide tagline on mobile to save space */
     }
 
     /* Añadir un overlay oscuro detrás del menú */

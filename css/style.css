@@ -1,0 +1,17 @@
+/* Main Stylesheet */
+@import 'base/variables.css';
+@import 'base/reset.css';
+@import 'base/animations.css';
+
+@import 'layout/nav.css';
+@import 'layout/footer.css';
+
+@import 'pages/home.css';
+@import 'pages/about.css';
+@import 'pages/contact.css';
+@import 'pages/faq.css';
+@import 'pages/news.css';
+@import 'pages/materials.css';
+@import 'pages/legal.css';
+@import 'pages/course.css';
+@import 'pages/error.css';

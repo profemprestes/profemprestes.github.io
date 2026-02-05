@@ -1,3 +1,5 @@
+
+/* Section extracted: :root\s*\{ */
 :root {
     /* Brand Colors */
     --primary-color: #0056ff;
@@ -10,7 +12,6 @@
     --bg-light: #ffffff;
     --bg-off-white: #f8f9fa;
     --bg-dark: #1a1a2e;
-    --bg-darker: #16213e;
 
     /* Text */
     --text-main: #333333;
@@ -21,14 +22,7 @@
     --border-radius-card: 16px;
     --border-radius-btn: 50px;
     --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.05);
-    --shadow-card-hover: 0 15px 35px rgba(0, 0, 0, 0.1);
-    
-    /* Spacing */
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 4rem;
-
-    /* Fonts */
-    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* Combined CSS for Matias Prestes Website */
+/* general.css */
