@@ -1,16 +1,17 @@
+@import 'base/variables.css';
+@import 'layout/nav.css';
+@import 'layout/footer.css';
+
 /* Global Custom Styles */
 /* Generated for profemprestes.github.io */
 
-/* Typography Overrides (mapping from Tailwind config) */
+/* Typography Overrides */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
 }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Lexend', sans-serif;
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
 }
 
 /* Glass Morphism Effect */
@@ -26,14 +27,13 @@ h4 {
 .neon-border {
     position: relative;
     background: rgba(255, 255, 255, 0.05);
-    /* Ensure backdrop blur works if needed, though not specified in original */
 }
 
 .neon-border::before {
     content: '';
     position: absolute;
     inset: -1px;
-    background: linear-gradient(90deg, #0ea5e9, #6366f1, #0ea5e9);
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
     background-size: 200% 100%;
     z-index: -1;
     border-radius: inherit;
@@ -42,19 +42,13 @@ h4 {
 }
 
 @keyframes moveGradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 200% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
 }
 
 /* Skill Bar Animation Base */
 .skill-bar-fill {
     width: 0;
-    /* Default starting state for animation */
     transition: width 1.5s cubic-bezier(0.1, 0, 0, 1);
 }
 
