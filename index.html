@@ -58,7 +58,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#0ea5e9",
+                        primary: "var(--primary-color)",
                         secondary: "#6366f1",
                         "cyber-blue": "#00f2ff",
                         "background-light": "#f8fafc",
@@ -731,7 +731,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
                 <div>
                     <div class="flex items-center gap-3 mb-8">
-                        <img src="img/logos/logofinal3.webp" alt="Logo Matías Prestes"
+                        <img src="img/logos/logofinal3.webp" alt="Logo Matías Prestes" loading="lazy"
                             class="w-12 h-12 rounded-xl object-contain">
                         <div>
                             <h3 class="font-bold text-xl leading-none">Matías Prestes</h3>
@@ -792,7 +792,7 @@
                     <form class="space-y-4">
                         <input
                             class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all placeholder:text-slate-600"
-                            placeholder="Tu correo electrónico" type="email" />
+                            placeholder="Tu correo electrónico" type="email" aria-label="Correo electrónico" />
                         <button
                             class="w-full bg-primary hover:bg-cyan-600 text-white font-black py-4 rounded-2xl transition-all shadow-lg shadow-primary/20">
                             Suscribirme

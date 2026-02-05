@@ -2,7 +2,8 @@
 /* Section extracted: :root\s*\{ */
 :root {
     /* Brand Colors */
-    --primary-color: #0056ff;
+    --primary-color: #0ea5e9;
+    --color-blue-600: #2563eb;
     --primary-gradient-start: #4facfe;
     --primary-gradient-end: #00f2fe;
     --secondary-gradient-start: #7c4dff;
