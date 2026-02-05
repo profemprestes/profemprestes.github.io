@@ -1,5 +1,6 @@
 // Main UI Module
-// Handles animations, navigation, and interactive elements
+// Handles animations and interactive elements
+// Navigation and Newsletter logic have been moved to their own modules.
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -8,19 +9,25 @@ document.addEventListener('DOMContentLoaded', function () {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             if (href.length > 1) { // Only if not just "#"
+                e.preventDefault();
                 const target = document.querySelector(href);
                 if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth' });
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 }
             }
         });
     });
 
-    // --- Feature Card Animations ---
-    const featureCards = document.querySelectorAll('.feature-card');
-    if (featureCards.length > 0) {
-        featureCards.forEach((card, index) => {
+    // --- Stats Animation (Counter) ---
+    // (Used in Portales section logic mostly, but generic helper here if needed,
+    // though Portales logic is below and has its own animateValue)
+
+    // --- Card Hover Effects (Generic) ---
+    const cards = document.querySelectorAll('.card, .info-card, .stat-card');
+    if (cards.length > 0) {
+        cards.forEach((card, index) => {
             setTimeout(() => {
                 card.style.opacity = '1';
                 card.style.transform = 'translateY(0)';
@@ -107,76 +114,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // --- Navigation Logic ---
-    const navContainer = document.querySelector('.nav-container');
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenuContainer = document.getElementById('nav-menu-container') || document.querySelector('.nav-menu-container');
-
-    // Create overlay if not exists
-    let navOverlay = document.querySelector('.nav-overlay');
-    if (!navOverlay) {
-        navOverlay = document.createElement('div');
-        navOverlay.className = 'nav-overlay';
-        document.body.appendChild(navOverlay);
-    }
-
-    function openMenu() {
-        if (navMenuContainer) navMenuContainer.classList.add('show');
-        if (navOverlay) navOverlay.classList.add('show');
-        if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
-
-        const toggleIcon = navToggle ? navToggle.querySelector('i') : null;
-        if (toggleIcon) {
-            toggleIcon.classList.remove('fa-bars');
-            toggleIcon.classList.add('fa-times');
-        }
-    }
-
-    function closeMenu() {
-        if (navMenuContainer) navMenuContainer.classList.remove('show');
-        if (navOverlay) navOverlay.classList.remove('show');
-        if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-
-        const toggleIcon = navToggle ? navToggle.querySelector('i') : null;
-        if (toggleIcon) {
-            toggleIcon.classList.remove('fa-times');
-            toggleIcon.classList.add('fa-bars');
-        }
-    }
-
-    if (navToggle && navMenuContainer) {
-        navToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (navMenuContainer.classList.contains('show')) closeMenu();
-            else openMenu();
-        });
-
-        navOverlay.addEventListener('click', closeMenu);
-
-        // Close on link click
-        const navLinks = navMenuContainer.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-
-        // Close on Escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && navMenuContainer.classList.contains('show')) closeMenu();
-        });
-    }
-
-    // Scroll effect for nav
-    function handleScroll() {
-        if (navContainer) {
-            if (window.scrollY > 50) navContainer.classList.add('scrolled');
-            else navContainer.classList.remove('scrolled');
-        }
-    }
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-
     // --- Footer Animations ---
     const footerElements = document.querySelectorAll('.footer-column, .footer-bottom');
     if ('IntersectionObserver' in window && footerElements.length > 0) {
@@ -195,41 +132,6 @@ document.addEventListener('DOMContentLoaded', function () {
             element.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
             footerObserver.observe(element);
         });
-    }
-
-    // --- Newsletter Form ---
-    const newsletterForm = document.querySelector('.newsletter-form');
-    if (newsletterForm) {
-        const newsletterInput = newsletterForm.querySelector('.newsletter-input'); // scoped
-        const newsletterButton = newsletterForm.querySelector('.newsletter-button'); // scoped
-
-        if (newsletterInput && newsletterButton) {
-            newsletterInput.addEventListener('focus', () => newsletterForm.classList.add('focused'));
-            newsletterInput.addEventListener('blur', () => newsletterForm.classList.remove('focused'));
-
-            newsletterForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                if (newsletterInput.value.trim() !== '') {
-                    const originalText = newsletterButton.innerHTML;
-                    newsletterButton.innerHTML = '<i class="fas fa-check"></i>';
-
-                    setTimeout(() => {
-                        newsletterInput.value = '';
-                        newsletterButton.innerHTML = originalText; // Restore original text/icon
-
-                        const success = document.createElement('div');
-                        success.className = 'newsletter-success';
-                        success.textContent = '¡Gracias por suscribirte!';
-                        newsletterForm.parentNode.appendChild(success);
-
-                        setTimeout(() => {
-                            success.style.opacity = '0';
-                            setTimeout(() => success.remove(), 300);
-                        }, 3000);
-                    }, 1000);
-                }
-            });
-        }
     }
 
     // --- Decorative Elements Animation (Rocket/Laptop) ---

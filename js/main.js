@@ -1,5 +1,7 @@
 /* Main JS Entry Point */
 import './modules/animations.js';
+import './modules/navigation.js';
+import './modules/newsletter.js';
 import './modules/ui.js';
 
 // Page specific logic
