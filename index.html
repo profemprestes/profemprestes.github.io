@@ -1,700 +1,777 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matías Prestes - Profesor de Tecnología</title>
+<html class="scroll-smooth" lang="es">
 
-    <!-- SEO Improved -->
-    <meta name="description" content="Sitio web de Matías Prestes, profesor de informática en UTU y Secundaria de Uruguay. Recursos educativos sobre programación, bases de datos y robótica.">
-    <meta name="keywords" content="Matías Prestes, profesor informática, UTU, secundaria, educación, tecnología, programación, bases de datos, robótica, aprendizaje digital, Montevideo, Canelones">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Matías Prestes | Educación Digital</title>
+
+    <!-- SEO Improved (Preserved) -->
+    <meta name="description"
+        content="Sitio web de Matías Prestes, profesor de informática en UTU y Secundaria de Uruguay. Recursos educativos sobre programación, bases de datos y robótica.">
+    <meta name="keywords"
+        content="Matías Prestes, profesor informática, UTU, secundaria, educación, tecnología, programación, bases de datos, robótica, aprendizaje digital, Montevideo, Canelones">
     <meta name="author" content="Matías Prestes">
     <meta name="google-site-verification" content="1ItZbJp514jLxdkq9HT8vOSDtrL-tWnX29NtZxlS9mw" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook (Preserved) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://profemprestes.github.io/">
-    <meta property="og:title" content="Matías Prestes - Profesor de Tecnología">
-    <meta property="og:description" content="Sitio web de Matías Prestes, profesor de informática. Recursos educativos sobre programación, bases de datos y robótica.">
+    <meta property="og:title" content="Matías Prestes | Educación Digital">
+    <meta property="og:description"
+        content="Sitio web de Matías Prestes, profesor de informática. Recursos educativos sobre programación, bases de datos y robótica.">
     <meta property="og:image" content="https://profemprestes.github.io/img/logos/logofinal3.webp">
 
-    <!-- Twitter -->
+    <!-- Twitter (Preserved) -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://profemprestes.github.io/">
-    <meta property="twitter:title" content="Matías Prestes - Profesor de Tecnología">
-    <meta property="twitter:description" content="Sitio web de Matías Prestes, profesor de informática. Recursos educativos sobre programación, bases de datos y robótica.">
+    <meta property="twitter:title" content="Matías Prestes | Educación Digital">
+    <meta property="twitter:description"
+        content="Sitio web de Matías Prestes, profesor de informática. Recursos educativos sobre programación, bases de datos y robótica.">
     <meta property="twitter:image" content="https://profemprestes.github.io/img/logos/logofinal3.webp">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
-    <link rel="canonical" href="https://profemprestes.github.io/">
-    <link rel="icon" href="img/logos/logofinal3.webp">
+    <!-- Favicons (Preserved) -->
+    <link rel="icon" type="image/png" href="img/logos/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="img/logos/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="img/logos/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logos/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Profe Matias" />
+    <link rel="manifest" href="img/logos/favicon/site.webmanifest" />
 
-     <!-- Favicon -->
-     <link rel="icon" type="image/png" href="img/logos/favicon/favicon-96x96.png" sizes="96x96" />
-     <link rel="icon" type="image/svg+xml" href="img/logos/favicon/favicon.svg" />
-     <link rel="shortcut icon" href="img/logos/favicon/favicon.ico" />
-     <link rel="apple-touch-icon" sizes="180x180" href="img/logos/favicon/apple-touch-icon.png" />
-     <meta name="apple-mobile-web-app-title" content="Profe Matias" />
-     <link rel="manifest" href="img/logos/favicon/site.webmanifest" />
-     <script type="application/ld+json">
-         {
-             "@context": "https://schema.org",
-             "@type": "Person",
-             "name": "Matías Prestes",
-             "image": "https://profemprestes.github.io/img/logos/logofinal3.webp",
-             "url": "https://profemprestes.github.io/",
-             "sameAs": [
-                 "https://www.youtube.com/@profematiasprestes?sub_confirmation=1",
-                 "https://uy.linkedin.com/in/mprestestecnologia"
-             ],
-             "email": "profematiasprestes@gmail.com",
-             "jobTitle": "Profesor de Informática",
-             "teaches": [{
-                 "@type": "CourseInstance",
-                 "name": "Informática ESI (7°, 8°, 9°)",
-                 "description": "Clases de informática para la Enseñanza Secundaria Integrada.",
-                 "educationalLevel": "secondary education",
-                 "course": {
-                     "@type": "Course",
-                     "name": "Informática ESI (7°, 8°, 9°)",
-                     "description": "Clases de informática para la Enseñanza Secundaria Integrada.",
-                     "educationalLevel": "lower secondary education",
-                     "provider": {
-                         "@type": "Person",
-                         "name": "Matías Prestes"
-                     },
-                     "hasCourseInstance": [{
-                         "@type": "CourseInstance",
-                         "courseMode": "Onsite",
-                         "courseWorkload": "PT4H",
-                         "courseWorkloadDescription": "4 horas semanales",
-                         "name": "Informática ESI (7°, 8°, 9°)",
-                         "description": "Clases de informática para la Enseñanza Secundaria Integrada.",
-                         "educationalLevel": "lower secondary education",
-                         "url": "https://profemprestes.github.io/cursos/esi"
-                     }],
-                     "offers": {
-                         "@type": "Offer",
-                         "price": 0,
-                         "priceCurrency": "UYU",
-                         "availability": "https://schema.org/InStock",
-                         "category": "EducationalCourse"
-                     }
-                 }
-             }, {
-                 "@type": "CourseInstance",
-                 "educationalLevel": "higher education",
-                 "course": {
-                     "@type": "Course",
-                     "name": "Bachillerato en Informática UTU",
-                     "description": "Programa completo del Bachillerato en Informática de UTU.",
-                     "provider": {
-                         "@type": "Person",
-                         "name": "Matías Prestes"
-                     },
-                     "hasCourseInstance": [{
-                         "@type": "CourseInstance",
-                         "courseMode": "Onsite",
-                         "courseWorkload": "PT6H",
-                         "courseWorkloadDescription": "6 horas semanales",
-                         "name": "Programación Avanzada",
-                         "description": "Desarrollo de aplicaciones complejas con enfoque práctico.",
-                         "url": "https://profemprestes.github.io/cursos/programacion-avanzada"
-                     }, {
-                         "@type": "CourseInstance",
-                         "courseMode": "Onsite",
-                         "courseWorkload": "PT4H",
-                         "courseWorkloadDescription": "4 horas semanales",
-                         "name": "Introducción a Base de Datos",
-                         "description": "Fundamentos de bases de datos relacionales y SQL.",
-                         "url": "https://profemprestes.github.io/cursos/bases-datos"
-                     }],
-                     "offers": {
-                         "@type": "Offer",
-                         "price": 0,
-                         "priceCurrency": "UYU",
-                         "availability": "https://schema.org/InStock",
-                         "category": "EducationalCourse"
-                     }
-                 }
-             }],
-             "worksFor": [{
-                 "@type": "EducationalOrganization",
-                 "name": "UTU - Universidad Tecnológica del Uruguay",
-                 "address": {
-                     "@type": "PostalAddress",
-                     "streetAddress": "Av. Gral. Artigas 1313",
-                     "addressLocality": "Montevideo",
-                     "postalCode": "11100",
-                     "addressCountry": "UY"
-                 }
-             }],
-             "hasOfferCatalog": {
-                 "@type": "OfferCatalog",
-                 "itemListElement": [{ 
-                     "@type": "Offer",
-                     "name": "Consultoría Educativa",
-                     "description": "Asesoramiento para docentes y instituciones en currículum de informática.",
-                     "url": "https://profemprestes.github.io/consultoria",
-                     "eligibleRegion": "UY",
-                     "availability": "https://schema.org/InStock",
-                     "category": "EducationalService"
-                 }]
-             }
-         }
-     </script>
+    <link rel="canonical" href="https://profemprestes.github.io/">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Lexend:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0ea5e9",
+                        secondary: "#6366f1",
+                        "cyber-blue": "#00f2ff",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                        "card-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        display: ["Lexend", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                    },
+                    animation: {
+                        'float': 'float 4s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'mesh-gradient': 'mesh 10s ease infinite',
+                        'shake': 'shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        mesh: {
+                            '0%, 100%': { 'background-position': '0% 50%' },
+                            '50%': { 'background-position': '100% 50%' },
+                        },
+                        shake: {
+                            '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+                            '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+                            '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+                            '40%, 60%': { transform: 'translate3d(4px, 0, 0)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+
+    <!-- Custom Global Styles -->
+    <link href="css/global.css" rel="stylesheet" />
+
+    <!-- Schema.org JSON-LD (Preserved) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Matías Prestes",
+            "image": "https://profemprestes.github.io/img/logos/logofinal3.webp",
+            "url": "https://profemprestes.github.io/",
+            "sameAs": [
+                "https://www.youtube.com/@profematiasprestes?sub_confirmation=1",
+                "https://uy.linkedin.com/in/mprestestecnologia"
+            ],
+            "email": "profematiasprestes@gmail.com",
+            "jobTitle": "Profesor de Informática",
+            "teaches": [{
+                "@type": "CourseInstance",
+                "name": "Informática ESI (7°, 8°, 9°)",
+                "description": "Clases de informática para la Enseñanza Secundaria Integrada.",
+                "educationalLevel": "secondary education",
+                "course": {
+                    "@type": "Course",
+                    "name": "Informática ESI (7°, 8°, 9°)",
+                    "description": "Clases de informática para la Enseñanza Secundaria Integrada.",
+                    "educationalLevel": "lower secondary education",
+                    "provider": {
+                        "@type": "Person",
+                        "name": "Matías Prestes"
+                    },
+                    "hasCourseInstance": [{
+                        "@type": "CourseInstance",
+                        "courseMode": "Onsite",
+                        "courseWorkload": "PT4H",
+                        "courseWorkloadDescription": "4 horas semanales",
+                        "name": "Informática ESI (7°, 8°, 9°)",
+                        "description": "Clases de informática para la Enseñanza Secundaria Integrada.",
+                        "educationalLevel": "lower secondary education",
+                        "url": "https://profemprestes.github.io/cursos/esi"
+                    }],
+                    "offers": {
+                        "@type": "Offer",
+                        "price": 0,
+                        "priceCurrency": "UYU",
+                        "availability": "https://schema.org/InStock",
+                        "category": "EducationalCourse"
+                    }
+                }
+            }, {
+                "@type": "CourseInstance",
+                "educationalLevel": "higher education",
+                "course": {
+                    "@type": "Course",
+                    "name": "Bachillerato en Informática UTU",
+                    "description": "Programa completo del Bachillerato en Informática de UTU.",
+                    "provider": {
+                        "@type": "Person",
+                        "name": "Matías Prestes"
+                    },
+                    "hasCourseInstance": [{
+                        "@type": "CourseInstance",
+                        "courseMode": "Onsite",
+                        "courseWorkload": "PT6H",
+                        "courseWorkloadDescription": "6 horas semanales",
+                        "name": "Programación Avanzada",
+                        "description": "Desarrollo de aplicaciones complejas con enfoque práctico.",
+                        "url": "https://profemprestes.github.io/cursos/programacion-avanzada"
+                    }, {
+                        "@type": "CourseInstance",
+                        "courseMode": "Onsite",
+                        "courseWorkload": "PT4H",
+                        "courseWorkloadDescription": "4 horas semanales",
+                        "name": "Introducción a Base de Datos",
+                        "description": "Fundamentos de bases de datos relacionales y SQL.",
+                        "url": "https://profemprestes.github.io/cursos/bases-datos"
+                    }],
+                    "offers": {
+                        "@type": "Offer",
+                        "price": 0,
+                        "priceCurrency": "UYU",
+                        "availability": "https://schema.org/InStock",
+                        "category": "EducationalCourse"
+                    }
+                }
+            }],
+            "worksFor": [{
+                "@type": "EducationalOrganization",
+                "name": "UTU - Universidad Tecnológica del Uruguay",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Av. Gral. Artigas 1313",
+                    "addressLocality": "Montevideo",
+                    "postalCode": "11100",
+                    "addressCountry": "UY"
+                }
+            }],
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "itemListElement": [{ 
+                    "@type": "Offer",
+                    "name": "Consultoría Educativa",
+                    "description": "Asesoramiento para docentes y instituciones en currículum de informática.",
+                    "url": "https://profemprestes.github.io/consultoria",
+                    "eligibleRegion": "UY",
+                    "availability": "https://schema.org/InStock",
+                    "category": "EducationalService"
+                }]
+            }
+        }
+    </script>
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="nav-container" role="navigation">
-        <div class="nav-brand">
-            <a href="index.html" class="brand-logo" aria-label="Página de inicio de Matías Prestes">
-                <img src="img/logos/logofinal3.webp" alt="MP Logo" width="40" height="40">
-                <div class="brand-text">
-                    <span class="brand-name">Matías Prestes</span>
-                    <span class="brand-tagline">Profesor de Informática</span>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
+    <nav
+        class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <div
+                        class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                        MP</div>
+                    <div>
+                        <h1 class="font-bold text-lg leading-none">Matías Prestes</h1>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Profesor de Informática</p>
+                    </div>
                 </div>
-            </a>
-        </div>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu-container">
-            <i class="fas fa-bars" aria-hidden="true"></i>
-        </button>
-        <div class="nav-menu-container" id="nav-menu-container">
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a></li>
-                <li class="nav-item"><a href="materias.html" class="nav-link"><i class="fas fa-book" aria-hidden="true"></i> Cursos</a></li>
-                <li class="nav-item"><a href="materiales.html" class="nav-link"><i class="fas fa-file-alt" aria-hidden="true"></i> Materiales</a></li>
-                <li class="nav-item"><a href="faq.html" class="nav-link"><i class="fas fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
-                <li class="nav-item"><a href="noticias.html" class="nav-link"><i class="fas fa-newspaper" aria-hidden="true"></i> Noticias</a></li>
-                <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope" aria-hidden="true"></i> Contacto</a></li>
-            </ul>
-            <div class="nav-cta">
-                <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" target="_blank" rel="noopener" class="cta-button" aria-label="Suscríbete a mi canal de YouTube">
-                    <i class="fab fa-youtube" aria-hidden="true"></i> Suscríbete
-                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
+                        href="#"><span class="material-symbols-outlined text-lg">home</span> Inicio</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
+                        href="#"><span class="material-symbols-outlined text-lg">school</span> Cursos</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
+                        href="#"><span class="material-symbols-outlined text-lg">description</span> Materiales</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
+                        href="#"><span class="material-symbols-outlined text-lg">help_outline</span> FAQ</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
+                        href="#"><span class="material-symbols-outlined text-lg">newspaper</span> Noticias</a>
+                    <a class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 transition-all shadow-lg shadow-orange-500/20"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">play_circle</span> Suscríbete
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="hero-background">
-                <div id="particles-js"></div>
-             
-            </div>
-            <div class="hero-container">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <span class="badge-icon">🚀</span>
-                        <span class="badge-text">¡Bienvenido a la aventura digital!</span>
-                    </div>
-                    <h1 class="hero-title">Domina la Tecnología <span class="highlight">del Futuro</span></h1>
-                    <p class="hero-subtitle">Aprende HTML, CSS, SQL, Robótica y más tecnologías que transformarán tu futuro. Recursos educativos diseñados para impulsar tu carrera digital.</p>
-                    <div class="hero-cta-group">
-                        <a href="#portales" class="hero-cta primary" id="hero-cta-btn">
-                            <span>Explorar Recursos</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="contacto.html" class="hero-cta secondary">
-                            <span>Contactar</span>
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-        
-                </div>
-                <div class="hero-image">
-                    <div class="image-container">
-                        <img src="img/logos/logofinal3.webp" alt="Matías Prestes" class="profile-image">
-                        <div class="tech-badge badge-html">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="tech-badge badge-css">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="tech-badge badge-sql">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
-                        </div>
-                        <div class="tech-badge badge-robotics">
-                            <i class="fas fa-robot"></i>
-                            <span>Robótica</span>
-                        </div>
-                        <div class="tech-badge badge-education">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Educación</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="floating-codes">
-                <pre class="code-snippet html-code">&lt;div class="container"&gt;
-  &lt;h1&gt;Aprende HTML&lt;/h1&gt;
-  &lt;p&gt;Estructura web&lt;/p&gt;
-&lt;/div&gt;</pre>
-                <pre class="code-snippet css-code">.container {
-  display: flex;
-  color: #4facfe;
-  animation: float 3s;
-}</pre>
-                <pre class="code-snippet sql-code">SELECT * 
-FROM students
-WHERE passion = 'technology'
-ORDER BY future DESC;</pre>
-            </div>
-            <div class="hero-scroll">
-                <a href="#portales" class="scroll-indicator">
-                    <div class="mouse">
-                        <div class="wheel"></div>
-                    </div>
-                    <div class="arrow">
-                        <span></span>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- Animated Banner Section -->
-        <section class="animated-banner">
-            <div class="banner-background">
-                <div class="animated-shape shape-1"></div>
-                <div class="animated-shape shape-2"></div>
-                <div class="animated-shape shape-3"></div>
-            </div>
-
-            <div class="banner-content">
-                <div class="banner-wrapper">
-                    <div class="banner-header aos-init visible aos-animate" data-aos="fade-up">
-                        <span class="banner-badge">🎓 ¡Cuenta regresiva!</span>
-                        <h2 class="countdown-title">¡Aguanten, que falta poco para la libertad! 🎉</h2>
-                        <p class="banner-subtitle">Tiempo restante para escapar... digo, para los exámenes 😅</p>
-                    </div>
-
-                    <div class="countdown-grid compact aos-init visible aos-animate" data-aos="fade-up">
-                        <div class="countdown-box" role="timer" aria-label="Días restantes">
-                            <div class="countdown-inner">
-                                <div id="days" class="countdown-value">277</div>
-                                <div class="countdown-label">Días de tortura</div>
-                            </div>
-                        </div>
-
-                        <div class="countdown-box" role="timer" aria-label="Horas restantes">
-                            <div class="countdown-inner">
-                                <div id="hours" class="countdown-value">00</div>
-                                <div class="countdown-label">Horas de sufrimiento</div>
-                            </div>
-                        </div>
-
-                        <div class="countdown-box" role="timer" aria-label="Minutos restantes">
-                            <div class="countdown-inner">
-                                <div id="minutes" class="countdown-value">27</div>
-                                <div class="countdown-label">Minutos de agonía</div>
-                            </div>
-                        </div>
-
-                        <div class="countdown-box" role="timer" aria-label="Segundos restantes">
-                            <div class="countdown-inner">
-                                <div id="seconds" class="countdown-value">52</div>
-                                <div class="countdown-label">Segundos eternos</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="banner-actions compact aos-init visible aos-animate" data-aos="fade-up" data-aos-delay="500">
-                        <a href="materiales.html" class="banner-btn primary">
-                            <span>Mientras tanto, estudia un poco</span>
-                            <span class="emoji">😭</span>
-                        </a>
-                        <a href="#" class="banner-btn secondary">
-                            <span>Sobrevivamos juntos</span>
-                            <span class="emoji">🤝</span>
-                        </a>
-                    </div>
-
-                    <p class="banner-footer-text aos-init aos-animate visible" data-aos="fade-up" data-aos-delay="600">
-                        * Los resultados pueden variar. No nos hacemos responsables por crisis existenciales durante el estudio 🤪
+    <section class="relative overflow-hidden pt-20 pb-32 bg-[#0a0f1d] grid-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative z-10">
+                    <span
+                        class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-6 ring-1 ring-primary/30">
+                        🚀 ¡Bienvenido a la aventura digital!
+                    </span>
+                    <h2 class="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+                        Domina la <br />
+                        <span class="text-primary drop-shadow-[0_0_15px_rgba(14,165,233,0.5)]">Tecnología</span> <br />
+                        del Futuro
+                    </h2>
+                    <p class="text-slate-400 text-lg mb-10 max-w-lg">
+                        Aprende HTML, CSS, SQL, Robótica y más tecnologías que transformarán tu futuro. Recursos
+                        educativos diseñados para impulsar tu carrera digital.
                     </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sobre Mí Section -->
-        <section class="sobremi-section" id="sobremi">
-            <div class="sobremi-background">
-                <div class="decoration-shape shape-1"></div>
-                <div class="decoration-shape shape-2"></div>
-                <div class="decoration-shape shape-3"></div>
-            </div>
-            
-            <div class="sobremi-container">
-                <div class="sobremi-header" data-aos="fade-up">
-                    <h2>Sobre Mí</h2>
-                    <p>Transformando la educación tecnológica con pasión y experiencia</p>
-                </div>
-                
-                <div class="sobremi-content">
-                    <div class="profile-section" data-aos="fade-right">
-                        <div class="profile-container">
-                            <img src="img/img/FotoPerfilMatias.webp" alt="Matías Prestes" class="profile-image" loading="lazy">
-                            <div class="profile-overlay">
-                                <h3>Matías Prestes</h3>
-                                <p>Profesor de Informática y Tecnología</p>
-                            </div>
-                        </div>
-                        
-                        <div class="experience-badge">
-                            <i class="fas fa-award"></i>
-                            <span>+10 años de experiencia</span>
-                        </div>
-                        
-                        <div class="social-links">
-                            <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" target="_blank" class="social-btn youtube">
-                                <i class="fab fa-youtube"></i>
-                                <span>Canal YouTube</span>
-                                <span class="tooltip">Tutoriales y recursos educativos</span>
-                            </a>
-                            <a href="https://uy.linkedin.com/in/mprestestecnologia" target="_blank" class="social-btn linkedin">
-                                <i class="fab fa-linkedin-in"></i>
-                                <span>LinkedIn</span>
-                                <span class="tooltip">Conéctate profesionalmente</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="bio-section" data-aos="fade-left">
-                        <div class="bio-text">
-                            <p>Apasionado por la educación y la tecnología, me he dedicado más de una década a la enseñanza en <strong>UTU y Secundaria</strong>, formando estudiantes en el fascinante mundo de la informática.</p>
-                            
-                            <p>Mi enfoque educativo se centra en desarrollar habilidades prácticas y pensamiento crítico. Especializado en <strong>programación, bases de datos y robótica</strong>, busco siempre conectar los conceptos teóricos con aplicaciones del mundo real.</p>
-                            
-                            <p>A lo largo de mi trayectoria, he desarrollado metodologías innovadoras para hacer que temas técnicos sean accesibles para todos los niveles de aprendizaje. Creo firmemente que la <strong>tecnología debe ser inclusiva</strong> y que todos pueden aprender a dominarla con el enfoque adecuado.</p>
-                            
-                            <p>Mi objetivo es inspirar a la próxima generación de profesionales de la tecnología, proporcionándoles las herramientas y conocimientos necesarios para destacar en un mundo digital en constante evolución.</p>
-                        </div>
-                        
-                        <div class="skills-container">
-                            <h3>Mis Habilidades</h3>
-                            
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Bases de datos y SQL</span>
-                                    <span class="skill-percentage">95%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-value" style="width: 95%"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Programación</span>
-                                    <span class="skill-percentage">90%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-value" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Robótica y educación tecnológica</span>
-                                    <span class="skill-percentage">85%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-value" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Capacitación y docencia</span>
-                                    <span class="skill-percentage">98%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-value" style="width: 98%"></div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="flex flex-wrap gap-4">
+                        <button
+                            class="bg-primary hover:bg-cyber-blue text-white px-8 py-4 rounded-xl font-bold transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(14,165,233,0.4)] hover:shadow-[0_0_30px_rgba(0,242,255,0.6)] group">
+                            Explorar Recursos <span
+                                class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+                        </button>
+                        <button
+                            class="bg-white/5 hover:bg-white/10 text-white border border-white/20 px-8 py-4 rounded-xl font-bold transition-all">
+                            Contactar
+                        </button>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Fun Banner Section -->
-        <section class="fun-banner" id="fun-banner">
-            <div class="banner-container">
-                <h2 class="banner-title">¡Debuggeando el Semestre! 🎯</h2>
-                <p class="banner-subtitle">Cuando el código no compila y los parciales tampoco... ¡pero seguimos con humor! 💪</p>
-                <div class="banner-actions">
-                    <a href="materiales.html" class="banner-btn primary">
-                        <span>Recargar Energías</span>
-                        <span>⚡</span>
-                    </a>
-                    <a href="faq.html" class="banner-btn secondary">
-                        <span>Manual de Supervivencia</span>
-                        <span>🛟</span>
-                    </a>
-                </div>
-                <div class="floating-elements">
-                    <span class="emoji">💻</span>
-                    <span class="emoji">☕</span>
-                    <span class="emoji">🎮</span>
-                    <span class="emoji">📚</span>
-                    <span class="emoji">🔧</span>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Portales Oficiales Section -->
-        <section class="portales-section" id="portales">
-            <div class="portales-container">
-                <div class="portales-header" data-aos="fade-up">
-                    <h2>Portales Oficiales</h2>
-                    <p>Accede a las plataformas educativas oficiales para gestionar tu vida académica</p>
-                </div>
-
-                <div class="portales-grid">
-                    <!-- UTU Portal Card -->
-                    <article class="portal-card" data-aos="fade-up">
-                        <div class="portal-header">
-                            <div class="portal-logo">
-                                <i class="fas fa-university"></i>
-                            </div>
-                            <span class="portal-badge">Portal Oficial</span>
+                <div class="relative flex justify-center items-center h-[500px]">
+                    <div
+                        class="relative z-20 w-56 h-56 glass-morphism rounded-[2.5rem] flex items-center justify-center border-white/20 shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary/20 before:to-transparent before:rounded-[2.5rem]">
+                        <span class="text-7xl font-black text-white italic tracking-tighter drop-shadow-lg">MP</span>
+                        <div
+                            class="absolute -inset-8 rounded-full border border-primary/20 animate-[spin_15s_linear_infinite]">
                         </div>
-                        
-                        <h3 class="portal-title">Portal UTU</h3>
-                        <p class="portal-description">Gestiona toda tu información académica, accede a horarios y recursos en la plataforma oficial de UTU.</p>
-                        
-                        <div class="portal-features">
-                            <div class="feature-item">
-                                <i class="far fa-calendar-alt"></i>
-                                <span>Calendario académico</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-book-open"></i>
-                                <span>Materiales de estudio</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-clock"></i>
-                                <span>Horarios de clase</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-graduation-cap"></i>
-                                <span>Consulta de calificaciones</span>
-                            </div>
+                        <div
+                            class="absolute -inset-16 rounded-full border border-white/5 animate-[spin_25s_linear_infinite_reverse]">
                         </div>
-                        
-                        <div class="portal-stats">
-                            <div class="stat-item">
-                                <span class="stat-value">90k+</span>
-                                <span class="stat-label">Estudiantes</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-value">200+</span>
-                                <span class="stat-label">Cursos</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-value">120+</span>
-                                <span class="stat-label">Centros</span>
-                            </div>
-                        </div>
-                        
-                        <a href="https://www.utu.edu.uy/estudiantes" target="_blank" class="portal-btn">
-                            <span>Acceder al portal</span>
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </article>
-                    
-                    <!-- Secundaria Portal Card -->
-                    <article class="portal-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="portal-header">
-                            <div class="portal-logo">
-                                <i class="fas fa-school"></i>
-                            </div>
-                            <span class="portal-badge">Portal Oficial</span>
-                        </div>
-                        
-                        <h3 class="portal-title">Portal Secundaria</h3>
-                        <p class="portal-description">Administra tus estudios, consulta calificaciones y accede a la información académica oficial de Secundaria.</p>
-                        
-                        <div class="portal-features">
-                            <div class="feature-item">
-                                <i class="fas fa-user-graduate"></i>
-                                <span>Historial académico</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-clipboard-check"></i>
-                                <span>Calificaciones en línea</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-bullhorn"></i>
-                                <span>Comunicados oficiales</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-id-card"></i>
-                                <span>Carné estudiantil</span>
-                            </div>
-                        </div>
-                        
-                        <div class="portal-stats">
-                            <div class="stat-item">
-                                <span class="stat-value">250k+</span>
-                                <span class="stat-label">Estudiantes</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-value">300+</span>
-                                <span class="stat-label">Liceos</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-value">150+</span>
-                                <span class="stat-label">Materias</span>
-                            </div>
-                        </div>
-                        
-                        <a href="https://www.dges.edu.uy/estudiantes" target="_blank" class="portal-btn">
-                            <span>Acceder al portal</span>
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </article>
-                    
-                    <!-- Ceibal Portal Card -->
-                    <article class="portal-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="portal-header">
-                            <div class="portal-logo">
-                                <i class="fas fa-laptop"></i>
-                            </div>
-                            <span class="portal-badge">Soporte Técnico</span>
-                        </div>
-                        
-                        <h3 class="portal-title">Soporte Ceibal</h3>
-                        <p class="portal-description">Recursos digitales, plataformas educativas y soporte técnico para equipos y servicios del Plan Ceibal.</p>
-                        
-                        <div class="portal-features">
-                            <div class="feature-item">
-                                <i class="fas fa-tools"></i>
-                                <span>Soporte técnico</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                                <span>Plataformas educativas</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-book"></i>
-                                <span>Biblioteca digital</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-video"></i>
-                                <span>Tutoriales en video</span>
-                            </div>
-                        </div>
-                        
-                        <div class="portal-stats">
-                            <div class="stat-item">
-                                <span class="stat-value">700k+</span>
-                                <span class="stat-label">Dispositivos</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-value">15+</span>
-                                <span class="stat-label">Plataformas</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-value">24/7</span>
-                                <span class="stat-label">Soporte</span>
-                            </div>
-                        </div>
-                        
-                        <a href="https://ceibal.edu.uy/ayuda/soporte-de-plataformas" target="_blank" class="portal-btn">
-                            <span>Acceder al soporte</span>
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-decorations">
-            <div class="rotating-circle"></div>
-            <div class="rotating-circle"></div>
-            <div class="rotating-circle"></div>
-            <div class="bouncing-rocket">🚀</div>
-            <div class="pulsing-circle"></div>
-            <div class="pulsing-circle"></div>
-            <div class="spinning-laptop">💻</div>
-        </div>
-        
-        <div class="footer-grid">
-            <div class="footer-column">
-                <div class="footer-logo">
-                    <img src="img/logos/logofinal3.webp" alt="MP Logo" loading="lazy">
-                    <div class="footer-logo-text">
-                        <span class="logo-title">Matías Prestes</span>
-                        <span class="logo-subtitle">Educación Digital</span>
+                    </div>
+                    <div class="absolute top-10 right-20 animate-float" style="animation-delay: 0.2s;">
+                        <span
+                            class="bg-orange-500 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-1 shadow-lg shadow-orange-500/40">
+                            <span class="material-symbols-outlined text-sm">code</span> HTML5
+                        </span>
+                    </div>
+                    <div class="absolute top-1/4 -left-10 animate-float" style="animation-delay: 0.5s;">
+                        <span
+                            class="bg-purple-500 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-1 shadow-lg shadow-purple-500/40">
+                            <span class="material-symbols-outlined text-sm">precision_manufacturing</span> Robótica
+                        </span>
+                    </div>
+                    <div class="absolute bottom-10 right-1/4 animate-float" style="animation-delay: 0.8s;">
+                        <span
+                            class="bg-indigo-500 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-1 shadow-lg shadow-indigo-500/40">
+                            <span class="material-symbols-outlined text-sm">storage</span> SQL
+                        </span>
+                    </div>
+                    <div class="absolute top-1/2 -right-4 animate-float" style="animation-delay: 1.1s;">
+                        <span
+                            class="bg-emerald-500 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-1 shadow-lg shadow-emerald-500/40">
+                            <span class="material-symbols-outlined text-sm">school</span> Educación
+                        </span>
+                    </div>
+                    <div class="absolute bottom-1/4 -left-8 animate-float" style="animation-delay: 1.4s;">
+                        <span
+                            class="bg-blue-500 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-1 shadow-lg shadow-blue-500/40">
+                            <span class="material-symbols-outlined text-sm">style</span> CSS3
+                        </span>
                     </div>
                 </div>
-                <p class="footer-description">Brindando recursos educativos de calidad para impulsar tu carrera en el mundo digital. Comprometidos con tu crecimiento profesional.</p>
-                <div class="footer-social">
-                    <a href="https://uy.linkedin.com/in/mprestestecnologia" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.youtube.com/@profematiasprestes?sub_confirmation=1" class="social-icon"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-column">
-                <h3 class="footer-heading">Accesos Directos</h3>
-                <ul class="footer-menu">
-                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
-                    <li><a href="materias.html"><i class="fas fa-book"></i> Cursos</a></li>
-                    <li><a href="materiales.html"><i class="fas fa-file-alt"></i> Materiales</a></li>
-                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                    <li><a href="noticias.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
-                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h3 class="footer-heading">Información Legal</h3>
-                <ul class="footer-menu">
-                    <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Política de Privacidad</a></li>
-                    <li><a href="terminos.html"><i class="fas fa-gavel"></i> Términos y Condiciones</a></li>
-                    <li><a href="#"><i class="fas fa-cookie"></i> Política de Cookies</a></li>
-                    <li><a href="#"><i class="fas fa-handshake"></i> Acuerdos de Licencia</a></li>
-                    <li><a href="#"><i class="fas fa-user-shield"></i> Derechos de Autor</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column footer-newsletter">
-                <h3 class="footer-heading">Newsletter</h3>
-                <p>Suscríbete para recibir actualizaciones, nuevos recursos y consejos exclusivos directamente en tu correo.</p>
-                <form class="newsletter-form">
-                    <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
-                    <button type="submit" class="newsletter-button">Suscribirse</button>
-                </form>
             </div>
         </div>
-        
-        <div class="footer-bottom">
-            <div class="footer-copyright">
-                <p>&copy; 2024 Matías Prestes. Todos los derechos reservados.</p>
+    </section>
+    <section class="bg-indigo-950 py-20 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <span
+                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-white/80 mb-6 border border-white/20">
+                ⏳ ¡Cuenta regresiva!
+            </span>
+            <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-4">
+                ¡Aguanten, que falta poco para la libertad! 🎉
+            </h3>
+            <p class="text-indigo-200 mb-12 text-lg">Tiempo restante para escapar... digo, para los exámenes 😄</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div class="neon-border rounded-2xl p-6 backdrop-blur-md">
+                    <div class="text-5xl font-black text-white mb-1 animate-pulse-slow">0</div>
+                    <div class="text-[10px] uppercase tracking-[0.2em] font-bold text-indigo-300">Días de tortura</div>
+                </div>
+                <div class="neon-border rounded-2xl p-6 backdrop-blur-md">
+                    <div class="text-5xl font-black text-white mb-1 animate-pulse-slow">00</div>
+                    <div class="text-[10px] uppercase tracking-[0.2em] font-bold text-indigo-300">Horas de sufrimiento
+                    </div>
+                </div>
+                <div class="neon-border rounded-2xl p-6 backdrop-blur-md">
+                    <div class="text-5xl font-black text-white mb-1 animate-pulse-slow">00</div>
+                    <div class="text-[10px] uppercase tracking-[0.2em] font-bold text-indigo-300">Minutos de agonía
+                    </div>
+                </div>
+                <div class="neon-border rounded-2xl p-6 backdrop-blur-md">
+                    <div class="text-5xl font-black text-white mb-1 animate-pulse-slow">00</div>
+                    <div class="text-[10px] uppercase tracking-[0.2em] font-bold text-indigo-300">Segundos eternos</div>
+                </div>
             </div>
-            <div class="footer-legal"></div>
-                <a href="privacy.html">Privacidad</a>
-                <a href="terminos.html">Términos</a>
-                <a href="#">Cookies</a>
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button
+                    class="bg-gradient-to-r from-primary to-secondary text-white px-10 py-4 rounded-full font-bold shadow-[0_0_20px_rgba(99,102,241,0.4)] hover:scale-105 transition-all">
+                    Mientras tanto, estudia un poco
+                </button>
+                <button
+                    class="bg-white/10 text-white px-10 py-4 rounded-full font-bold border border-white/20 hover:bg-white/20 transition-all">
+                    Sobrevivamos juntos
+                </button>
+            </div>
+            <p class="text-xs text-indigo-400 italic">* Los resultados pueden variar. No nos hacemos responsables por
+                crisis existenciales durante el estudio 😂</p>
+        </div>
+    </section>
+    <section class="py-24 bg-white dark:bg-background-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold mb-4">Sobre Mí</h2>
+                <div class="h-1.5 w-24 bg-primary mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-500 dark:text-slate-400 text-lg">Transformando la educación tecnológica con pasión
+                    y experiencia</p>
+            </div>
+            <div class="grid lg:grid-cols-12 gap-16 items-start">
+                <div class="lg:col-span-5">
+                    <div
+                        class="bg-slate-50 dark:bg-card-dark p-6 rounded-[2.5rem] shadow-2xl border border-slate-100 dark:border-slate-800">
+                        <div class="relative rounded-3xl overflow-hidden mb-8 group aspect-[4/5]">
+                            <img alt="Matías Prestes Portrait"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIIcblHnR4PWM_XiTBOxmeccIIOLuxuluykWuyXIfg-1YvPyDKwQtm5PtzqExQvWMvVaUhbZUNZfy0fX0dmFDNw7maVHvD2NbQQHzNkN05EAiFZen90uKxSmd4K09R7zEY791RUPjcXUQajy3nJvG09MxBrNwdXlaOr_ju9IJlmGz-gVKZBCpcNq_oecOeCkvMEG1OTn_RuGZufQdExZXf_akDHzVf_ZaIbXkHXRYG3qwto5kDRC-q1wdFCgZCbDm22yeLcvbpExaY" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <div
+                                    class="bg-primary/90 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-bold flex items-center justify-center gap-2 w-fit">
+                                    <span class="material-symbols-outlined text-sm">workspace_premium</span> +10 años de
+                                    experiencia
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="text-3xl font-bold mb-1">Matías Prestes</h4>
+                            <p class="text-primary font-bold text-lg mb-8 uppercase tracking-wider">Profesor de
+                                Tecnología</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <button
+                                    class="flex items-center justify-center gap-2 bg-[#ff0000] hover:bg-red-700 text-white py-4 rounded-2xl font-bold text-sm transition-colors shadow-lg shadow-red-500/20">
+                                    <span class="material-symbols-outlined">play_circle</span> YouTube
+                                </button>
+                                <button
+                                    class="flex items-center justify-center gap-2 bg-[#0077b5] hover:bg-blue-800 text-white py-4 rounded-2xl font-bold text-sm transition-colors shadow-lg shadow-blue-500/20">
+                                    <span class="material-symbols-outlined">link</span> LinkedIn
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="prose prose-slate lg:prose-xl dark:prose-invert max-w-none mb-16">
+                        <p class="leading-relaxed mb-6">
+                            Apasionado por la educación y la tecnología, me he dedicado más de una década a la enseñanza
+                            en <strong>UTU y Secundaria</strong>, formando estudiantes en el fascinante mundo de la
+                            informática.
+                        </p>
+                        <p class="leading-relaxed">
+                            Mi enfoque educativo se centra en desarrollar habilidades prácticas y pensamiento crítico.
+                            Especializado en <strong>programación, bases de datos y robótica</strong>, busco siempre
+                            conectar los conceptos teóricos con aplicaciones del mundo real.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-slate-50 dark:bg-card-dark p-10 rounded-[2.5rem] shadow-xl border border-slate-100 dark:border-slate-800">
+                        <h3 class="text-2xl font-bold mb-10 flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">analytics</span>
+                            Mis Habilidades
+                        </h3>
+                        <div class="space-y-8">
+                            <div>
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-bold text-slate-700 dark:text-slate-300">Bases de datos y
+                                        SQL</span>
+                                    <span class="text-primary font-black">95%</span>
+                                </div>
+                                <div class="h-3 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-primary to-cyan-400 rounded-full skill-bar-fill shadow-[0_0_10px_rgba(14,165,233,0.3)]"
+                                        style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-bold text-slate-700 dark:text-slate-300">Programación</span>
+                                    <span class="text-primary font-black">90%</span>
+                                </div>
+                                <div class="h-3 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-primary to-cyan-400 rounded-full skill-bar-fill shadow-[0_0_10px_rgba(14,165,233,0.3)]"
+                                        style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-bold text-slate-700 dark:text-slate-300">Robótica y EdTech</span>
+                                    <span class="text-primary font-black">85%</span>
+                                </div>
+                                <div class="h-3 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-primary to-cyan-400 rounded-full skill-bar-fill shadow-[0_0_10px_rgba(14,165,233,0.3)]"
+                                        style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-bold text-slate-700 dark:text-slate-300">Capacitación
+                                        Docente</span>
+                                    <span class="text-primary font-black">98%</span>
+                                </div>
+                                <div class="h-3 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-primary to-cyan-400 rounded-full skill-bar-fill shadow-[0_0_10px_rgba(14,165,233,0.3)]"
+                                        style="width: 98%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 px-4">
+        <div
+            class="max-w-6xl mx-auto mesh-animate animate-mesh-gradient rounded-[3rem] p-16 text-center relative overflow-hidden shadow-[0_20px_50px_rgba(147,51,234,0.3)]">
+            <div
+                class="absolute inset-0 opacity-30 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
+            </div>
+            <div class="relative z-10">
+                <div class="flex justify-center mb-8">
+                    <div class="animate-shake p-4 bg-white/20 backdrop-blur-xl rounded-full">
+                        <span class="material-symbols-outlined text-7xl text-white">ads_click</span>
+                    </div>
+                </div>
+                <h2 class="text-4xl md:text-6xl font-black text-white mb-6 drop-shadow-md">¡Debuggeando el Semestre! 🎯
+                </h2>
+                <p class="text-white/90 text-xl mb-12 max-w-2xl mx-auto font-medium">
+                    Cuando el código no compila y los parciales tampoco... ¡pero seguimos con humor! 💪
+                </p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <button
+                        class="bg-cyan-400 text-slate-900 px-10 py-5 rounded-[1.5rem] font-black text-xl shadow-xl shadow-cyan-400/40 hover:scale-105 hover:bg-white transition-all">
+                        Recargar Energías ⚡
+                    </button>
+                    <button
+                        class="bg-white/10 backdrop-blur-lg text-white border border-white/40 px-10 py-5 rounded-[1.5rem] font-bold text-xl hover:bg-white/20 transition-all">
+                        Manual de Supervivencia 🏥
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-extrabold mb-4">Portales Oficiales</h2>
+                <p class="text-slate-500 dark:text-slate-400 text-lg">Accede a las plataformas educativas oficiales para
+                    gestionar tu vida académica</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div
+                    class="group bg-white dark:bg-card-dark rounded-[2.5rem] p-10 border border-slate-100 dark:border-slate-800 shadow-xl hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 flex flex-col">
+                    <div class="flex justify-between items-start mb-8">
+                        <div
+                            class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-blue-600">
+                            <span
+                                class="material-symbols-outlined text-3xl transition-transform group-hover:scale-125 group-hover:rotate-12">account_balance</span>
+                        </div>
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-full">Oficial</span>
+                    </div>
+                    <h3 class="text-2xl font-extrabold mb-4">Portal UTU</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-8 flex-grow leading-relaxed">Gestiona tu
+                        información académica, accede a horarios y recursos en la plataforma oficial de UTU.</p>
+                    <div class="grid grid-cols-2 gap-4 mb-10">
+                        <div
+                            class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 group/item">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover/item:animate-bounce">calendar_today</span>
+                            Calendario
+                        </div>
+                        <div
+                            class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 group/item">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover/item:animate-bounce">folder</span>
+                            Materiales
+                        </div>
+                        <div
+                            class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 group/item">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover/item:animate-bounce">schedule</span>
+                            Horarios
+                        </div>
+                        <div
+                            class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 group/item">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover/item:animate-bounce">assignment</span>
+                            Notas
+                        </div>
+                    </div>
+                    <div
+                        class="flex justify-between items-center mb-10 border-t border-slate-100 dark:border-slate-800 pt-8">
+                        <div class="text-center">
+                            <div class="text-xl font-black text-primary">90k+</div>
+                            <div class="text-[10px] text-slate-400 uppercase font-black">Estudiantes</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-xl font-black text-primary">200+</div>
+                            <div class="text-[10px] text-slate-400 uppercase font-black">Cursos</div>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-500/20">
+                        Acceder <span class="material-symbols-outlined text-lg">open_in_new</span>
+                    </button>
+                </div>
+                <div
+                    class="group bg-white dark:bg-card-dark rounded-[2.5rem] p-10 border border-slate-100 dark:border-slate-800 shadow-xl hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 flex flex-col">
+                    <div class="flex justify-between items-start mb-8">
+                        <div
+                            class="w-16 h-16 bg-cyan-100 dark:bg-cyan-900/30 rounded-2xl flex items-center justify-center text-cyan-600">
+                            <span
+                                class="material-symbols-outlined text-3xl transition-transform group-hover:scale-125 group-hover:rotate-12">corporate_fare</span>
+                        </div>
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-full">Oficial</span>
+                    </div>
+                    <h3 class="text-2xl font-extrabold mb-4">Secundaria</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-8 flex-grow leading-relaxed">Consulta
+                        calificaciones y administra tus estudios en la plataforma oficial de Secundaria.</p>
+                    <div class="grid grid-cols-2 gap-4 mb-10">
+                        <div
+                            class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 group/item">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover/item:animate-bounce">history_edu</span>
+                            Historial
+                        </div>
+                        <div
+                            class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 group/item">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover/item:animate-bounce">task_alt</span>
+                            Notas
+                        </div>
+                        <div
+                            class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 group/item">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover/item:animate-bounce">campaign</span>
+                            Avisos
+                        </div>
+                        <div
+                            class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 group/item">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover/item:animate-bounce">badge</span>
+                            Carné
+                        </div>
+                    </div>
+                    <div
+                        class="flex justify-between items-center mb-10 border-t border-slate-100 dark:border-slate-800 pt-8">
+                        <div class="text-center">
+                            <div class="text-xl font-black text-primary">250k+</div>
+                            <div class="text-[10px] text-slate-400 uppercase font-black">Alumnos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-xl font-black text-primary">300+</div>
+                            <div class="text-[10px] text-slate-400 uppercase font-black">Liceos</div>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full bg-primary hover:bg-cyan-600 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary/20">
+                        Acceder <span class="material-symbols-outlined text-lg">open_in_new</span>
+                    </button>
+                </div>
+                <div
+                    class="group bg-white dark:bg-card-dark rounded-[2.5rem] p-10 border border-slate-100 dark:border-slate-800 shadow-xl hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 flex flex-col">
+                    <div class="flex justify-between items-start mb-8">
+                        <div
+                            class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-600">
+                            <span
+                                class="material-symbols-outlined text-3xl transition-transform group-hover:scale-125 group-hover:rotate-12">devices</span>
+                        </div>
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-full">Soporte</span>
+                    </div>
+                    <h3 class="text-2xl font-extrabold mb-4">Soporte Ceibal</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-8 flex-grow leading-relaxed">Recursos
+                        digitales y soporte técnico para equipos y servicios del Plan Ceibal.</p>
+                    <div class="grid grid-cols-2 gap-4 mb-10">
+                        <div
+                            class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 group/item">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover/item:animate-bounce">build</span>
+                            Técnico
+                        </div>
+                        <div
+                            class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 group/item">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover/item:animate-bounce">laptop_mac</span>
+                            Equipos
+                        </div>
+                        <div
+                            class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 group/item">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover/item:animate-bounce">menu_book</span>
+                            Biblioteca
+                        </div>
+                        <div
+                            class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 group/item">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover/item:animate-bounce">video_library</span>
+                            Vídeos
+                        </div>
+                    </div>
+                    <div
+                        class="flex justify-between items-center mb-10 border-t border-slate-100 dark:border-slate-800 pt-8">
+                        <div class="text-center">
+                            <div class="text-xl font-black text-primary">700k+</div>
+                            <div class="text-[10px] text-slate-400 uppercase font-black">Equipos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-xl font-black text-primary">24/7</div>
+                            <div class="text-[10px] text-slate-400 uppercase font-black">Atención</div>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full bg-secondary hover:bg-indigo-700 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-indigo-500/20">
+                        Soporte <span class="material-symbols-outlined text-lg">open_in_new</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-slate-900 text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <div
+                            class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white font-black text-2xl">
+                            MP</div>
+                        <div>
+                            <h3 class="font-bold text-xl leading-none">Matías Prestes</h3>
+                            <p class="text-xs text-slate-400 font-medium">Educación Digital</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                        Brindando recursos educativos de calidad para impulsar tu carrera en el mundo digital.
+                        Comprometidos con tu crecimiento profesional.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-primary transition-all duration-300"
+                            href="#">
+                            <span class="material-symbols-outlined">link</span>
+                        </a>
+                        <a class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-red-600 transition-all duration-300"
+                            href="#">
+                            <span class="material-symbols-outlined">play_arrow</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-8 uppercase tracking-widest text-slate-200">Accesos</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm flex items-center gap-3"
+                                href="#"><span class="material-symbols-outlined text-lg">home</span> Inicio</a></li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm flex items-center gap-3"
+                                href="#"><span class="material-symbols-outlined text-lg">school</span> Cursos</a></li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm flex items-center gap-3"
+                                href="#"><span class="material-symbols-outlined text-lg">description</span>
+                                Materiales</a></li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm flex items-center gap-3"
+                                href="#"><span class="material-symbols-outlined text-lg">help_outline</span> FAQ</a>
+                        </li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm flex items-center gap-3"
+                                href="#"><span class="material-symbols-outlined text-lg">mail</span> Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-8 uppercase tracking-widest text-slate-200">Legal</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm flex items-center gap-3"
+                                href="#"><span class="material-symbols-outlined text-lg">gavel</span> Privacidad</a>
+                        </li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm flex items-center gap-3"
+                                href="#"><span class="material-symbols-outlined text-lg">rule</span> Términos</a></li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm flex items-center gap-3"
+                                href="#"><span class="material-symbols-outlined text-lg">cookie</span> Cookies</a></li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm flex items-center gap-3"
+                                href="#"><span class="material-symbols-outlined text-lg">verified</span> Licencias</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-8 uppercase tracking-widest text-slate-200">Newsletter</h4>
+                    <p class="text-slate-400 text-sm mb-8 leading-relaxed">Suscríbete para recibir actualizaciones y
+                        nuevos recursos directamente.</p>
+                    <form class="space-y-4">
+                        <input
+                            class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all placeholder:text-slate-600"
+                            placeholder="Tu correo electrónico" type="email" />
+                        <button
+                            class="w-full bg-primary hover:bg-cyan-600 text-white font-black py-4 rounded-2xl transition-all shadow-lg shadow-primary/20">
+                            Suscribirme
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-white/5 flex flex-col md:row justify-between items-center gap-8">
+                <p class="text-slate-500 text-xs font-medium">© 2024 Matías Prestes. Todos los derechos reservados.</p>
+                <div class="flex gap-10">
+                    <a class="text-slate-500 hover:text-white transition-colors text-xs font-bold"
+                        href="#">Privacidad</a>
+                    <a class="text-slate-500 hover:text-white transition-colors text-xs font-bold" href="#">Términos</a>
+                    <a class="text-slate-500 hover:text-white transition-colors text-xs font-bold" href="#">Cookies</a>
+                </div>
+                <div class="opacity-30">
+                    <span class="material-symbols-outlined text-4xl text-slate-400">code_blocks</span>
+                </div>
             </div>
         </div>
     </footer>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script type="module" src="js/main.js"></script>
 </body>
+
 </html>

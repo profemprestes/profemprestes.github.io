@@ -1,0 +1,72 @@
+/* Global Custom Styles */
+/* Generated for profemprestes.github.io */
+
+/* Typography Overrides (mapping from Tailwind config) */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Lexend', sans-serif;
+}
+
+/* Glass Morphism Effect */
+.glass-morphism {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Neon Border Animation */
+.neon-border {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    /* Ensure backdrop blur works if needed, though not specified in original */
+}
+
+.neon-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(90deg, #0ea5e9, #6366f1, #0ea5e9);
+    background-size: 200% 100%;
+    z-index: -1;
+    border-radius: inherit;
+    opacity: 0.5;
+    animation: moveGradient 4s linear infinite;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+/* Skill Bar Animation Base */
+.skill-bar-fill {
+    width: 0;
+    /* Default starting state for animation */
+    transition: width 1.5s cubic-bezier(0.1, 0, 0, 1);
+}
+
+/* Grid Background Pattern */
+.grid-bg {
+    background-image: linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Mesh Gradient Background */
+.mesh-animate {
+    background: linear-gradient(-45deg, #9333ea, #db2777, #7c3aed, #ec4899);
+    background-size: 400% 400%;
+}
